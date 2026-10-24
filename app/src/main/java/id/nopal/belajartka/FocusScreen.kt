@@ -23,6 +23,8 @@ import androidx.compose.foundation.gestures.detectTapGestures
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.ExperimentalLayoutApi
+import androidx.compose.foundation.layout.FlowRow
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
@@ -162,6 +164,7 @@ private fun SessionSetup(store: Store) {
 }
 
 /** One duration: minus and plus in 5-minute steps, plus a row of quick picks. Saved as soon as it changes. */
+@OptIn(ExperimentalLayoutApi::class)
 @Composable
 private fun DurationCard(label: String, minutes: Int, range: IntRange, quick: List<Int>, tag: String, onChange: (Int) -> Unit) {
     Card {
@@ -173,14 +176,14 @@ private fun DurationCard(label: String, minutes: Int, range: IntRange, quick: Li
                     modifier = Modifier.width(96.dp).testTag("${tag}_value"))
                 StepButton("+", minutes < range.last, "${tag}_plus") { onChange((minutes + 5).coerceIn(range)) }
             }
-            Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+            FlowRow(horizontalArrangement = Arrangement.spacedBy(8.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
                 quick.forEach { q ->
                     val on = q == minutes
                     Box(
                         Modifier.clip(RoundedCornerShape(50)).background(if (on) C.accentWash else C.surface2)
                             .clickable { onChange(q) }.testTag("${tag}_q_$q").padding(horizontal = 12.dp, vertical = 8.dp),
                     ) {
-                        Text(fmtMin(q), color = if (on) C.violet else C.muted, style = MaterialTheme.typography.labelLarge)
+                        Text(fmtMin(q), color = if (on) C.violet else C.muted, style = MaterialTheme.typography.labelLarge, maxLines = 1, softWrap = false)
                     }
                 }
             }
