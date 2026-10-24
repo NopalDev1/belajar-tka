@@ -26,7 +26,7 @@ Lingkup materi mengikuti kisi-kisi TKA SMA 2026 dari Pusmendik Kemendikdasmen, s
 
 ## Karakter
 
-Tuti si Buku (maskot dan ikon aplikasi) adalah karakter orisinal yang digambar khusus untuk aplikasi ini sebagai vektor (`res/drawable/tuti_*.xml`, `ic_launcher_*.xml`). Tidak dijiplak, tidak memakai gambar stok, dan tidak meniru karakter atau merek mana pun. Gerakannya (napas, kedip, lompat, geleng) dibuat dengan kode di `Mascot.kt`.
+Tuti si Buku (maskot dan ikon aplikasi) adalah karakter orisinal yang digambar khusus untuk aplikasi ini sebagai vektor (`res/drawable/tuti_*.xml`, `ic_launcher_*.xml`; tangan dan pensil digambar dengan kode di `Mascot.kt`). Tidak dijiplak, tidak memakai gambar stok, dan tidak meniru karakter atau merek mana pun. Gerakannya (napas, kedip, tangan melambai dan memantul, lompat, geleng) dibuat dengan kode di `Mascot.kt`.
 
 ## Build
 

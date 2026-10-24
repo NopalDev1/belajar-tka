@@ -59,15 +59,15 @@ class MascotQcTest {
         rule.mainClock.advanceTimeBy(100)
         current = mood
         val theme = if (dark) "dark" else "light"
-        for (t in 0..10) {
-            rule.mainClock.advanceTimeBy(if (t == 0) 16 else 110)
+        for (t in 0..24) {
+            rule.mainClock.advanceTimeBy(if (t == 0) 16 else 60)
             val bmp = rule.onNodeWithTag("frame").captureToImage().asAndroidBitmap()
-            if (t % 2 == 0) save(bmp, "40_mascot_${theme}_${mood.name.lowercase()}_$t")
+            save(bmp, "40_mascot_${theme}_${mood.name.lowercase()}_${t.toString().padStart(2, '0')}")
             assertTrue("${mood.name} $theme frame $t is clipped", edgesClear(bmp))
         }
         if (mood == MascotMood.IDLE) {
             // The blink falls at 96-100% of the 3.6 s idle clock.
-            rule.mainClock.advanceTimeBy(3520 - 100 - 16 - 10 * 110)
+            rule.mainClock.advanceTimeBy(3520 - 100 - 16 - 24 * 60)
             val bmp = rule.onNodeWithTag("frame").captureToImage().asAndroidBitmap()
             save(bmp, "40_mascot_${theme}_blink")
             assertTrue("blink $theme is clipped", edgesClear(bmp))
