@@ -12,10 +12,13 @@ import androidx.compose.animation.core.rememberInfiniteTransition
 import androidx.compose.animation.core.spring
 import androidx.compose.animation.core.tween
 import androidx.compose.foundation.Canvas
+import androidx.compose.foundation.gestures.detectTapGestures
 import androidx.compose.foundation.layout.size
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableIntStateOf
+import androidx.compose.runtime.setValue
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.geometry.Offset
@@ -31,12 +34,14 @@ import androidx.compose.ui.graphics.drawscope.rotate
 import androidx.compose.ui.graphics.drawscope.translate
 import androidx.compose.ui.graphics.drawscope.withTransform
 import androidx.compose.ui.graphics.painter.Painter
+import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import kotlinx.coroutines.async
 import kotlinx.coroutines.coroutineScope
+import kotlin.math.PI
 import kotlin.math.cos
 import kotlin.math.sin
 
@@ -47,6 +52,7 @@ private val Outline = Color(0xFF1A1D24)
 private val ArmRed = Color(0xFFB23943)
 private val PencilBody = Color(0xFFF4B63A)
 private val PencilWood = Color(0xFFF2D2A9)
+private val LegRed = Color(0xFF953038)
 
 /** Shoulders sit just behind the cover edge, in the 200 x 240 units of the drawing. */
 private val RightShoulder = Offset(157f, 104f)
@@ -76,16 +82,27 @@ private fun sway(m: MascotMood) = when (m) {
     MascotMood.WRONG -> 2f
 }
 
+/** Smooth bump that rises and falls inside [a, b] of a 0..1 cycle; 0 outside it. */
+private fun bump(p: Float, a: Float, b: Float): Float =
+    if (p < a || p > b) 0f else sin(PI.toFloat() * (p - a) / (b - a))
+
+/** Progress 0..1 inside [a, b] of a cycle, eased; 0 before and 1 after. */
+private fun span(p: Float, a: Float, b: Float): Float {
+    val t = ((p - a) / (b - a)).coerceIn(0f, 1f)
+    return t * t * (3 - 2 * t)
+}
+
 /**
  * Tuti si Buku, the app's own character (see README, "Karakter").
- * Body and face are vectors (res/drawable/tuti_*); the arms are drawn here as bendy curves so they can move:
- * they sway all the time and spring into a new pose when the mood changes (up for a right answer,
- * hanging for a wrong one). The whole figure also breathes, blinks, hops and shakes.
+ * Body and face are vectors (res/drawable/tuti_body_*); legs, arms and pencil are drawn here so they can move.
+ * Idle: breathes, blinks, sways, and every few seconds does one small action in turn (wave, write in the air,
+ * stretch, tap a foot, lean side to side, spin the pencil). A mood change springs the arms into a new pose:
+ * hop with arms up and a pencil spin for a right answer, a head shake and hanging arms for a wrong one,
+ * two hops and fast waving when a quiz is done. Tapping Tuti plays a short reaction.
  * The canvas leaves room on the sides and on top, so no frame is clipped. Motion only: no text, no confetti.
  */
 @Composable
 fun Mascot(mood: MascotMood, modifier: Modifier = Modifier, size: Dp = 96.dp) {
-    val legs = painterResource(R.drawable.tuti_legs)
     val idle = painterResource(R.drawable.tuti_body_idle)
     val blink = painterResource(R.drawable.tuti_body_blink)
     val happy = painterResource(R.drawable.tuti_body_happy)
@@ -94,11 +111,18 @@ fun Mascot(mood: MascotMood, modifier: Modifier = Modifier, size: Dp = 96.dp) {
     val loop = rememberInfiniteTransition(label = "tuti")
     val breath by loop.animateFloat(0f, 1f, infiniteRepeatable(tween(1600, easing = FastOutSlowInEasing), RepeatMode.Reverse), label = "breath")
     val wave by loop.animateFloat(-1f, 1f, infiniteRepeatable(tween(1300, easing = FastOutSlowInEasing), RepeatMode.Reverse), label = "wave")
-    // Blink on an infinite clock rather than a delay loop, so UI tests can still go idle.
+    val flap by loop.animateFloat(-1f, 1f, infiniteRepeatable(tween(220, easing = LinearEasing), RepeatMode.Reverse), label = "flap")
+    // Blink and the idle actions run on infinite clocks rather than delay loops, so UI tests can still go idle.
     val clock by loop.animateFloat(0f, 1f, infiniteRepeatable(tween(3600, easing = LinearEasing)), label = "blink")
+    val acts by loop.animateFloat(0f, 1f, infiniteRepeatable(tween(15000, easing = LinearEasing)), label = "acts")
 
-    val hop = remember { Animatable(0f) }    // 1 = top of a hop
-    val shake = remember { Animatable(0f) }  // -1..1, a tilt left or right
+    val hop = remember { Animatable(0f) }      // 1 = top of a hop
+    val shake = remember { Animatable(0f) }    // -1..1, a tilt left or right
+    val squash = remember { Animatable(0f) }   // + = squashed down, - = stretched up
+    val spin = remember { Animatable(0f) }     // pencil turns, 1 = one full turn
+    val reach = remember { Animatable(0f) }    // 1 = both arms stretched up
+    val fast = remember { Animatable(0f) }     // degrees of quick waving
+    val idleOn = remember { Animatable(1f) }
     val rA = remember { Animatable(rightPose(MascotMood.IDLE).angle) }
     val rL = remember { Animatable(rightPose(MascotMood.IDLE).length) }
     val rB = remember { Animatable(rightPose(MascotMood.IDLE).bend) }
@@ -106,22 +130,54 @@ fun Mascot(mood: MascotMood, modifier: Modifier = Modifier, size: Dp = 96.dp) {
     val lL = remember { Animatable(leftPose(MascotMood.IDLE).length) }
     val lB = remember { Animatable(leftPose(MascotMood.IDLE).bend) }
     val amp = remember { Animatable(sway(MascotMood.IDLE)) }
+
+    suspend fun hopOnce() {
+        hop.animateTo(0f, keyframes { durationMillis = 520; 1f at 200; 0f at 420; 0.12f at 470 })
+        squash.animateTo(0f, keyframes { durationMillis = 260; 0.08f at 60; -0.03f at 160 })
+    }
+
     LaunchedEffect(mood) {
-        hop.snapTo(0f); shake.snapTo(0f)
+        hop.snapTo(0f); shake.snapTo(0f); spin.snapTo(0f)
         coroutineScope {
             // A loose spring, so the arms overshoot a little and settle like real limbs.
             val arms = spring<Float>(dampingRatio = 0.45f, stiffness = Spring.StiffnessMediumLow)
             val r = rightPose(mood); val l = leftPose(mood)
             listOf(rA to r.angle, rL to r.length, rB to r.bend, lA to l.angle, lL to l.length, lB to l.bend, amp to sway(mood))
                 .forEach { (a, v) -> async { a.animateTo(v, arms) } }
+            async { idleOn.animateTo(if (mood == MascotMood.IDLE) 1f else 0f, tween(300)) }
             when (mood) {
-                MascotMood.IDLE -> Unit
-                MascotMood.CORRECT -> hop.animateTo(0f, keyframes { durationMillis = 520; 1f at 200; 0f at 420; 0.12f at 470 })
-                MascotMood.WRONG -> shake.animateTo(0f, keyframes { durationMillis = 600; -1f at 100; 1f at 220; -0.6f at 340; 0.3f at 460 })
-                MascotMood.DONE -> {
-                    hop.animateTo(0f, keyframes { durationMillis = 900; 1f at 200; 0f at 400; 0.7f at 580; 0f at 760; 0.1f at 830 })
-                    shake.animateTo(0f, keyframes { durationMillis = 400; 0.4f at 100; -0.4f at 220; 0.2f at 320 })
+                MascotMood.IDLE -> fast.animateTo(0f, tween(300))
+                MascotMood.CORRECT -> {
+                    async { spin.animateTo(1f, tween(700, easing = FastOutSlowInEasing)) }
+                    async { fast.animateTo(0f, keyframes { durationMillis = 1200; 12f at 150; 12f at 900 }) }
+                    hopOnce()
                 }
+                MascotMood.WRONG -> {
+                    async { squash.animateTo(0f, keyframes { durationMillis = 1200; 0.06f at 500; 0.06f at 800 }) }
+                    shake.animateTo(0f, keyframes { durationMillis = 600; -1f at 100; 1f at 220; -0.6f at 340; 0.3f at 460 })
+                }
+                MascotMood.DONE -> {
+                    async { spin.animateTo(2f, tween(1100, easing = FastOutSlowInEasing)) }
+                    async { fast.animateTo(16f, tween(200)) }
+                    hopOnce(); hopOnce()
+                    shake.animateTo(0f, keyframes { durationMillis = 500; 0.5f at 120; -0.5f at 260; 0.25f at 380 })
+                }
+            }
+        }
+    }
+
+    // A tap plays one of three short reactions in turn.
+    var taps by remember { mutableIntStateOf(0) }
+    LaunchedEffect(taps) {
+        if (taps == 0) return@LaunchedEffect
+        coroutineScope {
+            when (taps % 3) {
+                1 -> { async { spin.snapTo(0f); spin.animateTo(1f, tween(650, easing = FastOutSlowInEasing)) }; hopOnce() }
+                2 -> {
+                    async { fast.animateTo(0f, keyframes { durationMillis = 1000; 14f at 120; 14f at 800 }) }
+                    shake.animateTo(0f, keyframes { durationMillis = 900; 0.5f at 150; -0.5f at 400; 0.4f at 650 })
+                }
+                else -> reach.animateTo(0f, keyframes { durationMillis = 1100; 1f at 350; 1f at 700 })
             }
         }
     }
@@ -133,40 +189,81 @@ fun Mascot(mood: MascotMood, modifier: Modifier = Modifier, size: Dp = 96.dp) {
     }
     val rim = C.mascotRim
     val rimOn = C.dark
-    Canvas(modifier.size(size * 1.3f, size * 1.42f).testTag("mascot")) {
+    Canvas(
+        modifier.size(size * 1.3f, size * 1.42f).testTag("mascot")
+            .pointerInput(Unit) { detectTapGestures { taps++ } },
+    ) {
         val w = this.size.width / 1.3f
         val h = w * 1.2f
         val left = (this.size.width - w) / 2
         val top = this.size.height - h
-        val right = ArmPose(rA.value + wave * amp.value, rL.value, rB.value + wave * 3f)
-        val leftArm = ArmPose(lA.value - wave * amp.value * 0.6f, lL.value, lB.value)
+
+        // Idle actions, each a short bump inside the 15 s cycle.
+        val on = idleOn.value
+        val hello = bump(acts, 0.03f, 0.13f) * on
+        val write = bump(acts, 0.20f, 0.32f) * on
+        val stretch = bump(acts, 0.39f, 0.49f) * on + reach.value
+        val tap = bump(acts, 0.56f, 0.66f) * on
+        val lean = bump(acts, 0.72f, 0.84f) * on
+        val twirl = span(acts, 0.89f, 0.97f) * (if (acts < 0.98f) on else 0f)
+        val local = acts * 15f   // seconds into the cycle, drives the quick wiggles
+
+        val rAngle = rA.value + wave * amp.value + flap * fast.value +
+            hello * (-25f + sin(local * 2 * PI.toFloat() * 2.5f) * 14f) +
+            write * (25f + sin(local * 2 * PI.toFloat() * 4f) * 6f) -
+            25f * stretch - 10f * bump(acts, 0.89f, 0.97f) * on
+        val right = ArmPose(rAngle, rL.value, rB.value + wave * 3f)
+        val leftArm = ArmPose(lA.value - wave * amp.value * 0.6f + 100f * stretch, lL.value, lB.value)
+        val pencilAngle = rAngle - 30f + 130f * write + 360f * (spin.value + twirl)
+        val tuck = hop.value * 5f
+        val legs = LegLift(tuck, tuck + tap * maxOf(0f, sin(local * 2 * PI.toFloat() * 3f)) * 7f)
+        val sq = squash.value - 0.04f * stretch + tap * 0.015f * sin(local * 2 * PI.toFloat() * 6f)
+        val tilt = shake.value * 6f + lean * 5f * sin(local * 2 * PI.toFloat() * 1.1f)
+
         withTransform({
             translate(left, top - hop.value * h * 0.12f)
-            rotate(shake.value * 6f, Offset(w / 2, h))
-            scale(1f, 1f + breath * 0.02f, Offset(w / 2, h))
+            rotate(tilt, Offset(w / 2, h))
+            scale(1f + sq, 1f - sq + breath * 0.02f, Offset(w / 2, h))
         }) {
             val fig = Size(w, h)
             if (rimOn) {
                 val r = 2.dp.toPx()
-                for ((dx, dy) in RIM) translate(dx * r, dy * r) { figure(fig, legs, body, right, leftArm, rim) }
+                for ((dx, dy) in RIM) translate(dx * r, dy * r) { figure(fig, body, right, leftArm, pencilAngle, legs, rim) }
             }
-            figure(fig, legs, body, right, leftArm, null)
+            figure(fig, body, right, leftArm, pencilAngle, legs, null)
         }
     }
 }
 
+/** How far each foot is lifted, in drawing units. */
+private class LegLift(val left: Float, val right: Float)
+
 /** Legs, then arms and pencil, then the book on top, so the shoulders tuck behind the cover. [tint] paints a flat rim. */
-private fun DrawScope.figure(fig: Size, legs: Painter, body: Painter, right: ArmPose, left: ArmPose, tint: Color?) {
-    val filter = tint?.let { ColorFilter.tint(it) }
-    with(legs) { draw(fig, colorFilter = filter) }
+private fun DrawScope.figure(fig: Size, body: Painter, right: ArmPose, left: ArmPose, pencilAngle: Float, legs: LegLift, tint: Color?) {
     val k = fig.width / 200f
     withTransform({ scale(k, k, Offset.Zero) }) {
+        leg(76f, legs.left, tint)
+        leg(118f, legs.right, tint)
         arm(LeftShoulder, left, 8f, tint)
-        val hand = handOf(RightShoulder, right)
-        pencil(hand, right.angle - 30f, tint)
+        pencil(handOf(RightShoulder, right), pencilAngle, tint)
         arm(RightShoulder, right, 9f, tint)
     }
-    with(body) { draw(fig, colorFilter = filter) }
+    with(body) { draw(fig, colorFilter = tint?.let { ColorFilter.tint(it) }) }
+}
+
+/** One leg and shoe; [x] is the leg's left edge. The top stays hidden under the book when lifted. */
+private fun DrawScope.leg(x: Float, lift: Float, tint: Color?) {
+    translate(0f, -lift) {
+        val shin = Path().apply { moveTo(x, 186f); lineTo(x, 206f); lineTo(x + 12f, 206f); lineTo(x + 12f, 186f); close() }
+        drawPath(shin, tint ?: LegRed)
+        drawPath(shin, tint ?: Outline, style = Stroke(4f, join = StrokeJoin.Round))
+        val sx = x - 6f
+        val shoe = Path().apply {
+            moveTo(sx, 214f); quadraticTo(sx, 204f, sx + 12f, 204f); quadraticTo(sx + 26f, 204f, sx + 26f, 214f)
+            quadraticTo(sx + 26f, 220f, sx + 20f, 220f); lineTo(sx + 4f, 220f); quadraticTo(sx, 220f, sx, 214f); close()
+        }
+        drawPath(shoe, tint ?: Outline)
+    }
 }
 
 private fun handOf(s: Offset, p: ArmPose): Offset {
