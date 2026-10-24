@@ -738,7 +738,7 @@ object Content {
         ),
         // ================= HARI 9 · Min 1 Nov =================
         Step("rev2", 9, "Min, 1 Nov", Subject.MIX, "Rumus Inti & Strategi Ujian",
-            "Ringkasan rumus inti dan strategi mengerjakan soal TKA.",
+            "Ringkasan rumus inti dan strategi mengerjakan soal ujian.",
             listOf(
                 Section("Rumus inti Matematika", listOf(
                     "Persen bertingkat: kalikan faktornya. Berbalik nilai: §a_{1}b_{1} = a_{2}b_{2}§.",
@@ -783,7 +783,7 @@ object Content {
         .groupBy { it.subject }
 
     private fun pack(id: String, day: Int, date: String, subject: Subject, title: String, qs: List<Question>) =
-        Step(id, day, date, subject, title, "Paket latihan dari soal Kompeten TKA dan soal model resmi. Kerjakan seperti ujian.", emptyList(), qs, isPractice = true)
+        Step(id, day, date, subject, title, "Paket latihan dari kumpulan soal latihan dan soal model resmi. Kerjakan seperti ujian.", emptyList(), qs, isPractice = true)
 
     /** Spreads the question-bank packs over the plan so every day has extra practice. */
     private fun insertPractice(base: List<Step>): List<Step> {
