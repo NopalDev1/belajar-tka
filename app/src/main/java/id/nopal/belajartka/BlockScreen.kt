@@ -200,7 +200,7 @@ private fun AppRow(app: AppInfo, blocked: Boolean, minutes: Int, onToggle: () ->
         verticalAlignment = Alignment.CenterVertically,
     ) {
         Box(Modifier.size(36.dp).clip(CircleShape).background(if (blocked) C.bad else C.surface2), contentAlignment = Alignment.Center) {
-            Text(app.label.take(1).uppercase(), color = Color.White, fontWeight = FontWeight.Bold)
+            Text(app.label.take(1).uppercase(), color = if (blocked) Color.White else C.muted, fontWeight = FontWeight.Bold)
         }
         Spacer(Modifier.width(12.dp))
         Column(Modifier.weight(1f)) {

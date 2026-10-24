@@ -69,16 +69,17 @@ jobs:
           emulator-options: -no-window -gpu swiftshader_indirect -noaudio -no-boot-anim -camera-back none
           script: |
             adb shell settings put global window_animation_scale 1
-            ./gradlew --no-daemon connectedDebugAndroidTest || echo "TESTS_FAILED" > test-failed.txt
-            mkdir -p qc-out
-            adb pull /sdcard/Android/data/id.nopal.belajartka/files/qc qc-out/ || true
-            adb logcat -d -s AndroidRuntime:E TestRunner:* > qc-out/logcat.txt || true
+            ./gradlew --no-daemon connectedDebugAndroidTest || true
+            mkdir -p qc-out && adb logcat -d -s AndroidRuntime:E TestRunner:* > qc-out/logcat.txt || true
       - name: Collect reports
         if: always()
         run: |
           mkdir -p qc-out
           cp -r app/build/reports/androidTests qc-out/reports 2>/dev/null || true
           cp -r app/build/outputs/androidTest-results qc-out/results 2>/dev/null || true
+          mkdir -p qc-out/screens
+          find app/build/outputs/connected_android_test_additional_output -name "*.png" -exec cp {} qc-out/screens/ \; 2>/dev/null || true
+          ls qc-out/screens | head -50
       - name: Push screenshots to qc-screenshots branch
         if: always()
         run: |
@@ -92,4 +93,6 @@ jobs:
           git commit -m "QC screenshots for ${{ github.sha }}"
           git push -f origin qc-screenshots
       - name: Fail if UI tests failed
-        run: test ! -f test-failed.txt
+        run: |
+          ls qc-out/results/connected/debug/*.xml
+          ! grep -l "<failure" qc-out/results/connected/debug/*.xml

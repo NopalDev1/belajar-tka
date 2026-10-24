@@ -164,7 +164,7 @@ private fun DayBanner(day: Int, steps: List<Step>) {
     Box(
         Modifier.padding(horizontal = 16.dp, vertical = 14.dp).fillMaxWidth()
             .clip(RoundedCornerShape(20.dp))
-            .background(Brush.horizontalGradient(listOf(main, main.copy(alpha = 0.55f))))
+            .background(main)
             .padding(horizontal = 18.dp, vertical = 14.dp),
     ) {
         Column {
@@ -250,7 +250,7 @@ private fun PathNode(store: Store, idx: Int, isCurrent: Boolean, isSelected: Boo
             Box(Modifier.size(NODE).offset(y = 6.dp).clip(CircleShape).background(darken(base)))
             Box(
                 Modifier.size(NODE).scale(press).clip(CircleShape)
-                    .background(Brush.verticalGradient(listOf(lighten(base), base)))
+                    .background(base)
                     .clickable(src, null) {
                         if (unlocked) {
                             haptic.performHapticFeedback(HapticFeedbackType.TextHandleMove)
@@ -365,15 +365,9 @@ private fun StepPopover(store: Store, idx: Int, onClose: () -> Unit, onStart: ()
         BouncyButton(
             if (done) "ULANGI  (+XP lagi)" else "MULAI BELAJAR",
             Modifier.fillMaxWidth().testTag("start_step"),
-            brush = Brush.linearGradient(listOf(Color.White, Color.White)),
+            color = Color.White,
             onClick = onStart,
             textColor = step.subject.color,
         )
     }
 }
-
-private fun lighten(c: Color) = Color(
-    red = c.red + (1 - c.red) * 0.25f, green = c.green + (1 - c.green) * 0.25f, blue = c.blue + (1 - c.blue) * 0.25f, alpha = c.alpha,
-)
-
-private fun darken(c: Color) = Color(red = c.red * 0.65f, green = c.green * 0.65f, blue = c.blue * 0.65f, alpha = c.alpha)

@@ -3,6 +3,7 @@ package id.nopal.belajartka
 import android.content.Intent
 import android.os.Bundle
 import androidx.activity.ComponentActivity
+import androidx.activity.SystemBarStyle
 import androidx.activity.compose.BackHandler
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
@@ -18,6 +19,9 @@ import androidx.compose.animation.slideInHorizontally
 import androidx.compose.animation.slideOutHorizontally
 import androidx.compose.animation.togetherWith
 import androidx.compose.foundation.background
+import androidx.compose.foundation.border
+import androidx.compose.ui.draw.drawBehind
+import androidx.compose.ui.geometry.Offset
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.Arrangement
@@ -68,7 +72,10 @@ class MainActivity : ComponentActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
+        enableEdgeToEdge(
+            statusBarStyle = SystemBarStyle.light(android.graphics.Color.WHITE, android.graphics.Color.WHITE),
+            navigationBarStyle = SystemBarStyle.light(android.graphics.Color.WHITE, android.graphics.Color.WHITE),
+        )
         blockedPkg = intent?.getStringExtra(EXTRA_BLOCKED)
         setContent {
             JalurTheme {
@@ -182,7 +189,8 @@ private fun depth(r: Route) = when (r) {
 @Composable
 private fun BottomBar(selected: Int, onSelect: (Int) -> Unit) {
     Row(
-        Modifier.fillMaxWidth().background(C.surface).navigationBarsPadding().padding(horizontal = 10.dp, vertical = 8.dp),
+        Modifier.fillMaxWidth().background(C.bg).drawBehind { drawLine(C.line, Offset(0f, 0f), Offset(size.width, 0f), 4f) }
+            .navigationBarsPadding().padding(horizontal = 10.dp, vertical = 8.dp),
         horizontalArrangement = Arrangement.SpaceAround,
     ) {
         tabs.forEachIndexed { i, t ->
@@ -198,13 +206,14 @@ private fun BottomBar(selected: Int, onSelect: (Int) -> Unit) {
             ) {
                 Box(
                     Modifier.scale(scale).clip(RoundedCornerShape(50))
-                        .background(if (on) C.violet.copy(alpha = 0.25f) else C.surface)
+                        .background(if (on) C.blue.copy(alpha = 0.12f) else C.bg)
+                        .border(2.dp, if (on) C.blue.copy(alpha = 0.6f) else C.bg, RoundedCornerShape(50))
                         .padding(horizontal = 16.dp, vertical = 4.dp),
                 ) {
-                    Icon(t.icon, t.label, tint = if (on) C.text else C.muted, modifier = Modifier.size(24.dp))
+                    Icon(t.icon, t.label, tint = if (on) C.blue else C.faded, modifier = Modifier.size(24.dp))
                 }
                 Spacer(Modifier.height(2.dp))
-                Text(t.label, color = if (on) C.text else C.muted, style = MaterialTheme.typography.labelMedium,
+                Text(t.label.uppercase(), color = if (on) C.blue else C.faded, style = MaterialTheme.typography.labelMedium,
                     fontWeight = if (on) FontWeight.Bold else FontWeight.Medium)
             }
         }

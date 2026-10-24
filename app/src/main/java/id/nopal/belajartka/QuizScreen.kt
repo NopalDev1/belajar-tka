@@ -156,7 +156,7 @@ fun QuizScreen(
                 BouncyButton(
                     if (index == questions.size - 1) "LIHAT HASIL" else "LANJUT",
                     Modifier.fillMaxWidth().testTag("quiz_next"),
-                    brush = Brush.linearGradient(listOf(tone, tone.copy(alpha = 0.8f))),
+                    color = tone,
                 ) {
                     if (index == questions.size - 1) { finished = true; onDone(correct) } else { index++; picked = null }
                 }
@@ -228,7 +228,7 @@ private fun OptionRow(i: Int, text: String, answer: Int, picked: Int?, accent: C
         ) {
             Text(
                 when { revealed && isAnswer -> "✓"; revealed && isPicked -> "✕"; else -> "${'A' + i}" },
-                color = Color.White, fontWeight = FontWeight.Black,
+                color = if (revealed && (isAnswer || isPicked)) Color.White else accent, fontWeight = FontWeight.Black,
             )
         }
         Spacer(Modifier.width(12.dp))

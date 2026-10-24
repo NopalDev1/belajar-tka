@@ -2,7 +2,7 @@
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
     <item>
         <shape android:shape="oval">
-            <gradient android:startColor="#7C5CFF" android:endColor="#FF6B9A" android:angle="315" />
+            <solid android:color="#58CC02" />
         </shape>
     </item>
     <item android:drawable="@drawable/ic_launcher_fg" />

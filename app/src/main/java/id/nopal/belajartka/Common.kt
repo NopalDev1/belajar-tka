@@ -14,6 +14,9 @@ import androidx.compose.animation.core.spring
 import androidx.compose.animation.core.tween
 import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.background
+import androidx.compose.foundation.border
+import androidx.compose.foundation.layout.offset
+import androidx.compose.ui.unit.sp
 import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.interaction.collectIsPressedAsState
 import androidx.compose.foundation.layout.Arrangement
@@ -91,36 +94,54 @@ fun LinearBar(progress: Float, color: Color, modifier: Modifier = Modifier, heig
     Box(modifier.fillMaxWidth().height(height).clip(RoundedCornerShape(50)).background(C.line)) {
         Box(
             Modifier.fillMaxWidth(p).height(height).clip(RoundedCornerShape(50))
-                .background(Brush.horizontalGradient(listOf(color.copy(alpha = 0.7f), color)))
+                .background(color)
         )
     }
 }
 
-/** Button that squashes when pressed. */
+/** Chunky Duolingo-style button: solid fill on a darker lip that presses down. */
 @Composable
 fun BouncyButton(
     text: String,
     modifier: Modifier = Modifier,
     enabled: Boolean = true,
-    brush: Brush = C.hero,
+    color: Color = C.violet,
     textColor: Color = Color.White,
+    secondary: Boolean = false,
     onClick: () -> Unit,
 ) {
     val src = remember { MutableInteractionSource() }
     val pressed by src.collectIsPressedAsState()
-    val scale by animateFloatAsState(if (pressed) 0.94f else 1f, spring(Spring.DampingRatioMediumBouncy), label = "press")
-    Box(
-        modifier
-            .scale(scale)
-            .clip(RoundedCornerShape(18.dp))
-            .background(if (enabled) brush else Brush.linearGradient(listOf(C.surface2, C.surface2)))
-            .clickable(src, null, enabled = enabled, onClick = onClick)
-            .padding(horizontal = 22.dp, vertical = 15.dp),
-        contentAlignment = Alignment.Center,
-    ) {
-        Text(text, color = if (enabled) textColor else C.muted, style = MaterialTheme.typography.titleMedium, textAlign = TextAlign.Center)
+    val press by animateFloatAsState(if (pressed && enabled) 1f else 0f, spring(Spring.DampingRatioMediumBouncy), label = "press")
+    val face = when { !enabled -> C.surface2; secondary -> Color.White; else -> color }
+    val lip = when { !enabled -> C.line; secondary -> C.line; color == Color.White -> Color(0xFFE5E5E5); else -> darken(color) }
+    val label = when { !enabled -> C.faded; secondary -> C.blue; else -> textColor }
+    Box(modifier.padding(bottom = 4.dp)) {
+        Box(
+            Modifier.matchParentSize().offset(y = 4.dp).clip(RoundedCornerShape(14.dp)).background(lip)
+        )
+        Box(
+            Modifier
+                .fillMaxWidth()
+                .offset(y = (4 * press).dp)
+                .clip(RoundedCornerShape(14.dp))
+                .background(face)
+                .then(if (secondary) Modifier.border(2.dp, C.line, RoundedCornerShape(14.dp)) else Modifier)
+                .clickable(src, null, enabled = enabled, onClick = onClick)
+                .padding(horizontal = 18.dp, vertical = 14.dp),
+            contentAlignment = Alignment.Center,
+        ) {
+            Text(text.uppercase(), color = label, style = MaterialTheme.typography.labelLarge,
+                fontWeight = FontWeight.ExtraBold, letterSpacing = 0.8.sp, textAlign = TextAlign.Center)
+        }
     }
 }
+
+fun darken(c: Color, f: Float = 0.78f) = Color(red = c.red * f, green = c.green * f, blue = c.blue * f, alpha = c.alpha)
+
+fun lighten(c: Color, f: Float = 0.25f) = Color(
+    red = c.red + (1 - c.red) * f, green = c.green + (1 - c.green) * f, blue = c.blue + (1 - c.blue) * f, alpha = c.alpha,
+)
 
 @Composable
 fun Pill(text: String, color: Color, modifier: Modifier = Modifier) {
@@ -133,7 +154,10 @@ fun Pill(text: String, color: Color, modifier: Modifier = Modifier) {
 
 @Composable
 fun Card(modifier: Modifier = Modifier, color: Color = C.surface, content: @Composable BoxScope.() -> Unit) {
-    Box(modifier.clip(RoundedCornerShape(22.dp)).background(color).padding(18.dp), content = content)
+    Box(
+        modifier.clip(RoundedCornerShape(16.dp)).background(color).border(2.dp, C.line, RoundedCornerShape(16.dp)).padding(18.dp),
+        content = content,
+    )
 }
 
 /** Gentle up-down float, used on the current step and on mascots. */

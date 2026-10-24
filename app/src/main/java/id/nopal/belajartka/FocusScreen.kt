@@ -293,7 +293,7 @@ private fun SessionRunning(store: Store) {
 
         if (!pinned) {
             BouncyButton("📌 Pin terlepas, sematkan lagi", Modifier.fillMaxWidth(),
-                brush = Brush.linearGradient(listOf(C.gold, C.pink))) {
+                color = C.gold) {
                 runCatching { (ctx as? Activity)?.startLockTask() }
             }
         }
@@ -307,7 +307,7 @@ private fun StepDot(label: String, active: Boolean, done: Boolean, color: Color,
         (if (done) "✓ " else "") + label,
         modifier.clip(RoundedCornerShape(50)).background(if (active) color else if (done) color.copy(alpha = 0.3f) else C.surface)
             .padding(vertical = 8.dp),
-        color = if (active || done) Color.White else C.muted, textAlign = TextAlign.Center,
+        color = if (active) Color.White else if (done) C.text else C.muted, textAlign = TextAlign.Center,
         style = MaterialTheme.typography.labelLarge,
     )
 }
@@ -365,7 +365,7 @@ private fun SessionSummary(store: Store) {
                 color = C.muted, style = MaterialTheme.typography.bodyLarge)
             if (mode == 0) {
                 BouncyButton("📷  FOTO TULISAN DI BUKU", Modifier.fillMaxWidth().testTag("take_photo"),
-                    brush = Brush.linearGradient(listOf(C.good, C.good.copy(alpha = 0.75f)))) {
+                    color = C.good) {
                     val dir = File(ctx.filesDir, "ringkasan").apply { mkdirs() }
                     val f = File(dir, "ringkasan_${LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd_HHmmss"))}.jpg")
                     pendingFile = f
@@ -373,7 +373,7 @@ private fun SessionSummary(store: Store) {
                     runCatching { camera.launch(uri) }
                 }
                 BouncyButton("⌨️  TIDAK ADA BUKU? KETIK SAJA", Modifier.fillMaxWidth().testTag("type_notes"),
-                    brush = Brush.linearGradient(listOf(C.surface2, C.surface2))) { mode = 1 }
+                    secondary = true) { mode = 1 }
             } else {
                 OutlinedTextField(
                     text, { text = it },

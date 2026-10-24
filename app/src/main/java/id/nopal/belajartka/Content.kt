@@ -3,11 +3,11 @@ package id.nopal.belajartka
 import androidx.compose.ui.graphics.Color
 
 enum class Subject(val label: String, val color: Color, val emoji: String) {
-    MAT("Matematika", Color(0xFF5B8CFF), "📐"),
-    FIS("Fisika", Color(0xFFFF9F43), "⚡"),
-    BIN("B. Indonesia", Color(0xFFFF5C8A), "📖"),
-    BIG("B. Inggris", Color(0xFF2ED3A0), "🌏"),
-    MIX("Tryout & Review", Color(0xFFB18CFF), "🎯"),
+    MAT("Matematika", Color(0xFF1CB0F6), "📐"),
+    FIS("Fisika", Color(0xFFFF9600), "⚡"),
+    BIN("B. Indonesia", Color(0xFFFF4B91), "📖"),
+    BIG("B. Inggris", Color(0xFF58CC02), "🌏"),
+    MIX("Tryout & Review", Color(0xFFCE82FF), "🎯"),
 }
 
 data class Section(val title: String, val points: List<String>)

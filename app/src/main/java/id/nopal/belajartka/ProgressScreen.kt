@@ -84,7 +84,7 @@ fun ProgressScreen(store: Store, onRetry: () -> Unit, onOpenStep: (Int) -> Unit)
 @Composable
 private fun LevelCard(store: Store) {
     Row(
-        Modifier.fillMaxWidth().clip(RoundedCornerShape(26.dp)).background(C.hero).padding(20.dp),
+        Modifier.fillMaxWidth().clip(RoundedCornerShape(26.dp)).background(C.violet).padding(20.dp),
         verticalAlignment = Alignment.CenterVertically,
     ) {
         ProgressRing(store.levelProgress, Color.White, size = 96.dp, stroke = 10.dp) {
@@ -107,8 +107,7 @@ private fun CountdownCard(store: Store) {
     val today = LocalDate.now()
     val toExam = ChronoUnit.DAYS.between(today, LocalDate.parse(Content.EXAM_DATE)).coerceAtLeast(0)
     val toDeadline = ChronoUnit.DAYS.between(today, LocalDate.parse(Content.MATERIAL_DEADLINE)).coerceAtLeast(0)
-    val materialSteps = Content.steps.filter { LocalDate.parse("2026-10-" + "%02d".format(23 + it.day)).isBefore(LocalDate.parse(Content.MATERIAL_DEADLINE)) || it.day <= 6 }
-        .filter { it.day <= 6 }
+    val materialSteps = Content.steps.filter { it.day <= 6 }
     val materialDone = materialSteps.count { it.id in store.done }
     Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(12.dp)) {
         Column(Modifier.weight(1f).clip(RoundedCornerShape(22.dp)).background(C.surface).padding(16.dp)) {
@@ -203,8 +202,7 @@ private fun ActivityChart(store: Store) {
                         Modifier.fillMaxWidth().fillMaxHeight(frac * 0.82f)
                             .clip(RoundedCornerShape(topStart = 8.dp, topEnd = 8.dp))
                             .background(
-                                if (i == sel) Brush.verticalGradient(listOf(C.pink, C.violet))
-                                else Brush.verticalGradient(listOf(C.violet.copy(alpha = 0.6f), C.violet.copy(alpha = 0.3f)))
+                                if (i == sel) C.violet else C.goodWash
                             ),
                     )
                     Spacer(Modifier.height(4.dp))
@@ -328,8 +326,8 @@ private fun ResetButton(store: Store) {
         } else {
             Text("Yakin? Semua progres, XP, dan lencana akan hilang.", color = C.bad)
             Row(horizontalArrangement = Arrangement.spacedBy(10.dp), modifier = Modifier.padding(top = 8.dp)) {
-                BouncyButton("Batal", brush = Brush.linearGradient(listOf(C.surface2, C.surface2))) { confirm = false }
-                BouncyButton("Ya, reset", brush = Brush.linearGradient(listOf(C.bad, C.bad))) { store.resetAll(); confirm = false }
+                BouncyButton("Batal", secondary = true) { confirm = false }
+                BouncyButton("Ya, reset", color = C.bad) { store.resetAll(); confirm = false }
             }
         }
     }

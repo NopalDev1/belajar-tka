@@ -2,6 +2,7 @@ package id.nopal.belajartka
 
 import android.graphics.Bitmap
 import androidx.compose.ui.test.junit4.createAndroidComposeRule
+import androidx.compose.ui.test.onAllNodesWithTag
 import androidx.compose.ui.test.onNodeWithTag
 import androidx.compose.ui.test.onNodeWithText
 import androidx.compose.ui.test.performClick
@@ -40,7 +41,9 @@ class QcFlowTest {
         rule.waitForIdle()
         Thread.sleep(250)
         val bmp: Bitmap = InstrumentationRegistry.getInstrumentation().uiAutomation.takeScreenshot() ?: return
-        val dir = File(ctx.getExternalFilesDir(null), "qc").apply { mkdirs() }
+        // AGP pulls this folder back to the build machine after the run.
+        val dir = (InstrumentationRegistry.getArguments().getString("additionalTestOutputDir")?.let(::File)
+            ?: File(ctx.getExternalFilesDir(null), "qc")).apply { mkdirs() }
         File(dir, "$name.png").outputStream().use { bmp.compress(Bitmap.CompressFormat.PNG, 90, it) }
     }
 
@@ -141,7 +144,9 @@ class QcFlowTest {
 
     @Test fun g_lessonSwipeAnimation() {
         rule.onNodeWithTag("node_0").performClick()
+        rule.waitUntil(5000) { rule.onAllNodesWithTag("start_step").fetchSemanticsNodes().isNotEmpty() }
         rule.onNodeWithTag("start_step").performClick()
+        rule.waitUntil(5000) { rule.onAllNodesWithTag("point_0:0").fetchSemanticsNodes().isNotEmpty() }
         rule.mainClock.autoAdvance = false
         rule.onNodeWithTag("point_0:0").performTouchInput { swipeLeft() }
         rule.mainClock.advanceTimeBy(120)

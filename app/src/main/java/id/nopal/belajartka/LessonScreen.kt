@@ -99,11 +99,11 @@ fun LessonScreen(store: Store, step: Step, onBack: () -> Unit, onStartQuiz: () -
         }
         Row(Modifier.fillMaxWidth().padding(16.dp), horizontalArrangement = Arrangement.spacedBy(12.dp)) {
             BouncyButton("‹ Sebelumnya", Modifier.weight(1f), enabled = pager.currentPage > 0,
-                brush = Brush.linearGradient(listOf(C.surface2, C.surface2))) {
+                secondary = true) {
                 scope.launch { pager.animateScrollToPage(pager.currentPage - 1) }
             }
             BouncyButton("Berikutnya ›", Modifier.weight(1f).testTag("next_card"), enabled = pager.currentPage < pages - 1,
-                brush = Brush.linearGradient(listOf(step.subject.color, step.subject.color.copy(alpha = 0.75f)))) {
+                color = step.subject.color) {
                 scope.launch { pager.animateScrollToPage(pager.currentPage + 1) }
             }
         }
@@ -138,7 +138,7 @@ private fun SectionCard(step: Step, page: Int, understood: MutableList<String>) 
                     Modifier.size(26.dp).scale(tickScale).clip(CircleShape)
                         .background(if (on) step.subject.color else C.line),
                     contentAlignment = Alignment.Center,
-                ) { Text(if (on) "✓" else "${i + 1}", color = Color.White, fontSize = 13.sp, fontWeight = FontWeight.Bold) }
+                ) { Text(if (on) "✓" else "${i + 1}", color = if (on) Color.White else C.muted, fontSize = 13.sp, fontWeight = FontWeight.Bold) }
                 Spacer(Modifier.width(12.dp))
                 Text(pt, color = C.text, style = MaterialTheme.typography.bodyLarge, modifier = Modifier.weight(1f))
             }
@@ -152,7 +152,7 @@ private fun FinalCard(store: Store, step: Step, understood: Int, total: Int, onS
     val glow by animateDpAsState(if (ready) 3.dp else 1.dp, label = "glow")
     Column(
         Modifier.fillMaxSize().clip(RoundedCornerShape(28.dp))
-            .background(Brush.verticalGradient(listOf(step.subject.color.copy(alpha = 0.3f), C.surface)))
+            .background(step.subject.color.copy(alpha = 0.10f))
             .border(glow, step.subject.color, RoundedCornerShape(28.dp))
             .verticalScroll(rememberScrollState()).padding(24.dp),
         horizontalAlignment = Alignment.CenterHorizontally,
