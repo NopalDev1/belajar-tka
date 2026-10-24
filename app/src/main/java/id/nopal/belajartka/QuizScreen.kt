@@ -154,7 +154,7 @@ fun QuizScreen(
                 }
                 question.passage?.let { PassageBox(it) }
                 question.image?.let { QuestionImage(it) }
-                Text(question.text, color = C.text, style = MaterialTheme.typography.titleLarge)
+                MathText(question.text, MaterialTheme.typography.titleLarge, color = C.text)
                 val shown = active && revealed
                 when {
                     question.isTable -> {
@@ -209,8 +209,8 @@ fun QuizScreen(
                         color = tone, style = MaterialTheme.typography.titleLarge, modifier = Modifier.weight(1f))
                     Text("+$lastGain XP", color = C.gold, fontWeight = FontWeight.Black, fontSize = 18.sp)
                 }
-                if (!ok) Text("Jawaban benar: ${q.keyText()}", color = C.text, style = MaterialTheme.typography.titleMedium)
-                Text(q.explain, color = C.text, style = MaterialTheme.typography.bodyLarge)
+                if (!ok) MathText("Jawaban benar: ${q.keyText()}", MaterialTheme.typography.titleMedium, color = C.text)
+                MathText(q.explain, MaterialTheme.typography.bodyLarge, color = C.text)
                 BouncyButton(
                     if (index == questions.size - 1) "LIHAT HASIL" else "LANJUT",
                     Modifier.fillMaxWidth().testTag("quiz_next"),
@@ -298,7 +298,7 @@ private fun CheckRow(i: Int, text: String, isKey: Boolean, checked: Boolean, rev
             )
         }
         Spacer(Modifier.width(12.dp))
-        Text(text, color = C.text, style = MaterialTheme.typography.bodyLarge, modifier = Modifier.weight(1f))
+        MathText(text, MaterialTheme.typography.bodyLarge, Modifier.weight(1f), color = C.text)
     }
 }
 
@@ -315,7 +315,7 @@ private fun TableAnswer(q: Question, cells: Map<Int, Int>, revealed: Boolean, ac
                     .padding(12.dp),
                 verticalArrangement = Arrangement.spacedBy(8.dp),
             ) {
-                Text("${r + 1}. $row", color = C.text, style = MaterialTheme.typography.bodyLarge)
+                MathText("${r + 1}. $row", MaterialTheme.typography.bodyLarge, color = C.text)
                 Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
                     q.options.forEachIndexed { c, label ->
                         val on = chosen == c
@@ -405,7 +405,7 @@ private fun OptionRow(i: Int, text: String, answer: Int, picked: Int?, accent: C
             )
         }
         Spacer(Modifier.width(12.dp))
-        Text(text, color = C.text, style = MaterialTheme.typography.bodyLarge, modifier = Modifier.weight(1f))
+        MathText(text, MaterialTheme.typography.bodyLarge, Modifier.weight(1f), color = C.text)
     }
 }
 

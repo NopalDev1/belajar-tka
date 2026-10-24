@@ -22,10 +22,10 @@ object Lessons {
                     "Kebalikannya, kalau yang diketahui harga akhir dan kita mencari harga awal, kita MEMBAGI dengan faktornya.",
                 ),
                 formulas = listOf(
-                    "Naik p%:  baru = lama × (1 + p/100)",
-                    "Turun/diskon p%:  baru = lama × (1 − p/100)",
-                    "Bertingkat:  baru = lama × faktor₁ × faktor₂",
-                    "Mencari harga awal:  lama = baru ÷ faktor",
+                    "Naik p%: §\\text{baru} = \\text{lama} \\times \\left(1 + \\dfrac{p}{100}\\right)§",
+                    "Turun/diskon p%: §\\text{baru} = \\text{lama} \\times \\left(1 - \\dfrac{p}{100}\\right)§",
+                    "Bertingkat: §\\text{baru} = \\text{lama} \\times f_1 \\times f_2§",
+                    "Mencari harga awal: §\\text{lama} = \\dfrac{\\text{baru}}{\\text{faktor}}§",
                 ),
                 examples = listOf(
                     ex("Baju Rp200.000 didiskon 20%, lalu didiskon lagi 10% dari harga setelah diskon pertama. Berapa harga akhirnya?",
@@ -59,9 +59,9 @@ object Lessons {
                     "Skala peta juga perbandingan senilai: 1 : 200.000 artinya 1 cm di peta = 200.000 cm di dunia nyata.",
                 ),
                 formulas = listOf(
-                    "Senilai:  a₁ / b₁ = a₂ / b₂",
-                    "Berbalik nilai:  a₁ × b₁ = a₂ × b₂",
-                    "Jarak asli = jarak peta × penyebut skala   (1 km = 100.000 cm)",
+                    "Senilai: §\\dfrac{a_1}{b_1} = \\dfrac{a_2}{b_2}§",
+                    "Berbalik nilai: §a_1 \\times b_1 = a_2 \\times b_2§",
+                    "§\\text{jarak asli} = \\text{jarak peta} \\times \\text{penyebut skala}§ (1 km = 100.000 cm)",
                 ),
                 examples = listOf(
                     ex("6 pekerja menyelesaikan rumah dalam 12 hari. Kalau pekerjanya 9 orang, berapa hari?",
@@ -91,9 +91,9 @@ object Lessons {
                     "Sifat logaritma mengikuti sifat pangkat: karena perkalian pangkat menjumlahkan eksponen, log dari perkalian menjadi penjumlahan log.",
                 ),
                 formulas = listOf(
-                    "aᵐ × aⁿ = aᵐ⁺ⁿ      aᵐ ÷ aⁿ = aᵐ⁻ⁿ      (aᵐ)ⁿ = aᵐⁿ      a⁰ = 1",
-                    "ᵃlog b = c  ⇔  aᶜ = b",
-                    "log(x·y) = log x + log y      log(x/y) = log x − log y      log xⁿ = n·log x",
+                    "§a^m \\cdot a^n = a^{m+n} \\qquad \\dfrac{a^m}{a^n} = a^{m-n} \\qquad (a^m)^n = a^{mn} \\qquad a^0 = 1§",
+                    "§{}^{a}\\!\\log b = c \\iff a^c = b§",
+                    "§\\log(xy) = \\log x + \\log y \\qquad \\log\\dfrac{x}{y} = \\log x - \\log y \\qquad \\log x^n = n \\log x§",
                 ),
                 examples = listOf(
                     ex("Hitung 2⁵ × 2³ ÷ 2⁶.",
@@ -125,10 +125,10 @@ object Lessons {
                     "Fungsi komposisi (f∘g)(x) artinya f(g(x)): kerjakan g dulu, hasilnya dimasukkan ke f. Fungsi invers membalik fungsi: kalau f mengubah 5 menjadi 9, maka f⁻¹ mengubah 9 kembali menjadi 5.",
                 ),
                 formulas = listOf(
-                    "Akar kuadrat: x₁ + x₂ = −b/a,   x₁ · x₂ = c/a",
-                    "Puncak parabola: x = −b / (2a)",
-                    "(f∘g)(x) = f(g(x))",
-                    "f(x) = ax + b  →  f⁻¹(x) = (x − b) / a",
+                    "Akar kuadrat: §x_1 + x_2 = -\\dfrac{b}{a}, \\quad x_1 \\cdot x_2 = \\dfrac{c}{a}§",
+                    "Puncak parabola: §x_p = -\\dfrac{b}{2a}§",
+                    "§(f \\circ g)(x) = f(g(x))§",
+                    "§f(x) = ax + b \\;\\Rightarrow\\; f^{-1}(x) = \\dfrac{x - b}{a}§",
                 ),
                 examples = listOf(
                     ex("x + y = 10 dan x − y = 4. Tentukan 2x + y.",
@@ -168,8 +168,8 @@ object Lessons {
                     "Angka penting menunjukkan seberapa teliti hasil ukur. Aturannya: semua angka bukan nol penting; nol di antara angka bukan nol penting; nol di depan (seperti 0,00…) TIDAK penting karena hanya menunjukkan letak koma; nol di belakang koma desimal penting karena menunjukkan ketelitian.",
                 ),
                 formulas = listOf(
-                    "Jangka sorong: hasil = skala utama + (garis nonius ke-n × 0,01 cm)",
-                    "Mikrometer: hasil = skala utama + (skala putar × 0,01 mm)",
+                    "Jangka sorong: §\\text{hasil} = \\text{SU} + n \\times 0{,}01 \\text{ cm}§",
+                    "Mikrometer: §\\text{hasil} = \\text{SU} + \\text{SP} \\times 0{,}01 \\text{ mm}§",
                     "Kali/bagi: hasil mengikuti angka penting paling sedikit",
                 ),
                 examples = listOf(
@@ -198,10 +198,10 @@ object Lessons {
                     "Kalau benda direm, percepatannya negatif (perlambatan). Benda dilempar ke atas juga GLBB dengan a = −g; di titik tertinggi kecepatannya 0.",
                 ),
                 formulas = listOf(
-                    "GLB: s = v · t",
-                    "GLBB: v = v₀ + a·t      s = v₀·t + ½·a·t²      v² = v₀² + 2·a·s",
-                    "km/jam → m/s: bagi 3,6",
-                    "Lempar ke atas: t puncak = v₀ / g",
+                    "GLB: §s = v \\cdot t§",
+                    "GLBB: §v = v_0 + at \\qquad s = v_0 t + \\tfrac{1}{2} a t^2 \\qquad v^2 = v_0^2 + 2as§",
+                    "km/jam ke m/s: §v_{\\text{m/s}} = \\dfrac{v_{\\text{km/jam}}}{3{,}6}§",
+                    "Lempar ke atas: §t_{\\text{puncak}} = \\dfrac{v_0}{g}§",
                 ),
                 examples = listOf(
                     ex("Mobil diam lalu dipercepat 2 m/s² selama 5 s. Berapa jarak yang ditempuh?",
@@ -229,10 +229,10 @@ object Lessons {
                     "Di titik tertinggi, kecepatan tegak = 0 (bola berhenti naik), tetapi kecepatan mendatar tetap vₓ. Dari sini didapat waktu ke puncak dan tinggi maksimum.",
                 ),
                 formulas = listOf(
-                    "vₓ = v₀ cos θ      vᵧ = v₀ sin θ",
-                    "t puncak = v₀ sin θ / g",
-                    "h maks = (v₀ sin θ)² / (2g)",
-                    "Jarak terjauh R = v₀² sin 2θ / g  (paling jauh di θ = 45°)",
+                    "§v_x = v_0 \\cos\\theta \\qquad v_y = v_0 \\sin\\theta§",
+                    "§t_{\\text{puncak}} = \\dfrac{v_0 \\sin\\theta}{g}§",
+                    "§h_{\\text{maks}} = \\dfrac{(v_0 \\sin\\theta)^2}{2g}§",
+                    "Jarak terjauh: §R = \\dfrac{v_0^2 \\sin 2\\theta}{g}§ (paling jauh di §\\theta = 45^\\circ§)",
                 ),
                 examples = listOf(
                     ex("Bola ditendang 20 m/s dengan sudut 30°. Berapa tinggi maksimumnya? (g = 10 m/s²)",
@@ -255,9 +255,9 @@ object Lessons {
                     "Kecepatan sudut ω menyatakan berapa radian yang ditempuh per detik. Hubungannya dengan kecepatan linear: v = ω·r.",
                 ),
                 formulas = listOf(
-                    "v = ω · r      ω = 2πf      T = 1/f",
-                    "a sentripetal = v²/r = ω²·r",
-                    "Gaya sentripetal F = m · v²/r",
+                    "§v = \\omega r \\qquad \\omega = 2\\pi f \\qquad T = \\dfrac{1}{f}§",
+                    "§a_s = \\dfrac{v^2}{r} = \\omega^2 r§",
+                    "Gaya sentripetal: §F_s = m\\dfrac{v^2}{r}§",
                 ),
                 examples = listOf(
                     ex("Benda bergerak melingkar dengan r = 0,5 m dan v = 2 m/s. Berapa percepatan sentripetalnya?",
@@ -425,10 +425,10 @@ object Lessons {
                     "Jenis gaya yang sering muncul: berat w = mg (ke bawah), gaya normal N (tegak lurus permukaan), gaya gesek f = μN (melawan gerak), dan gaya pegas F = kΔx.",
                 ),
                 formulas = listOf(
-                    "ΣF = m · a",
-                    "w = m · g      f gesek = μ · N      (bidang datar: N = mg)",
-                    "Lift dipercepat ke atas: N = m(g + a);  ke bawah: N = m(g − a)",
-                    "Pegas: F = k · Δx",
+                    "§\\Sigma F = m \\cdot a§",
+                    "§w = mg \\qquad f_k = \\mu N§ (bidang datar: §N = mg§)",
+                    "Lift ke atas: §N = m(g + a)§; ke bawah: §N = m(g - a)§",
+                    "Pegas: §F = k\\,\\Delta x§",
                 ),
                 examples = listOf(
                     ex("Balok 5 kg ditarik 20 N mendatar di lantai dengan μₖ = 0,2. Berapa percepatannya? (g = 10)",
@@ -455,10 +455,10 @@ object Lessons {
                     "Daya adalah kecepatan melakukan usaha: P = W/t, satuannya watt (J/s).",
                 ),
                 formulas = listOf(
-                    "W = F · s · cos θ",
-                    "Ek = ½ m v²      Ep = m g h",
-                    "W = ΔEk      Ep₁ + Ek₁ = Ep₂ + Ek₂",
-                    "P = W / t",
+                    "§W = F s \\cos\\theta§",
+                    "§E_k = \\tfrac{1}{2} m v^2 \\qquad E_p = mgh§",
+                    "§W = \\Delta E_k \\qquad E_{p1} + E_{k1} = E_{p2} + E_{k2}§",
+                    "§P = \\dfrac{W}{t}§",
                 ),
                 examples = listOf(
                     ex("Bola 0,5 kg jatuh bebas dari 5 m. Berapa Ek saat menyentuh tanah? (g = 10)",
@@ -483,10 +483,10 @@ object Lessons {
                     "Jenis tumbukan berdasarkan koefisien restitusi e: lenting sempurna (e = 1, energi kinetik kekal), lenting sebagian (0 < e < 1), tidak lenting sama sekali (e = 0, benda menempel).",
                 ),
                 formulas = listOf(
-                    "p = m · v",
-                    "I = F · Δt = Δp = m(v₂ − v₁)",
-                    "m₁v₁ + m₂v₂ = m₁v₁' + m₂v₂'",
-                    "Menempel: m₁v₁ + m₂v₂ = (m₁ + m₂) v'",
+                    "§p = m v§",
+                    "§I = F\\,\\Delta t = \\Delta p = m(v_2 - v_1)§",
+                    "§m_1 v_1 + m_2 v_2 = m_1 v_1' + m_2 v_2'§",
+                    "Menempel: §m_1 v_1 + m_2 v_2 = (m_1 + m_2)\\, v'§",
                 ),
                 examples = listOf(
                     ex("Benda 2 kg (6 m/s) menumbuk benda 1 kg yang diam, lalu menempel. Berapa kecepatan akhirnya?",
@@ -510,7 +510,7 @@ object Lessons {
                     "Kalau gaya tegak lurus lengan, τ = F·r. Kalau miring, hanya komponen tegak lurus yang dipakai: τ = F·r·sin θ.",
                     "Momen inersia I adalah \"kelembaman\" untuk rotasi, bergantung pada massa dan seberapa jauh massa itu dari sumbu. Hukum II Newton versi rotasi: τ = I·α.",
                 ),
-                formulas = listOf("τ = F · r · sin θ", "I partikel = m r²", "τ = I · α"),
+                formulas = listOf("§\\tau = F r \\sin\\theta§", "Partikel: §I = m r^2§", "§\\Sigma\\tau = I \\alpha§"),
                 examples = listOf(
                     ex("Kunci pas 25 cm diberi gaya 20 N tegak lurus di ujungnya. Berapa torsinya?",
                         "Ubah satuan: 25 cm = 0,25 m.",
@@ -531,7 +531,7 @@ object Lessons {
                     "Kenapa? Kalau kamu menggambar persegi di setiap sisi segitiga, luas persegi pada sisi miring tepat sama dengan jumlah luas dua persegi lainnya.",
                     "Menghafal tripel Pythagoras (3-4-5, 6-8-10, 5-12-13, 8-15-17, 7-24-25) sangat menghemat waktu di ujian.",
                 ),
-                formulas = listOf("c² = a² + b²   (c = sisi miring)"),
+                formulas = listOf("§c^2 = a^2 + b^2§ (c = sisi miring)"),
                 examples = listOf(
                     ex("Sisi tegak segitiga siku-siku 6 cm dan 8 cm. Berapa sisi miringnya?",
                         "c² = 6² + 8² = 36 + 64 = 100.",
@@ -546,7 +546,7 @@ object Lessons {
                     "Keliling lingkaran K = 2πr dan luasnya L = πr². Gunakan π = 22/7 kalau jari-jari kelipatan 7, dan 3,14 untuk lainnya.",
                     "Volume bangun ruang \"tegak\" (prisma, tabung) = luas alas × tinggi. Tabung alasnya lingkaran, jadi V = πr²t. Bangun \"runcing\" (limas, kerucut) volumenya sepertiga bangun tegaknya: kerucut V = ⅓πr²t. Bola V = 4/3 πr³.",
                 ),
-                formulas = listOf("K = 2πr      L = πr²", "Tabung V = πr²t      Kerucut V = ⅓πr²t      Bola V = 4/3 πr³"),
+                formulas = listOf("§K = 2\\pi r \\qquad L = \\pi r^2§", "Tabung §V = \\pi r^2 t§ · Kerucut §V = \\tfrac{1}{3}\\pi r^2 t§ · Bola §V = \\tfrac{4}{3}\\pi r^3§"),
                 examples = listOf(
                     ex("Keliling lingkaran 44 cm (π = 22/7). Berapa luasnya?",
                         "2πr = 44 → 2 × 22/7 × r = 44 → r = 44 × 7/44 = 7 cm.",
@@ -567,9 +567,9 @@ object Lessons {
                     "Transformasi geometri memindahkan titik. Pencerminan terhadap sumbu-x membalik tanda y; terhadap sumbu-y membalik tanda x; terhadap titik asal membalik keduanya; terhadap garis y = x menukar x dan y. Translasi (a, b) menggeser x sejauh a dan y sejauh b.",
                 ),
                 formulas = listOf(
-                    "Sebangun: sisi₁/sisi₁' = sisi₂/sisi₂'",
-                    "Cermin sumbu-x: (x, y) → (x, −y)      sumbu-y: (−x, y)",
-                    "Titik asal: (−x, −y)      garis y = x: (y, x)      Translasi: (x + a, y + b)",
+                    "Sebangun: §\\dfrac{a}{a'} = \\dfrac{b}{b'} = \\dfrac{c}{c'}§",
+                    "Cermin sumbu-x: §(x, y) \\to (x, -y)§ · sumbu-y: §(x, y) \\to (-x, y)§",
+                    "Titik asal: §(-x, -y)§ · garis §y = x§: §(y, x)§ · Translasi: §(x + a,\\, y + b)§",
                 ),
                 examples = listOf(
                     ex("Tongkat 1,5 m berbayangan 2 m. Pada saat yang sama, bayangan pohon 8 m. Berapa tinggi pohon?",
@@ -592,10 +592,10 @@ object Lessons {
                     "Soal kontekstual (tangga, layang-layang, bayangan gedung) selalu dimulai dengan menggambar segitiganya dan menandai sisi depan/samping/miring dari sudut yang diketahui.",
                 ),
                 formulas = listOf(
-                    "sin θ = depan/miring      cos θ = samping/miring      tan θ = depan/samping",
-                    "sin 30° = ½   sin 45° = ½√2   sin 60° = ½√3",
-                    "cos 30° = ½√3   cos 45° = ½√2   cos 60° = ½   tan 45° = 1",
-                    "sin²x + cos²x = 1",
+                    "§\\sin\\theta = \\dfrac{\\text{de}}{\\text{mi}} \\qquad \\cos\\theta = \\dfrac{\\text{sa}}{\\text{mi}} \\qquad \\tan\\theta = \\dfrac{\\text{de}}{\\text{sa}}§",
+                    "§\\sin 30^\\circ = \\tfrac{1}{2} \\qquad \\sin 45^\\circ = \\tfrac{1}{2}\\sqrt{2} \\qquad \\sin 60^\\circ = \\tfrac{1}{2}\\sqrt{3}§",
+                    "§\\cos 30^\\circ = \\tfrac{1}{2}\\sqrt{3} \\qquad \\cos 45^\\circ = \\tfrac{1}{2}\\sqrt{2} \\qquad \\cos 60^\\circ = \\tfrac{1}{2} \\qquad \\tan 45^\\circ = 1§",
+                    "§\\sin^2 x + \\cos^2 x = 1§",
                 ),
                 examples = listOf(
                     ex("Tangga 10 m bersandar di dinding, membentuk sudut 30° dengan tanah. Berapa tinggi ujung atas tangga?",
@@ -668,7 +668,7 @@ object Lessons {
                     "Tekanan adalah gaya per satuan luas: P = F/A. Di dalam zat cair, berat air di atas sebuah titik menekan titik itu. Makin dalam, makin banyak air di atasnya, jadi tekanannya makin besar. Itulah sebabnya bendungan dibuat lebih tebal di bagian bawah.",
                     "Tekanan hidrostatis hanya bergantung pada massa jenis zat cair (ρ), percepatan gravitasi (g), dan kedalaman (h) diukur dari PERMUKAAN. Bentuk wadah tidak berpengaruh.",
                 ),
-                formulas = listOf("Pₕ = ρ · g · h", "Air: ρ = 1000 kg/m³", "Tekanan total = P udara luar + ρgh"),
+                formulas = listOf("§P_h = \\rho g h§", "Air: §\\rho = 1000 \\text{ kg/m}^3§", "Tekanan total: §P = P_0 + \\rho g h§"),
                 examples = listOf(
                     ex("Berapa tekanan hidrostatis pada kedalaman 2 m di air? (g = 10)",
                         "Pₕ = ρgh = 1000 × 10 × 2.",
@@ -684,7 +684,7 @@ object Lessons {
                     "Hukum Pascal: tekanan yang diberikan pada zat cair dalam ruang tertutup diteruskan ke segala arah dengan SAMA BESAR.",
                     "Karena tekanannya sama, F₁/A₁ = F₂/A₂. Artinya gaya kecil pada penampang kecil bisa menghasilkan gaya besar pada penampang besar. Inilah prinsip dongkrak hidrolik, rem hidrolik, dan kursi dokter gigi.",
                 ),
-                formulas = listOf("F₁ / A₁ = F₂ / A₂"),
+                formulas = listOf("§\\dfrac{F_1}{A_1} = \\dfrac{F_2}{A_2}§"),
                 examples = listOf(
                     ex("Dongkrak: penampang kecil 10 cm², besar 200 cm². Gaya 50 N di penampang kecil bisa mengangkat beban berapa?",
                         "F₂ = F₁ × A₂/A₁ = 50 × 200/10.",
@@ -700,7 +700,7 @@ object Lessons {
                     "Benda yang tercelup di zat cair terasa lebih ringan karena didorong ke atas oleh gaya apung. Archimedes menemukan besarnya gaya apung sama dengan BERAT zat cair yang dipindahkan oleh bagian benda yang tercelup.",
                     "Dari sini muncul tiga keadaan. Terapung: massa jenis benda lebih kecil dari zat cair (kayu di air). Melayang: sama. Tenggelam: lebih besar (batu di air). Kapal besi bisa terapung karena bentuknya berongga sehingga massa jenis rata-ratanya kecil.",
                 ),
-                formulas = listOf("Fₐ = ρ_cair · g · V_tercelup", "Berat semu = berat di udara − Fₐ"),
+                formulas = listOf("§F_A = \\rho_{\\text{cair}}\\, g\\, V_{\\text{tercelup}}§", "§w_{\\text{semu}} = w_{\\text{udara}} - F_A§"),
                 examples = listOf(
                     ex("Benda 0,002 m³ tercelup seluruhnya dalam air. Berapa gaya apungnya? (g = 10)",
                         "V tercelup = 0,002 m³ (seluruhnya).",
@@ -717,7 +717,7 @@ object Lessons {
                     "Prinsip Bernoulli: di tempat aliran fluida lebih CEPAT, tekanannya lebih KECIL. Contoh: udara di atas sayap pesawat mengalir lebih cepat daripada di bawahnya, sehingga tekanan atas lebih kecil dan sayap terdorong ke atas (gaya angkat).",
                     "Penyemprot parfum dan obat nyamuk: saat pompa ditekan, udara mengalir cepat melewati ujung atas pipa kecil. Tekanan di situ turun, sehingga tekanan udara di permukaan cairan mendorong cairan naik lalu tersembur.",
                 ),
-                formulas = listOf("Debit Q = A · v = V/t", "Kontinuitas: A₁ v₁ = A₂ v₂", "Bernoulli: P + ½ρv² + ρgh = konstan"),
+                formulas = listOf("Debit: §Q = A v = \\dfrac{V}{t}§", "Kontinuitas: §A_1 v_1 = A_2 v_2§", "Bernoulli: §P + \\tfrac{1}{2}\\rho v^2 + \\rho g h = \\text{konstan}§"),
                 examples = listOf(
                     ex("Air dari pipa 4 cm² (v = 2 m/s) mengalir ke pipa 1 cm². Berapa kecepatannya di pipa kecil?",
                         "A₁v₁ = A₂v₂ → 4 × 2 = 1 × v₂.",
@@ -739,7 +739,7 @@ object Lessons {
                     "Soal rata-rata gabungan: jangan rata-ratakan rata-rata! Ubah dulu menjadi JUMLAH nilai (n × rata-rata), baru dihitung.",
                     "Di TKA, data sering disajikan dalam tabel atau grafik. Baca judul, satuan, dan skala sumbu sebelum menghitung.",
                 ),
-                formulas = listOf("Mean = Σx / n", "Median: urutkan; genap → (dua data tengah)/2", "Jangkauan = maks − min", "Total = n × rata-rata"),
+                formulas = listOf("§\\bar{x} = \\dfrac{\\Sigma x}{n}§", "Median: urutkan dulu; jika n genap §Me = \\dfrac{x_{n/2} + x_{n/2 + 1}}{2}§", "§J = x_{\\text{maks}} - x_{\\text{min}}§", "§\\text{Total} = n \\times \\bar{x}§"),
                 examples = listOf(
                     ex("Rata-rata 5 siswa 70. Setelah 1 siswa baru masuk, rata-rata menjadi 72. Berapa nilai siswa baru?",
                         "Total lama = 5 × 70 = 350.",
@@ -761,7 +761,7 @@ object Lessons {
                     "Kombinasi dipakai kalau urutan TIDAK penting, misalnya memilih 2 orang untuk tim (A dan B sama saja dengan B dan A).",
                     "Cara cepat P(n, r): kalikan n turun sebanyak r angka. P(5, 2) = 5 × 4 = 20. Kombinasi = permutasi dibagi r!: C(5, 2) = 20 ÷ 2! = 10.",
                 ),
-                formulas = listOf("P(n, r) = n! / (n − r)!", "C(n, r) = n! / (r! (n − r)!)"),
+                formulas = listOf("§P(n, r) = \\dfrac{n!}{(n - r)!}§", "§C(n, r) = \\dfrac{n!}{r!\\,(n - r)!}§"),
                 examples = listOf(
                     ex("Dari 5 calon dipilih ketua dan sekretaris. Berapa susunan?",
                         "Jabatan berbeda → urutan penting → permutasi.",
@@ -781,7 +781,7 @@ object Lessons {
                     "Ruang sampel yang sering dipakai: satu dadu 6 hasil, dua dadu 6 × 6 = 36 hasil, satu koin 2 hasil, kartu bridge 52 kartu (4 jenis × 13; ada 4 As, 12 kartu bergambar).",
                     "Frekuensi harapan adalah berapa kali sebuah kejadian diharapkan muncul dalam n percobaan: peluang × n.",
                 ),
-                formulas = listOf("P(A) = n(A) / n(S)", "Frekuensi harapan = P(A) × n", "P(bukan A) = 1 − P(A)"),
+                formulas = listOf("§P(A) = \\dfrac{n(A)}{n(S)}§", "§F_h = P(A) \\times n§", "§P(A^c) = 1 - P(A)§"),
                 examples = listOf(
                     ex("Dua dadu dilempar. Peluang jumlahnya 7?",
                         "n(S) = 36.",
@@ -853,7 +853,7 @@ object Lessons {
                     "Cepat rambat v = λ × f. Logikanya: tiap detik ada f gelombang lewat, masing-masing sepanjang λ.",
                     "Gelombang transversal arah getarnya tegak lurus arah rambat (tali, cahaya). Gelombang longitudinal arah getarnya searah arah rambat, berupa rapatan dan regangan (bunyi, pegas).",
                 ),
-                formulas = listOf("v = λ · f", "T = 1/f = t/n      f = n/t"),
+                formulas = listOf("§v = \\lambda f§", "§T = \\dfrac{1}{f} = \\dfrac{t}{n} \\qquad f = \\dfrac{n}{t}§"),
                 examples = listOf(
                     ex("Terbentuk 20 gelombang dalam 4 s. Berapa periodenya?",
                         "T = t/n = 4/20 = 0,2 s.",
@@ -869,7 +869,7 @@ object Lessons {
                     "Intensitas bunyi adalah daya per luas. Bunyi menyebar ke segala arah seperti permukaan bola, luasnya 4πr². Karena itu intensitas berbanding terbalik dengan KUADRAT jarak: jarak 2 kali → intensitas ¼.",
                     "Efek Doppler: frekuensi yang kamu dengar berubah kalau sumber atau pendengar bergerak. Saat ambulans MENDEKAT, gelombang \"terdesak\" sehingga frekuensi terdengar LEBIH TINGGI. Saat MENJAUH, terdengar lebih rendah.",
                 ),
-                formulas = listOf("I = P / (4πr²)      I₁/I₂ = (r₂/r₁)²", "fₚ = (v ± vₚ)/(v ∓ vₛ) · fₛ  (tanda atas saat saling mendekat)"),
+                formulas = listOf("§I = \\dfrac{P}{4\\pi r^2} \\qquad \\dfrac{I_1}{I_2} = \\left(\\dfrac{r_2}{r_1}\\right)^2§", "§f_p = \\dfrac{v \\pm v_p}{v \\mp v_s}\\, f_s§ (tanda atas saat saling mendekat)"),
                 examples = listOf(
                     ex("Pengendara motor dan ambulans sama-sama bergerak. Kapan sirine terdengar lebih tinggi?",
                         "Frekuensi naik kalau jarak sumber–pendengar makin pendek.",
@@ -886,7 +886,7 @@ object Lessons {
                     "Rumus yang sama dipakai untuk cermin dan lensa: 1/f = 1/s + 1/s'. Kalau s' positif, bayangan nyata (bisa ditangkap layar); kalau negatif, maya. Perbesaran M = |s'/s|.",
                     "Kekuatan lensa P = 1/f dengan f dalam meter, satuannya dioptri. Kacamata minus memakai lensa cekung (P negatif), kacamata plus memakai lensa cembung.",
                 ),
-                formulas = listOf("1/f = 1/s + 1/s'      f = R/2", "M = |s'/s|", "P = 1/f (meter) = 100/f (cm)"),
+                formulas = listOf("§\\dfrac{1}{f} = \\dfrac{1}{s} + \\dfrac{1}{s'} \\qquad f = \\dfrac{R}{2}§", "§M = \\left|\\dfrac{s'}{s}\\right|§", "§P = \\dfrac{1}{f_{\\text{(m)}}} = \\dfrac{100}{f_{\\text{(cm)}}}§"),
                 examples = listOf(
                     ex("Benda 15 cm di depan cermin cekung f = 10 cm. Di mana bayangannya?",
                         "1/s' = 1/f − 1/s = 1/10 − 1/15.",
@@ -909,7 +909,7 @@ object Lessons {
                     "Asas Black: saat dua zat dicampur, kalor yang dilepas zat panas = kalor yang diterima zat dingin. Kalau zat dan massanya sama, suhu akhir adalah rata-rata suhunya.",
                     "Perpindahan kalor: konduksi (lewat zat padat tanpa perpindahan partikel, misal sendok panas), konveksi (disertai aliran fluida, misal air mendidih), radiasi (tanpa medium, misal panas matahari).",
                 ),
-                formulas = listOf("Q = m · c · ΔT", "Q = m · L (perubahan wujud)", "Asas Black: Q lepas = Q terima"),
+                formulas = listOf("§Q = m\\,c\\,\\Delta T§", "§Q = m\\,L§ (perubahan wujud)", "Asas Black: §Q_{\\text{lepas}} = Q_{\\text{terima}}§"),
                 examples = listOf(
                     ex("100 g air 80 °C dicampur 100 g air 20 °C. Berapa suhu akhir?",
                         "Q lepas = m c (80 − T); Q terima = m c (T − 20).",
@@ -935,7 +935,7 @@ object Lessons {
                     "Hukum Boyle (suhu tetap): kalau volume diperbesar, partikel lebih jarang menumbuk dinding, jadi tekanan turun. P₁V₁ = P₂V₂.",
                     "Hukum Boyle–Gay-Lussac menggabungkan tekanan, volume, dan suhu: P₁V₁/T₁ = P₂V₂/T₂. Suhu WAJIB dalam kelvin (K = °C + 273).",
                 ),
-                formulas = listOf("Boyle: P₁V₁ = P₂V₂", "P₁V₁/T₁ = P₂V₂/T₂   (T dalam kelvin)", "PV = nRT"),
+                formulas = listOf("Boyle: §P_1 V_1 = P_2 V_2§", "§\\dfrac{P_1 V_1}{T_1} = \\dfrac{P_2 V_2}{T_2}§ (T dalam kelvin)", "§PV = nRT§"),
                 examples = listOf(
                     ex("Gas 2 atm, 3 L dikembangkan pada suhu tetap menjadi 6 L. Tekanannya?",
                         "Suhu tetap → Boyle.",
@@ -953,7 +953,7 @@ object Lessons {
                     "Empat proses: isobarik (tekanan tetap, W = PΔV), isokhorik (volume tetap, W = 0), isotermik (suhu tetap, ΔU = 0), adiabatik (tanpa pertukaran kalor, Q = 0).",
                     "Mesin kalor mengubah kalor menjadi usaha, tetapi tidak pernah 100%. Mesin paling ideal (Carnot) efisiensinya η = 1 − T_rendah/T_tinggi dengan suhu dalam kelvin.",
                 ),
-                formulas = listOf("ΔU = Q − W", "Isobarik: W = P·ΔV   (1 L = 10⁻³ m³)", "Carnot: η = 1 − Tr/Tt"),
+                formulas = listOf("§\\Delta U = Q - W§", "Isobarik: §W = P\\,\\Delta V§ (§1 \\text{ L} = 10^{-3} \\text{ m}^3§)", "Carnot: §\\eta = 1 - \\dfrac{T_r}{T_t}§"),
                 examples = listOf(
                     ex("Gas menyerap 500 J kalor dan melakukan usaha 200 J. Berapa ΔU?",
                         "Q = +500 (menyerap), W = +200 (melakukan usaha).",
@@ -977,7 +977,7 @@ object Lessons {
                     "Karena jarak dikuadratkan, menjauhkan muatan 2 kali membuat gayanya menjadi ¼, bukan ½.",
                     "Medan listrik E adalah gaya per satuan muatan di suatu titik. Di antara dua pelat sejajar bertegangan V dan berjarak d, medannya seragam: E = V/d. Gaya pada muatan q di situ F = qE. Prinsip ini dipakai pada mesin fotokopi dan printer laser.",
                 ),
-                formulas = listOf("F = k q₁ q₂ / r²   (k = 9 × 10⁹ N·m²/C²)", "E = F/q = kq/r²", "Pelat sejajar: E = V/d,  F = q·V/d", "1 μC = 10⁻⁶ C"),
+                formulas = listOf("§F = k\\dfrac{q_1 q_2}{r^2}§ (§k = 9 \\times 10^9 \\text{ N m}^2/\\text{C}^2§)", "§E = \\dfrac{F}{q} = k\\dfrac{q}{r^2}§", "Pelat sejajar: §E = \\dfrac{V}{d}, \\quad F = \\dfrac{qV}{d}§", "§1\\,\\mu\\text{C} = 10^{-6} \\text{ C}§"),
                 examples = listOf(
                     ex("Dua muatan 2 μC berjarak 30 cm. Berapa gaya Coulomb-nya?",
                         "q = 2 × 10⁻⁶ C, r = 0,3 m.",
@@ -1002,10 +1002,10 @@ object Lessons {
                     "Daya listrik P = V·I, dan energi W = P·t. Tagihan listrik dihitung dalam kWh: watt × jam ÷ 1000.",
                 ),
                 formulas = listOf(
-                    "V = I · R",
-                    "Seri: R = R₁ + R₂ + …",
-                    "Paralel: 1/R = 1/R₁ + 1/R₂;  dua resistor: R = R₁R₂/(R₁ + R₂)",
-                    "P = V·I = I²R = V²/R      W = P·t",
+                    "§V = I R§",
+                    "Seri: §R_s = R_1 + R_2 + \\cdots§",
+                    "Paralel: §\\dfrac{1}{R_p} = \\dfrac{1}{R_1} + \\dfrac{1}{R_2}§; dua resistor: §R_p = \\dfrac{R_1 R_2}{R_1 + R_2}§",
+                    "§P = V I = I^2 R = \\dfrac{V^2}{R} \\qquad W = P\\,t§",
                 ),
                 examples = listOf(
                     ex("3 Ω dan 6 Ω paralel, lalu diseri dengan 2 Ω dan baterai 12 V. Berapa arus di resistor 3 Ω?",

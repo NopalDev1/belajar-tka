@@ -39,10 +39,10 @@ object LessonsExtra {
             "Pecahan dijumlah setelah penyebutnya disamakan (pakai KPK). Pecahan dibagi dengan cara mengalikan kebalikannya.",
         ),
         formulas = listOf(
-            "Asli ⊂ Cacah ⊂ Bulat ⊂ Rasional ⊂ Real",
-            "a(b + c) = ab + ac",
-            "a/b + c/d = (ad + bc)/(bd)",
-            "a/b ÷ c/d = a/b × d/c",
+            "§\\mathbb{N} \\subset \\text{Cacah} \\subset \\mathbb{Z} \\subset \\mathbb{Q} \\subset \\mathbb{R}§",
+            "§a(b + c) = ab + ac§",
+            "§\\dfrac{a}{b} + \\dfrac{c}{d} = \\dfrac{ad + bc}{bd}§",
+            "§\\dfrac{a}{b} \\div \\dfrac{c}{d} = \\dfrac{a}{b} \\times \\dfrac{d}{c}§",
         ),
         examples = listOf(
             ex("Hitung −3 × (4 − 10) + 12 ÷ (−4).",
@@ -83,10 +83,10 @@ object LessonsExtra {
             "Merasionalkan penyebut artinya menghilangkan akar dari penyebut. Untuk a/√b, kalikan atas dan bawah dengan √b. Untuk penyebut berbentuk √b + √c atau √b − √c, kalikan dengan bentuk sekawannya (tandanya dibalik). Ini bekerja karena (x + y)(x − y) = x² − y², sehingga akarnya hilang.",
         ),
         formulas = listOf(
-            "√a × √b = √(ab)      √a / √b = √(a/b)",
-            "ⁿ√(aᵐ) = a^(m/n)",
-            "a/√b = a√b / b",
-            "a/(√b − √c) = a(√b + √c)/(b − c)",
+            "§\\sqrt{a} \\cdot \\sqrt{b} = \\sqrt{ab} \\qquad \\dfrac{\\sqrt{a}}{\\sqrt{b}} = \\sqrt{\\dfrac{a}{b}}§",
+            "§\\sqrt[n]{a^m} = a^{\\frac{m}{n}}§",
+            "§\\dfrac{a}{\\sqrt{b}} = \\dfrac{a\\sqrt{b}}{b}§",
+            "§\\dfrac{a}{\\sqrt{b} - \\sqrt{c}} = \\dfrac{a(\\sqrt{b} + \\sqrt{c})}{b - c}§",
         ),
         examples = listOf(
             ex("Sederhanakan √50 + √18 − √8.",
@@ -158,8 +158,8 @@ object LessonsExtra {
         ),
         formulas = listOf(
             "Dikali/dibagi negatif → tanda dibalik",
-            "Garis ax + by = c memotong sumbu di (c/a, 0) dan (0, c/b)",
-            "Nilai optimum f(x, y) = px + qy ada di titik pojok",
+            "Garis §ax + by = c§ memotong sumbu di §\\left(\\frac{c}{a}, 0\\right)§ dan §\\left(0, \\frac{c}{b}\\right)§",
+            "Nilai optimum §f(x, y) = px + qy§ ada di titik pojok",
         ),
         examples = listOf(
             ex("Selesaikan −2x + 5 > 11.",
@@ -197,9 +197,9 @@ object LessonsExtra {
             "Fungsi linear f(x) = mx + c grafiknya garis lurus dengan gradien m. Fungsi kuadrat f(x) = ax² + bx + c grafiknya parabola: terbuka ke atas kalau a > 0 (punya nilai minimum) dan ke bawah kalau a < 0 (punya nilai maksimum). Titik puncaknya ada di x = −b/(2a). Fungsi rasional berbentuk pecahan, misalnya f(x) = (2x + 1)/(x − 3), dengan x yang membuat penyebut nol dikeluarkan dari domain.",
         ),
         formulas = listOf(
-            "Pecahan: penyebut ≠ 0      Akar: isi akar ≥ 0",
-            "Kuadrat: xₚ = −b/(2a),  yₚ = f(xₚ) = −D/(4a),  D = b² − 4ac",
-            "a > 0 → range y ≥ yₚ;   a < 0 → range y ≤ yₚ",
+            "Pecahan: penyebut §\\neq 0§ · Akar: isi akar §\\geq 0§",
+            "Kuadrat: §x_p = -\\dfrac{b}{2a}, \\quad y_p = -\\dfrac{D}{4a}, \\quad D = b^2 - 4ac§",
+            "§a > 0 \\Rightarrow y \\geq y_p§ · §a < 0 \\Rightarrow y \\leq y_p§",
         ),
         examples = listOf(
             ex("Tentukan domain f(x) = (2x + 1)/(x − 3) dan g(x) = √(x − 2).",
@@ -235,9 +235,9 @@ object LessonsExtra {
             "Cek invers dengan satu angka: f⁻¹(f(x)) harus kembali ke x.",
         ),
         formulas = listOf(
-            "(f∘g)(x) = f(g(x))      (g∘f)(x) = g(f(x))",
-            "f(x) = ax + b  →  f⁻¹(x) = (x − b)/a",
-            "f(x) = (ax + b)/(cx + d)  →  f⁻¹(x) = (−dx + b)/(cx − a)",
+            "§(f \\circ g)(x) = f(g(x)) \\qquad (g \\circ f)(x) = g(f(x))§",
+            "§f(x) = ax + b \\;\\Rightarrow\\; f^{-1}(x) = \\dfrac{x - b}{a}§",
+            "§f(x) = \\dfrac{ax + b}{cx + d} \\;\\Rightarrow\\; f^{-1}(x) = \\dfrac{-dx + b}{cx - a}§",
         ),
         examples = listOf(
             ex("f(x) = 2x + 1 dan g(x) = x². Tentukan (f∘g)(x), (g∘f)(x), dan (f∘g)(2).",
@@ -276,9 +276,9 @@ object LessonsExtra {
             "Bunga tunggal adalah contoh aritmetika dalam kehidupan sehari-hari: bunganya selalu dihitung dari modal awal, sehingga tabungan bertambah dengan jumlah yang sama setiap periode.",
         ),
         formulas = listOf(
-            "Uₙ = a + (n − 1)b      b = Uₙ − Uₙ₋₁",
-            "Sₙ = n/2 (a + Uₙ) = n/2 (2a + (n − 1)b)",
-            "Bunga tunggal: Mₙ = M (1 + n·i)",
+            "§U_n = a + (n - 1)b \\qquad b = U_n - U_{n-1}§",
+            "§S_n = \\dfrac{n}{2}(a + U_n) = \\dfrac{n}{2}\\big(2a + (n - 1)b\\big)§",
+            "Bunga tunggal: §M_n = M(1 + n\\,i)§",
         ),
         examples = listOf(
             ex("Barisan 3, 7, 11, …. Tentukan U₂₀ dan S₂₀.",
@@ -319,9 +319,9 @@ object LessonsExtra {
             "Bunga majemuk berbeda dengan bunga tunggal: bunga periode berikutnya dihitung dari modal ditambah bunga sebelumnya (\"bunga berbunga\"). Karena itu rumusnya geometri: Mₙ = M(1 + i)ⁿ.",
         ),
         formulas = listOf(
-            "Uₙ = a·rⁿ⁻¹      r = Uₙ / Uₙ₋₁",
-            "Sₙ = a(rⁿ − 1)/(r − 1)      S∞ = a/(1 − r), syarat |r| < 1",
-            "Tumbuh: Mₙ = M(1 + i)ⁿ      Susut: Mₙ = M(1 − i)ⁿ",
+            "§U_n = a\\,r^{n-1} \\qquad r = \\dfrac{U_n}{U_{n-1}}§",
+            "§S_n = \\dfrac{a(r^n - 1)}{r - 1} \\qquad S_\\infty = \\dfrac{a}{1 - r}§, syarat §|r| < 1§",
+            "Tumbuh: §M_n = M(1 + i)^n§ · Susut: §M_n = M(1 - i)^n§",
         ),
         examples = listOf(
             ex("Barisan 2, 6, 18, …. Tentukan U₆ dan S₆.",
@@ -363,9 +363,9 @@ object LessonsExtra {
             "Dalam ruang (misalnya kubus), dua garis bisa sejajar, berpotongan, atau BERSILANGAN: tidak sejajar dan tidak pernah bertemu karena tidak sebidang. Dua bidang bisa sejajar atau berpotongan pada sebuah garis. Garis bisa terletak pada bidang, sejajar bidang, atau menembus bidang.",
         ),
         formulas = listOf(
-            "Berpenyiku: α + β = 90°      Berpelurus: α + β = 180°",
-            "Sehadap & berseberangan: sama      Dalam sepihak: jumlah 180°",
-            "Jumlah sudut segi-n = (n − 2) × 180°",
+            "Berpenyiku: §\\alpha + \\beta = 90^\\circ§ · Berpelurus: §\\alpha + \\beta = 180^\\circ§",
+            "Sehadap & berseberangan: sama · Dalam sepihak: jumlah §180^\\circ§",
+            "Jumlah sudut segi-n: §(n - 2) \\times 180^\\circ§",
         ),
         examples = listOf(
             ex("Dua garis sejajar dipotong transversal. Sepasang sudut dalam sepihak besarnya (2x + 10)° dan (3x − 5)°. Tentukan x.",
@@ -399,9 +399,9 @@ object LessonsExtra {
             "Untuk bangun gabungan, pecah menjadi bangun-bangun sederhana, hitung masing-masing, lalu jumlahkan atau kurangkan.",
         ),
         formulas = listOf(
-            "Persegi panjang L = p·l      Jajargenjang L = a·t      Segitiga L = ½·a·t",
-            "Trapesium L = ½(a + b)·t      Belah ketupat/layang-layang L = ½·d₁·d₂",
-            "Juring L = θ/360 · πr²      Busur = θ/360 · 2πr",
+            "Persegi panjang §L = p\\,l§ · Jajargenjang §L = a\\,t§ · Segitiga §L = \\tfrac{1}{2} a\\,t§",
+            "Trapesium §L = \\tfrac{1}{2}(a + b)\\,t§ · Belah ketupat/layang-layang §L = \\tfrac{1}{2} d_1 d_2§",
+            "Juring §L = \\dfrac{\\theta}{360^\\circ}\\,\\pi r^2§ · Busur §= \\dfrac{\\theta}{360^\\circ}\\,2\\pi r§",
         ),
         examples = listOf(
             ex("Trapesium dengan sisi sejajar 10 cm dan 16 cm serta tinggi 6 cm. Berapa luasnya?",
@@ -435,9 +435,9 @@ object LessonsExtra {
             "Tabung terdiri dari 2 lingkaran dan selimut. Kalau selimut dibuka, bentuknya persegi panjang dengan panjang 2πr (keliling alas) dan lebar t. Jadi L = 2πr² + 2πrt = 2πr(r + t). Kerucut terdiri dari alas lingkaran dan selimut πrs, dengan s = garis pelukis yang dicari dari Pythagoras: s² = r² + t². Bola L = 4πr².",
         ),
         formulas = listOf(
-            "Kubus 6s²      Balok 2(pl + pt + lt)",
-            "Prisma = 2 × L alas + keliling alas × t",
-            "Tabung 2πr(r + t)      Kerucut πr(r + s), s² = r² + t²      Bola 4πr²",
+            "Kubus §6s^2§ · Balok §2(pl + pt + lt)§",
+            "Prisma: §2 L_{\\text{alas}} + K_{\\text{alas}} \\times t§",
+            "Tabung §2\\pi r(r + t)§ · Kerucut §\\pi r(r + s),\\; s^2 = r^2 + t^2§ · Bola §4\\pi r^2§",
         ),
         examples = listOf(
             ex("Tabung berjari-jari 7 cm dan tinggi 10 cm. Berapa luas permukaannya? (π = 22/7)",
@@ -465,9 +465,9 @@ object LessonsExtra {
             "Jarak titik ke garis: tarik garis tegak lurus dari titik ke garis, lalu hitung panjangnya dengan Pythagoras atau luas segitiga. Jarak titik ke bidang: cari proyeksi titik itu pada bidang. Jarak dua bidang sejajar atau dua garis sejajar sama dengan jarak sembarang titik di satu objek ke objek lainnya.",
         ),
         formulas = listOf(
-            "Diagonal sisi = s√2      Diagonal ruang = s√3",
+            "Diagonal sisi §= s\\sqrt{2}§ · Diagonal ruang §= s\\sqrt{3}§",
             "Jarak titik ke garis/bidang = panjang ruas tegak lurus",
-            "Kubus: jarak A ke bidang BDE = ⅓ × AG = s√3/3",
+            "Kubus: jarak A ke bidang BDE §= \\tfrac{1}{3} AG = \\dfrac{s\\sqrt{3}}{3}§",
         ),
         examples = listOf(
             ex("Kubus ABCD.EFGH bersisi 6 cm. Berapa jarak titik A ke titik G?",
@@ -498,9 +498,9 @@ object LessonsExtra {
             "Komposisi transformasi dikerjakan berurutan sesuai urutan di soal: hasil transformasi pertama menjadi titik awal transformasi kedua.",
         ),
         formulas = listOf(
-            "Rotasi O: 90° (−y, x)   180° (−x, −y)   −90° (y, −x)",
-            "Dilatasi O, k: (kx, ky)",
-            "Dilatasi pusat (a, b): (a + k(x − a), b + k(y − b))",
+            "Rotasi pusat O: §90^\\circ \\to (-y, x) \\qquad 180^\\circ \\to (-x, -y) \\qquad -90^\\circ \\to (y, -x)§",
+            "Dilatasi §[O, k]§: §(x, y) \\to (kx, ky)§",
+            "Dilatasi pusat §(a, b)§: §\\big(a + k(x - a),\\; b + k(y - b)\\big)§",
         ),
         examples = listOf(
             ex("Titik P(3, −2) dirotasi 90° berlawanan arah jarum jam terhadap O. Tentukan bayangannya.",
@@ -533,9 +533,9 @@ object LessonsExtra {
             "Sudut berelasi mengubah sudut besar ke sudut lancip: sin(180° − α) = sin α, cos(180° − α) = −cos α, sin(180° + α) = −sin α, cos(360° − α) = cos α. Nilainya sama dengan sudut lancipnya, tandanya mengikuti kuadran.",
         ),
         formulas = listOf(
-            "csc = 1/sin      sec = 1/cos      cot = 1/tan = cos/sin",
+            "§\\csc x = \\dfrac{1}{\\sin x} \\qquad \\sec x = \\dfrac{1}{\\cos x} \\qquad \\cot x = \\dfrac{\\cos x}{\\sin x}§",
             "Kuadran positif: I semua, II sin, III tan, IV cos",
-            "120° = 180° − 60°   210° = 180° + 30°   315° = 360° − 45°",
+            "§120^\\circ = 180^\\circ - 60^\\circ \\qquad 210^\\circ = 180^\\circ + 30^\\circ \\qquad 315^\\circ = 360^\\circ - 45^\\circ§",
         ),
         examples = listOf(
             ex("sin A = 3/5 dengan A lancip. Tentukan cos A, tan A, sec A, csc A, dan cot A.",
@@ -566,8 +566,8 @@ object LessonsExtra {
             "Persentase perubahan = (nilai baru − nilai lama)/nilai lama × 100%. Pembaginya selalu nilai LAMA.",
         ),
         formulas = listOf(
-            "Lingkaran: n = (sudut/360°) × total = (persen/100) × total",
-            "Perubahan % = (baru − lama)/lama × 100%",
+            "Diagram lingkaran: §n = \\dfrac{\\text{sudut}}{360^\\circ} \\times \\text{total} = \\dfrac{\\text{persen}}{100} \\times \\text{total}§",
+            "§\\text{Perubahan} = \\dfrac{\\text{baru} - \\text{lama}}{\\text{lama}} \\times 100\\%§",
         ),
         examples = listOf(
             ex("Dalam diagram lingkaran hobi 40 siswa, sektor sepak bola bersudut 108°. Berapa siswa yang hobi sepak bola?",
@@ -596,10 +596,10 @@ object LessonsExtra {
             "Modus ada di kelas dengan frekuensi terbesar. Posisinya condong ke kelas tetangga yang frekuensinya lebih besar: Mo = Tb + (d₁/(d₁ + d₂)) × p, dengan d₁ = selisih dengan kelas sebelumnya dan d₂ = selisih dengan kelas sesudahnya.",
         ),
         formulas = listOf(
-            "Mean = Σ fᵢxᵢ / Σ fᵢ   (xᵢ = titik tengah)",
-            "Median = Tb + ((n/2 − F)/f) · p",
-            "Modus = Tb + (d₁/(d₁ + d₂)) · p",
-            "Tb = batas bawah − 0,5",
+            "§\\bar{x} = \\dfrac{\\Sigma f_i x_i}{\\Sigma f_i}§ (§x_i§ = titik tengah)",
+            "§Me = T_b + \\left(\\dfrac{\\frac{n}{2} - F}{f}\\right) p§",
+            "§Mo = T_b + \\left(\\dfrac{d_1}{d_1 + d_2}\\right) p§",
+            "§T_b = \\text{batas bawah} - 0{,}5§",
         ),
         examples = listOf(
             ex("Data nilai: 41–50 (3), 51–60 (7), 61–70 (10), 71–80 (6), 81–90 (4). Tentukan mean, median, dan modus.",
@@ -624,9 +624,9 @@ object LessonsExtra {
             "Ragam (varians) adalah rata-rata kuadrat simpangan. Simpangan baku adalah akar dari ragam, sehingga satuannya kembali sama dengan data. Makin kecil simpangan baku, makin seragam datanya.",
         ),
         formulas = listOf(
-            "H = Q₃ − Q₁",
-            "Simpangan rata-rata SR = Σ|xᵢ − x̄| / n",
-            "Ragam s² = Σ(xᵢ − x̄)² / n      Simpangan baku s = √s²",
+            "§H = Q_3 - Q_1§",
+            "Simpangan rata-rata: §SR = \\dfrac{\\Sigma |x_i - \\bar{x}|}{n}§",
+            "Ragam: §s^2 = \\dfrac{\\Sigma (x_i - \\bar{x})^2}{n}§ · Simpangan baku: §s = \\sqrt{s^2}§",
         ),
         examples = listOf(
             ex("Data: 2, 4, 4, 4, 5, 5, 7, 9. Tentukan Q₁, Q₂, Q₃, simpangan rata-rata, ragam, dan simpangan baku.",
@@ -653,9 +653,9 @@ object LessonsExtra {
             "Pengambilan tanpa pengembalian membuat isi kantong berubah, sehingga peluang pengambilan kedua dihitung dari sisa benda. Mengambil 2 sekaligus juga bisa dihitung dengan kombinasi.",
         ),
         formulas = listOf(
-            "P(A ∪ B) = P(A) + P(B) − P(A ∩ B)",
-            "Saling lepas: P(A ∪ B) = P(A) + P(B)",
-            "Saling bebas: P(A ∩ B) = P(A) × P(B)",
+            "§P(A \\cup B) = P(A) + P(B) - P(A \\cap B)§",
+            "Saling lepas: §P(A \\cup B) = P(A) + P(B)§",
+            "Saling bebas: §P(A \\cap B) = P(A) \\times P(B)§",
         ),
         examples = listOf(
             ex("Satu kartu diambil dari 52 kartu bridge. Berapa peluang terambil kartu As atau kartu hati?",
@@ -966,8 +966,8 @@ object LessonsExtra {
             "Pada gerak vertikal ke atas, kecepatan berkurang g setiap detik sampai nol di titik tertinggi. Waktu naik t = v₀/g dan tinggi maksimum h = v₀²/(2g). Waktu turun sama dengan waktu naik, sehingga waktu di udara 2v₀/g.",
         ),
         formulas = listOf(
-            "Jatuh bebas: v = √(2gh)      t = √(2h/g)      h = ½gt²",
-            "Ke atas: t naik = v₀/g      h maks = v₀²/(2g)",
+            "Jatuh bebas: §v = \\sqrt{2gh} \\qquad t = \\sqrt{\\dfrac{2h}{g}} \\qquad h = \\tfrac{1}{2} g t^2§",
+            "Ke atas: §t_{\\text{naik}} = \\dfrac{v_0}{g} \\qquad h_{\\text{maks}} = \\dfrac{v_0^2}{2g}§",
         ),
         examples = listOf(
             ex("Batu jatuh bebas dari ketinggian 20 m (g = 10 m/s²). Berapa waktu dan kecepatannya saat menyentuh tanah?",
@@ -995,10 +995,10 @@ object LessonsExtra {
             "Pada dawai (senar), kedua ujungnya simpul, sehingga nada dasar terjadi ketika panjang dawai = ½λ: f₁ = v/(2L). Pipa organa terbuka juga f₁ = v/(2L). Pipa organa tertutup (satu ujung tertutup) panjangnya ¼λ pada nada dasar, sehingga f₁ = v/(4L), dan hanya menghasilkan harmonik ganjil.",
         ),
         formulas = listOf(
-            "y = A sin(ωt − kx)      ω = 2πf      k = 2π/λ      v = ω/k",
-            "Dawai & pipa terbuka: fₙ = n·v/(2L)",
-            "Pipa tertutup: f = (2n − 1)·v/(4L)",
-            "Cepat rambat dawai: v = √(F/μ)",
+            "§y = A \\sin(\\omega t - kx) \\qquad \\omega = 2\\pi f \\qquad k = \\dfrac{2\\pi}{\\lambda} \\qquad v = \\dfrac{\\omega}{k}§",
+            "Dawai & pipa terbuka: §f_n = \\dfrac{n\\,v}{2L}§",
+            "Pipa tertutup: §f = \\dfrac{(2n - 1)\\,v}{4L}§",
+            "Cepat rambat dawai: §v = \\sqrt{\\dfrac{F}{\\mu}}§",
         ),
         examples = listOf(
             ex("y = 0,05 sin(10πt − 2πx) dalam meter dan sekon. Tentukan amplitudo, frekuensi, panjang gelombang, dan cepat rambat.",
@@ -1026,9 +1026,9 @@ object LessonsExtra {
             "Kalau jarak menjadi r₂, intensitas berubah dengan (r₁/r₂)², sehingga TI berkurang 20 log(r₂/r₁). Jarak 10 kali lebih jauh berarti TI turun 20 dB.",
         ),
         formulas = listOf(
-            "TI = 10 log(I/I₀),  I₀ = 10⁻¹² W/m²",
-            "n sumber: TIₙ = TI₁ + 10 log n",
-            "Jarak: TI₂ = TI₁ − 20 log(r₂/r₁)",
+            "§TI = 10 \\log\\dfrac{I}{I_0}, \\quad I_0 = 10^{-12} \\text{ W/m}^2§",
+            "n sumber: §TI_n = TI_1 + 10 \\log n§",
+            "Jarak: §TI_2 = TI_1 - 20 \\log\\dfrac{r_2}{r_1}§",
         ),
         examples = listOf(
             ex("Sebuah mesin menghasilkan TI 60 dB. Berapa TI 10 mesin identik yang menyala bersamaan?",
@@ -1055,9 +1055,9 @@ object LessonsExtra {
             "Kisi difraksi adalah lempeng dengan sangat banyak celah. Kalau kisi punya N garis per satuan panjang, jarak antarcelahnya d = 1/N. Terang ke-n terjadi pada sudut θ dengan d·sin θ = nλ.",
         ),
         formulas = listOf(
-            "Celah ganda (terang): d·y/L = n·λ",
-            "Kisi: d·sin θ = n·λ,  d = 1/N",
-            "1 nm = 10⁻⁹ m",
+            "Celah ganda (terang): §\\dfrac{d\\,y}{L} = n\\lambda§",
+            "Kisi: §d \\sin\\theta = n\\lambda, \\quad d = \\dfrac{1}{N}§",
+            "§1 \\text{ nm} = 10^{-9} \\text{ m}§",
         ),
         examples = listOf(
             ex("Celah ganda berjarak 0,5 mm disinari cahaya 600 nm. Layar berjarak 1 m. Berapa jarak terang pertama dari terang pusat?",
@@ -1084,9 +1084,9 @@ object LessonsExtra {
             "Lup (kaca pembesar) adalah lensa cembung. Kalau mata tidak berakomodasi (benda di titik fokus), perbesarannya M = 25/f. Kalau mata berakomodasi maksimum, M = 25/f + 1.",
         ),
         formulas = listOf(
-            "Miopi: P = −100/PR",
-            "Hipermetropi: P = 100/25 − 100/PP",
-            "Lup: M = 25/f (tak berakomodasi),  M = 25/f + 1 (akomodasi maksimum)",
+            "Miopi: §P = -\\dfrac{100}{PR}§",
+            "Hipermetropi: §P = \\dfrac{100}{25} - \\dfrac{100}{PP}§",
+            "Lup: §M = \\dfrac{25}{f}§ (tak berakomodasi), §M = \\dfrac{25}{f} + 1§ (akomodasi maksimum)",
         ),
         examples = listOf(
             ex("Titik jauh seseorang 200 cm. Berapa kekuatan kacamatanya?",
@@ -1117,8 +1117,8 @@ object LessonsExtra {
             "Pemuaian diperhitungkan dalam kehidupan sehari-hari: celah pada sambungan rel kereta, kabel listrik yang dipasang kendur, dan keping bimetal pada termostat.",
         ),
         formulas = listOf(
-            "ΔL = L₀·α·ΔT      ΔA = A₀·β·ΔT      ΔV = V₀·γ·ΔT",
-            "β = 2α      γ = 3α",
+            "§\\Delta L = L_0 \\alpha \\Delta T \\qquad \\Delta A = A_0 \\beta \\Delta T \\qquad \\Delta V = V_0 \\gamma \\Delta T§",
+            "§\\beta = 2\\alpha \\qquad \\gamma = 3\\alpha§",
         ),
         examples = listOf(
             ex("Rel baja sepanjang 10 m (α = 1,2 × 10⁻⁵ /°C) mengalami kenaikan suhu 30°C. Berapa pertambahan panjangnya?",
@@ -1141,9 +1141,9 @@ object LessonsExtra {
             "Persamaan umum gas ideal PV = nRT menghubungkan tekanan, volume, jumlah mol, dan suhu. R = 8,31 J/(mol·K).",
         ),
         formulas = listOf(
-            "PV = nRT      R = 8,31 J/(mol·K)",
-            "Ek = 3/2·k·T      k = 1,38 × 10⁻²³ J/K",
-            "v_rms = √(3RT/M) ∝ √T",
+            "§PV = nRT \\qquad R = 8{,}31 \\text{ J/(mol K)}§",
+            "§E_k = \\tfrac{3}{2} k T \\qquad k = 1{,}38 \\times 10^{-23} \\text{ J/K}§",
+            "§v_{\\text{rms}} = \\sqrt{\\dfrac{3RT}{M}} \\propto \\sqrt{T}§",
         ),
         examples = listOf(
             ex("Suhu gas dinaikkan dari 27°C menjadi 927°C. Berapa kali kecepatan efektif dan energi kinetik partikelnya berubah?",
@@ -1172,9 +1172,9 @@ object LessonsExtra {
             "Rangkaian kapasitor kebalikan dari resistor. Pada rangkaian paralel kapasitansi dijumlah langsung, sedangkan pada rangkaian seri dipakai kebalikannya.",
         ),
         formulas = listOf(
-            "V = kq/r      W = q·ΔV",
-            "C = Q/V      C = ε₀A/d      W = ½CV²",
-            "Paralel: C = C₁ + C₂      Seri: 1/C = 1/C₁ + 1/C₂",
+            "§V = k\\dfrac{q}{r} \\qquad W = q\\,\\Delta V§",
+            "§C = \\dfrac{Q}{V} \\qquad C = \\dfrac{\\varepsilon_0 A}{d} \\qquad W = \\tfrac{1}{2} C V^2§",
+            "Paralel: §C_p = C_1 + C_2§ · Seri: §\\dfrac{1}{C_s} = \\dfrac{1}{C_1} + \\dfrac{1}{C_2}§",
         ),
         examples = listOf(
             ex("Berapa potensial listrik pada jarak 30 cm dari muatan 2 μC?",
@@ -1206,8 +1206,8 @@ object LessonsExtra {
             "Tegangan yang terukur di kutub baterai (tegangan jepit) lebih kecil dari GGL, karena sebagian tegangan \"hilang\" di hambatan dalam: V = ε − I·r. Inilah alasan lampu sedikit meredup ketika banyak alat dinyalakan bersamaan dari baterai yang sama.",
         ),
         formulas = listOf(
-            "I = ε/(R + r)",
-            "Tegangan jepit: V = ε − I·r = I·R",
+            "§I = \\dfrac{\\varepsilon}{R + r}§",
+            "Tegangan jepit: §V = \\varepsilon - I r = I R§",
         ),
         examples = listOf(
             ex("Baterai 12 V dengan hambatan dalam 1 Ω dihubungkan ke resistor 5 Ω. Berapa arus dan tegangan jepitnya?",

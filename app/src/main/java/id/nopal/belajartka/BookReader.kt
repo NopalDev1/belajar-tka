@@ -302,7 +302,7 @@ private fun BodyPage(step: Step, section: Int, chapter: Int) {
     val color = step.subject.color
     SubHeading(step, section, chapter)
     sec.explain.forEachIndexed { i, para ->
-        Text(emphasize(para, color, dropCap = i == 0), style = bodyStyle)
+        MathText(para, bodyStyle, decorate = { piece, first -> emphasize(piece, color, dropCap = i == 0 && first) })
         Spacer(Modifier.height(12.dp))
     }
     if (sec.formulas.isNotEmpty()) {
@@ -313,7 +313,7 @@ private fun BodyPage(step: Step, section: Int, chapter: Int) {
         ) {
             Text("RUMUS", color = darken(color), style = MaterialTheme.typography.labelLarge, fontWeight = FontWeight.Black, letterSpacing = 2.sp)
             sec.formulas.forEach {
-                Text(it, color = Ink, fontFamily = FontFamily.Serif, fontWeight = FontWeight.SemiBold, fontSize = 17.sp, lineHeight = 26.sp)
+                MathBlock(it, TextStyle(color = Ink, fontFamily = FontFamily.Serif, fontWeight = FontWeight.SemiBold, fontSize = 17.sp, lineHeight = 26.sp))
             }
         }
     }
@@ -331,7 +331,7 @@ private fun WorkedPage(step: Step, section: Int, k: Int) {
         Text(step.sections[section].title, color = InkSoft, style = MaterialTheme.typography.labelMedium, maxLines = 1)
     }
     Spacer(Modifier.height(14.dp))
-    Text(ex.problem, style = bodyStyle.copy(fontStyle = FontStyle.Italic, textAlign = TextAlign.Start))
+    MathText(ex.problem, bodyStyle.copy(fontStyle = FontStyle.Italic, textAlign = TextAlign.Start))
     Spacer(Modifier.height(16.dp))
     Text("Penyelesaian", color = Ink, fontFamily = FontFamily.Serif, fontWeight = FontWeight.Bold, fontSize = 19.sp)
     Spacer(Modifier.height(8.dp))
@@ -342,7 +342,7 @@ private fun WorkedPage(step: Step, section: Int, k: Int) {
                     Text("${i + 1}", color = darken(color), fontWeight = FontWeight.Black, fontSize = 13.sp)
                 }
                 Spacer(Modifier.width(10.dp))
-                Text(s, style = bodyStyle.copy(textAlign = TextAlign.Start), modifier = Modifier.weight(1f))
+                MathText(s, bodyStyle.copy(textAlign = TextAlign.Start), Modifier.weight(1f))
             }
         }
     }
@@ -352,7 +352,7 @@ private fun WorkedPage(step: Step, section: Int, k: Int) {
                 .border(2.dp, C.good, RoundedCornerShape(14.dp)).padding(14.dp).testTag("example_answer"),
         ) {
             Text("JAWABAN", color = darken(C.good), style = MaterialTheme.typography.labelLarge, fontWeight = FontWeight.Black)
-            Text(ex.answer, color = Ink, fontFamily = FontFamily.Serif, fontWeight = FontWeight.Bold, fontSize = 18.sp)
+            MathText(ex.answer, TextStyle(color = Ink, fontFamily = FontFamily.Serif, fontWeight = FontWeight.Bold, fontSize = 18.sp))
         }
     }
     if (shown < ex.steps.size) {
@@ -379,7 +379,7 @@ private fun SummaryPage(step: Step, section: Int, understood: MutableList<String
             verticalArrangement = Arrangement.spacedBy(8.dp),
         ) {
             Text("⚠  AWAS JEBAKAN", color = darken(C.pink), style = MaterialTheme.typography.labelLarge, fontWeight = FontWeight.Black)
-            sec.pitfalls.forEach { Text("• $it", style = bodyStyle.copy(fontSize = 16.sp, lineHeight = 25.sp, textAlign = TextAlign.Start)) }
+            sec.pitfalls.forEach { MathText("• $it", bodyStyle.copy(fontSize = 16.sp, lineHeight = 25.sp, textAlign = TextAlign.Start)) }
         }
         Spacer(Modifier.height(18.dp))
     }
@@ -402,7 +402,7 @@ private fun SummaryPage(step: Step, section: Int, understood: MutableList<String
                 Text(if (on) "✓" else "${i + 1}", color = if (on) Color.White else C.muted, fontSize = 13.sp, fontWeight = FontWeight.Bold)
             }
             Spacer(Modifier.width(12.dp))
-            Text(pt, style = bodyStyle.copy(fontSize = 16.sp, lineHeight = 25.sp, textAlign = TextAlign.Start), modifier = Modifier.weight(1f))
+            MathText(pt, bodyStyle.copy(fontSize = 16.sp, lineHeight = 25.sp, textAlign = TextAlign.Start), Modifier.weight(1f))
         }
     }
 }
