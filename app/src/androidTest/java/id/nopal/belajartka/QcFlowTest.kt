@@ -70,6 +70,13 @@ class QcFlowTest {
         }
     }
 
+    /** Switches the map to the stop's subject, scrolls to it and taps it. */
+    private fun tapNode(i: Int) {
+        rule.onNodeWithTag("subject_${Content.nodes[i].step.subject.name}").performClick()
+        rule.waitForIdle()
+        rule.onNodeWithTag("node_$i").performScrollTo().performClick()
+    }
+
     /** Answers one question of any type; [right] = false picks a wrong answer. */
     private fun answer(q: Question, right: Boolean) {
         when {
@@ -94,7 +101,7 @@ class QcFlowTest {
 
     @Test fun a_readOnTheMap() {
         shot("01_map_start", 1200)
-        rule.onNodeWithTag("node_0").performClick()
+        tapNode(0)
         shot("02_map_popover")
         rule.onNodeWithTag("start_step").performClick()
         shot("03_book_opener", 900)
@@ -127,7 +134,7 @@ class QcFlowTest {
     }
 
     @Test fun b_lockedNodeShakes() {
-        rule.onNodeWithTag("node_3").performClick()
+        tapNode(3)
         shot("10_locked_shake", 100)
     }
 
@@ -135,6 +142,7 @@ class QcFlowTest {
         val qi = Content.nodes.indexOfFirst { it.isQuiz }
         unlockUpTo(qi)
         val step = Content.nodes[qi].step
+        rule.onNodeWithTag("subject_${step.subject.name}").performClick()
         rule.onNodeWithTag("node_$qi").performScrollTo()
         shot("11_map_quiz_node", 900)
         rule.onNodeWithTag("node_$qi").performClick()
@@ -161,7 +169,7 @@ class QcFlowTest {
         val step = Content.steps[si]
         val ni = Content.nodes.indexOfFirst { it.isQuiz && it.step.id == "rbig1" }
         unlockUpTo(ni)
-        rule.onNodeWithTag("node_$ni").performScrollTo().performClick()
+        tapNode(ni)
         rule.onNodeWithTag("start_step").performClick()
         var multiShot = false
         var tableShot = false
@@ -259,15 +267,8 @@ class QcFlowTest {
         assertEquals(1, store.photos.size)
     }
 
-    @Test fun i_blockScreen() {
-        rule.onNodeWithTag("tab_4").performClick()
-        shot("36_block_top", 2000)
-        rule.onNodeWithTag("limit_30").performScrollTo().performClick()
-        assertEquals(30, store.dailyLimitMin)
-    }
-
     @Test fun j_pageTurnAnimation() {
-        rule.onNodeWithTag("node_0").performClick()
+        tapNode(0)
         rule.waitUntil(5000) { rule.onAllNodesWithTag("start_step").fetchSemanticsNodes().isNotEmpty() }
         rule.onNodeWithTag("start_step").performClick()
         rule.waitUntil(5000) { rule.onAllNodesWithTag("book_pager").fetchSemanticsNodes().isNotEmpty() }

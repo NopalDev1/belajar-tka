@@ -74,30 +74,19 @@ sealed interface Route {
 }
 
 class MainActivity : ComponentActivity() {
-    private var blockedPkg by mutableStateOf<String?>(null)
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge(
-            statusBarStyle = SystemBarStyle.light(android.graphics.Color.WHITE, android.graphics.Color.WHITE),
+            statusBarStyle = SystemBarStyle.light(0xFFF6F5F1.toInt(), 0xFFF6F5F1.toInt()),
             navigationBarStyle = SystemBarStyle.light(android.graphics.Color.WHITE, android.graphics.Color.WHITE),
         )
-        blockedPkg = intent?.getStringExtra(EXTRA_BLOCKED)
         setContent {
             JalurTheme {
-                App(Store.get(this), blockedPkg) { blockedPkg = null }
+                App(Store.get(this))
             }
         }
     }
 
-    override fun onNewIntent(intent: Intent) {
-        super.onNewIntent(intent)
-        intent.getStringExtra(EXTRA_BLOCKED)?.let { blockedPkg = it }
-    }
-
-    companion object {
-        const val EXTRA_BLOCKED = "blocked_pkg"
-    }
 }
 
 private data class TabItem(val label: String, val icon: ImageVector)
@@ -107,16 +96,13 @@ private val tabs = listOf(
     TabItem("Buku", Icons.AutoMirrored.Rounded.MenuBook),
     TabItem("Progres", Icons.Rounded.BarChart),
     TabItem("Fokus", Icons.Rounded.Timer),
-    TabItem("Blokir", Icons.Rounded.Shield),
 )
 
 @Composable
-fun App(store: Store, blockedPkg: String?, onDismissBlocked: () -> Unit) {
+fun App(store: Store) {
     var route by remember { mutableStateOf<Route>(Route.Home(0)) }
     var lastTab by remember { mutableStateOf(0) }
 
-    // A blocked app sends you straight to the focus timer.
-    LaunchedEffect(blockedPkg) { if (blockedPkg != null) route = Route.Home(3).also { lastTab = 3 } }
 
     fun go(r: Route) {
         if (r is Route.Home) lastTab = r.tab
@@ -164,8 +150,7 @@ fun App(store: Store, blockedPkg: String?, onDismissBlocked: () -> Unit) {
                             2 -> ProgressScreen(store, onRetry = { go(Route.Retry) }, onOpenStep = { i ->
                                 go(if (Content.steps[i].sections.isNotEmpty()) Route.Chapter(i, 0, Route.Home(2)) else Route.Quiz(i, Route.Home(2)))
                             })
-                            3 -> FocusScreen(store, blockedPkg, onDismissBlocked)
-                            else -> BlockScreen(store)
+                            else -> FocusScreen(store)
                         }
                     }
                     BottomBar(r.tab) { go(Route.Home(it)) }
@@ -224,8 +209,8 @@ private fun depth(r: Route) = when (r) {
 @Composable
 private fun BottomBar(selected: Int, onSelect: (Int) -> Unit) {
     Row(
-        Modifier.fillMaxWidth().background(C.bg).drawBehind { drawLine(C.line, Offset(0f, 0f), Offset(size.width, 0f), 4f) }
-            .navigationBarsPadding().padding(horizontal = 10.dp, vertical = 8.dp),
+        Modifier.fillMaxWidth().background(C.surface).drawBehind { drawLine(C.line, Offset(0f, 0f), Offset(size.width, 0f), 2f) }
+            .navigationBarsPadding().padding(horizontal = 8.dp, vertical = 8.dp),
         horizontalArrangement = Arrangement.SpaceAround,
     ) {
         tabs.forEachIndexed { i, t ->
@@ -235,19 +220,18 @@ private fun BottomBar(selected: Int, onSelect: (Int) -> Unit) {
                     .clip(RoundedCornerShape(16.dp))
                     .clickable(remember { MutableInteractionSource() }, null) { onSelect(i) }
                     .testTag("tab_$i")
-                    .padding(horizontal = 6.dp, vertical = 6.dp),
+                    .padding(horizontal = 6.dp, vertical = 4.dp),
                 horizontalAlignment = Alignment.CenterHorizontally,
             ) {
                 Box(
-                    Modifier.clip(RoundedCornerShape(12.dp))
-                        .background(if (on) C.blue.copy(alpha = 0.12f) else C.bg)
-                        .border(2.dp, if (on) C.blue.copy(alpha = 0.6f) else C.bg, RoundedCornerShape(12.dp))
-                        .padding(horizontal = 12.dp, vertical = 4.dp),
+                    Modifier.clip(RoundedCornerShape(50))
+                        .background(if (on) C.accentWash else C.surface)
+                        .padding(horizontal = 20.dp, vertical = 5.dp),
                 ) {
-                    Icon(t.icon, t.label, tint = if (on) C.blue else C.faded, modifier = Modifier.size(24.dp))
+                    Icon(t.icon, t.label, tint = if (on) C.violet else C.muted, modifier = Modifier.size(22.dp))
                 }
-                Spacer(Modifier.height(2.dp))
-                Text(t.label, color = if (on) C.blue else C.faded, style = MaterialTheme.typography.labelMedium,
+                Spacer(Modifier.height(4.dp))
+                Text(t.label, color = if (on) C.text else C.muted, style = MaterialTheme.typography.labelMedium,
                     fontWeight = if (on) FontWeight.Bold else FontWeight.Medium)
             }
         }

@@ -1,4 +1,4 @@
-# Jalur TKA
+# Tuntas
 
 Aplikasi Android untuk persiapan **TKA SMA 2026** (Matematika, B. Indonesia, B. Inggris, Fisika), dibuat untuk TKA gelombang 2 (2–5 November 2026).
 
@@ -15,7 +15,6 @@ Aplikasi Android untuk persiapan **TKA SMA 2026** (Matematika, B. Indonesia, B. 
 - **Bank soal (512 soal)**: PG, PG Kompleks, dan PG Kompleks Kategori, dengan kunci dan pembahasan singkat. Sumbernya kisi-kisi dan contoh resmi, file latihan yang diunggah, dan soal yang ditulis untuk aplikasi ini dengan acuan contoh soal di detikEdu, CNN Indonesia, Kompas.com, dan Blog ITERA.
 - **Progres**: level, hari berturut-turut, progres per mapel, grafik harian, lencana, dan daftar soal salah.
 - **Sesi Harian**: belajar, latihan soal, lalu foto atau ketik ringkasan. Selama sesi, aplikasi disematkan dan layar tetap menyala.
-- **Pemblokir distraksi (Aksesibilitas)**: menutup aplikasi lain saat sesi berjalan, dengan opsi blokir terus dan batas harian.
 
 ## Gaya penulisan
 

@@ -116,7 +116,7 @@ fun QuizScreen(
 
     Column(Modifier.fillMaxSize().background(C.bg).statusBarsPadding().navigationBarsPadding()) {
         if (finished) {
-            ResultView(questions.size, correct, bestCombo, xpGained, color, onContinue)
+            ResultView(questions.size, correct, bestCombo, color, onContinue)
             return@Column
         }
         val q = questions[index]
@@ -195,8 +195,8 @@ fun QuizScreen(
             val ok = lastOk
             val tone = if (ok) C.good else C.bad
             Column(
-                Modifier.fillMaxWidth().clip(RoundedCornerShape(topStart = 12.dp, topEnd = 12.dp))
-                    .background(C.surface).border(2.dp, tone, RoundedCornerShape(topStart = 12.dp, topEnd = 12.dp))
+                Modifier.fillMaxWidth().clip(RoundedCornerShape(topStart = 24.dp, topEnd = 24.dp))
+                    .background(C.surface).border(2.dp, tone, RoundedCornerShape(topStart = 24.dp, topEnd = 24.dp))
                     .heightIn(max = 380.dp).verticalScroll(rememberScrollState())
                     .padding(20.dp),
                 verticalArrangement = Arrangement.spacedBy(8.dp),
@@ -204,7 +204,6 @@ fun QuizScreen(
                 Row(verticalAlignment = Alignment.CenterVertically) {
                     Text(if (ok) "Benar" else "Salah", color = tone, style = MaterialTheme.typography.titleLarge,
                         modifier = Modifier.weight(1f).testTag("verdict"))
-                    Text("+$lastGain XP", color = C.muted, fontWeight = FontWeight.Bold, fontSize = 16.sp)
                 }
                 MathText("Kunci: ${q.keyText()}", MaterialTheme.typography.titleMedium, color = C.text)
                 MathText(q.explain, MaterialTheme.typography.bodyLarge, color = C.text)
@@ -234,7 +233,7 @@ private fun QuestionImage(path: String) {
         Image(
             bmp, "Gambar soal",
             Modifier.fillMaxWidth().clip(RoundedCornerShape(16.dp)).background(Color.White)
-                .border(2.dp, C.line, RoundedCornerShape(16.dp)).clickable { zoomed = true }.testTag("q_image"),
+                .border(1.dp, C.line, RoundedCornerShape(16.dp)).clickable { zoomed = true }.testTag("q_image"),
             contentScale = ContentScale.FillWidth,
         )
         Text("Ketuk gambar untuk memperbesar", color = C.faded, style = MaterialTheme.typography.labelMedium, modifier = Modifier.padding(top = 4.dp))
@@ -275,9 +274,9 @@ private fun CheckRow(i: Int, text: String, isKey: Boolean, checked: Boolean, rev
     }
     val border by animateColorAsState(tone, label = "cb")
     Row(
-        Modifier.fillMaxWidth().clip(RoundedCornerShape(12.dp))
+        Modifier.fillMaxWidth().clip(RoundedCornerShape(16.dp))
             .background(if (checked || (revealed && isKey)) tone.copy(alpha = 0.13f) else C.surface)
-            .border(2.dp, border, RoundedCornerShape(12.dp))
+            .border(2.dp, border, RoundedCornerShape(16.dp))
             .clickable(enabled = !revealed, onClick = onClick).testTag("chk_$i")
             .padding(14.dp),
         verticalAlignment = Alignment.CenterVertically,
@@ -306,8 +305,8 @@ private fun TableAnswer(q: Question, cells: Map<Int, Int>, revealed: Boolean, ac
             val chosen = cells[r]
             val rowOk = chosen == q.rowKeys[r]
             Column(
-                Modifier.fillMaxWidth().clip(RoundedCornerShape(12.dp)).background(C.surface)
-                    .border(2.dp, if (revealed) (if (rowOk) C.good else C.bad) else C.line, RoundedCornerShape(12.dp))
+                Modifier.fillMaxWidth().clip(RoundedCornerShape(16.dp)).background(C.surface)
+                    .border(2.dp, if (revealed) (if (rowOk) C.good else C.bad) else C.line, RoundedCornerShape(16.dp))
                     .padding(12.dp),
                 verticalArrangement = Arrangement.spacedBy(8.dp),
             ) {
@@ -321,7 +320,7 @@ private fun TableAnswer(q: Question, cells: Map<Int, Int>, revealed: Boolean, ac
                         )
                         Text(
                             label,
-                            Modifier.weight(1f).clip(RoundedCornerShape(12.dp)).background(bg)
+                            Modifier.weight(1f).clip(RoundedCornerShape(16.dp)).background(bg)
                                 .clickable(enabled = !revealed) { onPick(r, c) }.testTag("cell_${r}_$c")
                                 .padding(vertical = 10.dp, horizontal = 6.dp),
                             color = if (on || isKey) Color.White else C.text, textAlign = TextAlign.Center,
@@ -338,7 +337,7 @@ private fun TableAnswer(q: Question, cells: Map<Int, Int>, revealed: Boolean, ac
 @Composable
 private fun ComboBadge(combo: Int) {
     if (combo < 2) return
-    Text("$combo beruntun", Modifier.clip(RoundedCornerShape(12.dp)).border(2.dp, C.line, RoundedCornerShape(12.dp))
+    Text("$combo beruntun", Modifier.clip(RoundedCornerShape(16.dp)).border(1.dp, C.line, RoundedCornerShape(16.dp))
         .padding(horizontal = 10.dp, vertical = 4.dp), color = C.muted, fontWeight = FontWeight.Bold)
 }
 
@@ -346,7 +345,7 @@ private fun ComboBadge(combo: Int) {
 private fun PassageBox(text: String) {
     var open by remember { mutableStateOf(true) }
     Column(
-        Modifier.fillMaxWidth().clip(RoundedCornerShape(12.dp)).background(C.surface).border(2.dp, C.line, RoundedCornerShape(12.dp)).clickable { open = !open }.padding(16.dp),
+        Modifier.fillMaxWidth().clip(RoundedCornerShape(16.dp)).background(C.surface).border(1.dp, C.line, RoundedCornerShape(16.dp)).clickable { open = !open }.padding(16.dp),
     ) {
         Text(if (open) "Bacaan (ketuk untuk menutup)" else "Bacaan (ketuk untuk membuka)", color = C.muted, style = MaterialTheme.typography.labelMedium)
         AnimatedVisibility(open) {
@@ -379,7 +378,7 @@ private fun OptionRow(i: Int, text: String, answer: Int, picked: Int?, accent: C
     }
     Row(
         Modifier.fillMaxWidth().offset { IntOffset(shake.value.roundToInt(), 0) }
-            .clip(RoundedCornerShape(12.dp)).background(bg).border(2.dp, border, RoundedCornerShape(12.dp))
+            .clip(RoundedCornerShape(16.dp)).background(bg).border(2.dp, border, RoundedCornerShape(16.dp))
             .clickable(enabled = !revealed, onClick = onClick).testTag("opt_$i")
             .padding(14.dp),
         verticalAlignment = Alignment.CenterVertically,
@@ -399,7 +398,7 @@ private fun OptionRow(i: Int, text: String, answer: Int, picked: Int?, accent: C
 }
 
 @Composable
-private fun ResultView(total: Int, correct: Int, bestCombo: Int, xp: Int, color: Color, onContinue: () -> Unit) {
+private fun ResultView(total: Int, correct: Int, bestCombo: Int, color: Color, onContinue: () -> Unit) {
     val stars = starsFor(correct, total)
     Column(
         Modifier.fillMaxSize().verticalScroll(rememberScrollState()).padding(24.dp).testTag("quiz_result"),
@@ -416,7 +415,7 @@ private fun ResultView(total: Int, correct: Int, bestCombo: Int, xp: Int, color:
                 AnimatedNumber(correct * 100 / total, MaterialTheme.typography.headlineLarge, suffix = "%")
             }
             Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(12.dp)) {
-                ResultTile("XP", "+$xp", Modifier.weight(1f))
+                ResultTile("Salah", "${total - correct}", Modifier.weight(1f))
                 ResultTile("Benar beruntun", "$bestCombo", Modifier.weight(1f))
             }
             Text("Bintang: 3 jika benar semua, 2 jika minimal 70%, selain itu 1.", color = C.muted,
@@ -432,7 +431,7 @@ private fun ResultView(total: Int, correct: Int, bestCombo: Int, xp: Int, color:
 @Composable
 private fun ResultTile(label: String, value: String, modifier: Modifier) {
     Column(
-        modifier.clip(RoundedCornerShape(12.dp)).border(2.dp, C.line, RoundedCornerShape(12.dp)).padding(16.dp),
+        modifier.clip(RoundedCornerShape(16.dp)).border(1.dp, C.line, RoundedCornerShape(16.dp)).padding(16.dp),
         horizontalAlignment = Alignment.CenterHorizontally,
     ) {
         Text(label, color = C.muted, style = MaterialTheme.typography.labelMedium)

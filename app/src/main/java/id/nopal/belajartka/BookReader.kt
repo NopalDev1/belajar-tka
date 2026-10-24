@@ -209,7 +209,7 @@ fun BookReader(
 private fun TurnButton(icon: androidx.compose.ui.graphics.vector.ImageVector, desc: String, enabled: Boolean, color: Color, modifier: Modifier, onClick: () -> Unit) {
     val bg by animateColorAsState(if (enabled) color else C.surface2, label = "turn")
     Box(
-        modifier.size(54.dp).clip(RoundedCornerShape(12.dp)).background(bg).clickable(enabled = enabled, onClick = onClick),
+        modifier.size(54.dp).clip(RoundedCornerShape(16.dp)).background(bg).clickable(enabled = enabled, onClick = onClick),
         contentAlignment = Alignment.Center,
     ) { Icon(icon, desc, tint = if (enabled) Color.White else C.faded, modifier = Modifier.size(32.dp)) }
 }
@@ -370,7 +370,7 @@ private fun WorkedPage(step: Step, section: Int, k: Int) {
         Row(horizontalArrangement = Arrangement.spacedBy(10.dp), verticalAlignment = Alignment.CenterVertically) {
             BouncyButton("Langkah ${shown + 1}", Modifier.weight(1f).testTag("reveal_step"), color = color) { shown++ }
             Text("Lihat semua", color = darken(color), fontWeight = FontWeight.Bold,
-                modifier = Modifier.clip(RoundedCornerShape(12.dp)).clickable { shown = ex.steps.size }.padding(10.dp).testTag("reveal_all"))
+                modifier = Modifier.clip(RoundedCornerShape(16.dp)).clickable { shown = ex.steps.size }.padding(10.dp).testTag("reveal_all"))
         }
     }
 }
@@ -398,8 +398,8 @@ private fun SummaryPage(step: Step, section: Int, understood: MutableList<String
         val on = key in understood
         val bg by animateColorAsState(if (on) color.copy(alpha = 0.16f) else Color.Transparent, label = "pt")
         Row(
-            Modifier.fillMaxWidth().padding(vertical = 4.dp).clip(RoundedCornerShape(12.dp)).background(bg)
-                .border(1.5.dp, if (on) color else PaperEdge, RoundedCornerShape(12.dp))
+            Modifier.fillMaxWidth().padding(vertical = 4.dp).clip(RoundedCornerShape(16.dp)).background(bg)
+                .border(1.5.dp, if (on) color else PaperEdge, RoundedCornerShape(16.dp))
                 .clickable { if (on) understood.remove(key) else understood.add(key) }
                 .testTag("point_$key").padding(12.dp),
             verticalAlignment = Alignment.Top,
@@ -436,7 +436,7 @@ private fun EndPage(store: Store, step: Step, section: Int, wholeChapter: Boolea
             BouncyButton("Kembali ke buku", Modifier.fillMaxWidth().testTag("finish_read"), secondary = true, onClick = onFinished)
         } else {
             val already = "${step.id}#$section" in store.read
-            BouncyButton(if (already) "Selesai" else "Selesai (+10 XP)", Modifier.fillMaxWidth().testTag("finish_read"), color = color) {
+            BouncyButton("Selesai", Modifier.fillMaxWidth().testTag("finish_read"), color = color) {
                 store.markRead(step, section); onFinished()
             }
         }
