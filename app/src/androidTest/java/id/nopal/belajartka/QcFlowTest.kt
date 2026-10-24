@@ -287,6 +287,7 @@ class QcFlowTest {
         val k = step.sections.indexOfFirst { it.formulas.isNotEmpty() }
         rule.onNodeWithTag("sub_${Content.steps.indexOf(step)}_$k").performScrollTo().performClick()
         rule.mainClock.advanceTimeBy(900)
+        if (k == 0) turnPage() // section 0 opens on the chapter opener
         rule.onNodeWithTag("formula_box").performScrollTo()
         shot("39_formula_box", 900)
         rule.onNodeWithTag("back").performClick()
