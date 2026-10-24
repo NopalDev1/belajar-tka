@@ -126,7 +126,7 @@ private fun SectionCard(step: Step, page: Int, understood: MutableList<String>) 
             val key = "$page:$i"
             val on = key in understood
             val bg by animateColorAsState(if (on) step.subject.color.copy(alpha = 0.18f) else C.surface2, label = "pt")
-            val tickScale by animateFloatAsState(if (on) 1f else 0.6f, spring(Spring.DampingRatioHighBouncy), label = "tick")
+            val tickScale by animateFloatAsState(if (on) 1.1f else 0.9f, spring(Spring.DampingRatioHighBouncy), label = "tick")
             Row(
                 Modifier.fillMaxWidth().clip(RoundedCornerShape(16.dp)).background(bg)
                     .clickable { if (on) understood.remove(key) else understood.add(key) }
