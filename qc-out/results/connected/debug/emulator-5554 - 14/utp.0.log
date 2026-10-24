@@ -1,0 +1,49 @@
+INFO: Constructing runner from config.
+INFO: Configuring Android Instrumentation driver: android_instrumentation_runtime {
+  instrumentation_info {
+    app_package: "id.nopal.belajartka"
+    test_package: "id.nopal.belajartka.test"
+    test_runner_class: "androidx.test.runner.AndroidJUnitRunner"
+  }
+  instrumentation_args {
+    args_map {
+      key: "additionalTestOutputDir"
+      value: "/sdcard/Android/media/id.nopal.belajartka/additional_test_output"
+    }
+  }
+}
+am_instrument_timeout: 31536000
+
+INFO: No installables found in test fixture. Nothing to install.
+INFO: Installing [/home/runner/work/belajar-tka/belajar-tka/app/build/outputs/apk/debug/app-debug.apk] on device emulator-5554.
+INFO: Installing [/home/runner/work/belajar-tka/belajar-tka/app/build/outputs/apk/androidTest/debug/app-debug-androidTest.apk] on device emulator-5554.
+INFO: Start logcat streaming.
+INFO: Running Android Instrumentation driver.
+INFO: Stop logcat streaming.
+INFO: Uninstalling id.nopal.belajartka for device emulator-5554.
+INFO: Uninstalling id.nopal.belajartka.test for device emulator-5554.
+INFO: Execute id.nopal.belajartka.MascotQcTest.correctLight: PASSED
+INFO: Execute id.nopal.belajartka.MascotQcTest.wrongDark: PASSED
+INFO: Execute id.nopal.belajartka.MascotQcTest.tapReactions: PASSED
+INFO: Execute id.nopal.belajartka.MascotQcTest.idleDark: PASSED
+INFO: Execute id.nopal.belajartka.MascotQcTest.wrongLight: PASSED
+INFO: Execute id.nopal.belajartka.MascotQcTest.doneDark: PASSED
+INFO: Execute id.nopal.belajartka.MascotQcTest.correctDark: PASSED
+INFO: Execute id.nopal.belajartka.MascotQcTest.doneLight: PASSED
+INFO: Execute id.nopal.belajartka.MascotQcTest.idleCycle: PASSED
+INFO: Execute id.nopal.belajartka.MascotQcTest.idleLight: PASSED
+INFO: Execute id.nopal.belajartka.QcFlowTest.e_libraryAndBook: PASSED
+INFO: Execute id.nopal.belajartka.QcFlowTest.c_chapterQuizFromMap: PASSED
+INFO: Execute id.nopal.belajartka.QcFlowTest.d_complexQuestionsWithFigures: PASSED
+INFO: Execute id.nopal.belajartka.QcFlowTest.p_launcherIcon: PASSED
+INFO: Execute id.nopal.belajartka.QcFlowTest.f_progressScreen: PASSED
+INFO: Execute id.nopal.belajartka.QcFlowTest.g_sessionFlow: PASSED
+INFO: Execute id.nopal.belajartka.QcFlowTest.j_pageTurnAnimation: PASSED
+INFO: Execute id.nopal.belajartka.QcFlowTest.n_focusDark: PASSED
+INFO: Execute id.nopal.belajartka.QcFlowTest.k_latexAndEnglishBook: PASSED
+INFO: Execute id.nopal.belajartka.QcFlowTest.l_latexQuiz: PASSED
+INFO: Execute id.nopal.belajartka.QcFlowTest.a_readOnTheMap: PASSED
+INFO: Execute id.nopal.belajartka.QcFlowTest.o_tutiInQuizDark: PASSED
+INFO: Execute id.nopal.belajartka.QcFlowTest.b_lockedNodeShakes: PASSED
+INFO: Execute id.nopal.belajartka.QcFlowTest.h_summaryTyping: PASSED
+INFO: Execute id.nopal.belajartka.QcFlowTest.m_settingsAndDarkMode: PASSED

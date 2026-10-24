@@ -1,0 +1,1316 @@
+# 2026-10-24T16:27:58.914762899Z:
+test_suite_meta_data {
+  scheduled_test_case_count: 25
+}
+test_status: PASSED
+test_result {
+  test_case {
+    test_class: "MascotQcTest"
+    test_package: "id.nopal.belajartka"
+    test_method: "correctLight"
+    start_time {
+      seconds: 1792859024
+      nanos: 7000000
+    }
+    end_time {
+      seconds: 1792859031
+      nanos: 375000000
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/belajar-tka/belajar-tka/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/logcat-id.nopal.belajartka.MascotQcTest-correctLight.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/belajar-tka/belajar-tka/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/belajar-tka/belajar-tka/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/belajar-tka/belajar-tka/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "MascotQcTest"
+    test_package: "id.nopal.belajartka"
+    test_method: "wrongDark"
+    start_time {
+      seconds: 1792859031
+      nanos: 523000000
+    }
+    end_time {
+      seconds: 1792859038
+      nanos: 465000000
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/belajar-tka/belajar-tka/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/logcat-id.nopal.belajartka.MascotQcTest-wrongDark.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/belajar-tka/belajar-tka/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/belajar-tka/belajar-tka/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/belajar-tka/belajar-tka/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "MascotQcTest"
+    test_package: "id.nopal.belajartka"
+    test_method: "tapReactions"
+    start_time {
+      seconds: 1792859038
+      nanos: 493000000
+    }
+    end_time {
+      seconds: 1792859048
+      nanos: 967000000
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/belajar-tka/belajar-tka/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/logcat-id.nopal.belajartka.MascotQcTest-tapReactions.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/belajar-tka/belajar-tka/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/belajar-tka/belajar-tka/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/belajar-tka/belajar-tka/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "MascotQcTest"
+    test_package: "id.nopal.belajartka"
+    test_method: "idleDark"
+    start_time {
+      seconds: 1792859048
+      nanos: 969000000
+    }
+    end_time {
+      seconds: 1792859056
+      nanos: 394000000
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/belajar-tka/belajar-tka/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/logcat-id.nopal.belajartka.MascotQcTest-idleDark.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/belajar-tka/belajar-tka/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/belajar-tka/belajar-tka/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/belajar-tka/belajar-tka/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "MascotQcTest"
+    test_package: "id.nopal.belajartka"
+    test_method: "wrongLight"
+    start_time {
+      seconds: 1792859056
+      nanos: 457000000
+    }
+    end_time {
+      seconds: 1792859061
+      nanos: 708000000
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/belajar-tka/belajar-tka/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/logcat-id.nopal.belajartka.MascotQcTest-wrongLight.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/belajar-tka/belajar-tka/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/belajar-tka/belajar-tka/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/belajar-tka/belajar-tka/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "MascotQcTest"
+    test_package: "id.nopal.belajartka"
+    test_method: "doneDark"
+    start_time {
+      seconds: 1792859061
+      nanos: 738000000
+    }
+    end_time {
+      seconds: 1792859069
+      nanos: 94000000
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/belajar-tka/belajar-tka/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/logcat-id.nopal.belajartka.MascotQcTest-doneDark.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/belajar-tka/belajar-tka/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/belajar-tka/belajar-tka/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/belajar-tka/belajar-tka/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "MascotQcTest"
+    test_package: "id.nopal.belajartka"
+    test_method: "correctDark"
+    start_time {
+      seconds: 1792859069
+      nanos: 103000000
+    }
+    end_time {
+      seconds: 1792859075
+      nanos: 273000000
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/belajar-tka/belajar-tka/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/logcat-id.nopal.belajartka.MascotQcTest-correctDark.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/belajar-tka/belajar-tka/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/belajar-tka/belajar-tka/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/belajar-tka/belajar-tka/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "MascotQcTest"
+    test_package: "id.nopal.belajartka"
+    test_method: "doneLight"
+    start_time {
+      seconds: 1792859075
+      nanos: 277000000
+    }
+    end_time {
+      seconds: 1792859080
+      nanos: 521000000
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/belajar-tka/belajar-tka/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/logcat-id.nopal.belajartka.MascotQcTest-doneLight.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/belajar-tka/belajar-tka/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/belajar-tka/belajar-tka/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/belajar-tka/belajar-tka/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "MascotQcTest"
+    test_package: "id.nopal.belajartka"
+    test_method: "idleCycle"
+    start_time {
+      seconds: 1792859080
+      nanos: 558000000
+    }
+    end_time {
+      seconds: 1792859093
+      nanos: 637000000
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/belajar-tka/belajar-tka/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/logcat-id.nopal.belajartka.MascotQcTest-idleCycle.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/belajar-tka/belajar-tka/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/belajar-tka/belajar-tka/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/belajar-tka/belajar-tka/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "MascotQcTest"
+    test_package: "id.nopal.belajartka"
+    test_method: "idleLight"
+    start_time {
+      seconds: 1792859093
+      nanos: 639000000
+    }
+    end_time {
+      seconds: 1792859099
+      nanos: 474000000
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/belajar-tka/belajar-tka/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/logcat-id.nopal.belajartka.MascotQcTest-idleLight.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/belajar-tka/belajar-tka/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/belajar-tka/belajar-tka/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/belajar-tka/belajar-tka/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "QcFlowTest"
+    test_package: "id.nopal.belajartka"
+    test_method: "e_libraryAndBook"
+    start_time {
+      seconds: 1792859099
+      nanos: 475000000
+    }
+    end_time {
+      seconds: 1792859112
+      nanos: 522000000
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/belajar-tka/belajar-tka/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/logcat-id.nopal.belajartka.QcFlowTest-e_libraryAndBook.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/belajar-tka/belajar-tka/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/belajar-tka/belajar-tka/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/belajar-tka/belajar-tka/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "QcFlowTest"
+    test_package: "id.nopal.belajartka"
+    test_method: "c_chapterQuizFromMap"
+    start_time {
+      seconds: 1792859112
+      nanos: 551000000
+    }
+    end_time {
+      seconds: 1792859129
+      nanos: 950000000
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/belajar-tka/belajar-tka/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/logcat-id.nopal.belajartka.QcFlowTest-c_chapterQuizFromMap.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/belajar-tka/belajar-tka/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/belajar-tka/belajar-tka/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/belajar-tka/belajar-tka/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "QcFlowTest"
+    test_package: "id.nopal.belajartka"
+    test_method: "d_complexQuestionsWithFigures"
+    start_time {
+      seconds: 1792859129
+      nanos: 952000000
+    }
+    end_time {
+      seconds: 1792859161
+      nanos: 469000000
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/belajar-tka/belajar-tka/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/logcat-id.nopal.belajartka.QcFlowTest-d_complexQuestionsWithFigures.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/belajar-tka/belajar-tka/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/belajar-tka/belajar-tka/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/belajar-tka/belajar-tka/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "QcFlowTest"
+    test_package: "id.nopal.belajartka"
+    test_method: "p_launcherIcon"
+    start_time {
+      seconds: 1792859161
+      nanos: 551000000
+    }
+    end_time {
+      seconds: 1792859175
+      nanos: 204000000
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/belajar-tka/belajar-tka/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/logcat-id.nopal.belajartka.QcFlowTest-p_launcherIcon.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/belajar-tka/belajar-tka/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/belajar-tka/belajar-tka/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/belajar-tka/belajar-tka/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "QcFlowTest"
+    test_package: "id.nopal.belajartka"
+    test_method: "f_progressScreen"
+    start_time {
+      seconds: 1792859175
+      nanos: 206000000
+    }
+    end_time {
+      seconds: 1792859181
+      nanos: 152000000
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/belajar-tka/belajar-tka/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/logcat-id.nopal.belajartka.QcFlowTest-f_progressScreen.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/belajar-tka/belajar-tka/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/belajar-tka/belajar-tka/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/belajar-tka/belajar-tka/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "QcFlowTest"
+    test_package: "id.nopal.belajartka"
+    test_method: "g_sessionFlow"
+    start_time {
+      seconds: 1792859181
+      nanos: 154000000
+    }
+    end_time {
+      seconds: 1792859189
+      nanos: 334000000
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/belajar-tka/belajar-tka/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/logcat-id.nopal.belajartka.QcFlowTest-g_sessionFlow.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/belajar-tka/belajar-tka/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/belajar-tka/belajar-tka/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/belajar-tka/belajar-tka/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "QcFlowTest"
+    test_package: "id.nopal.belajartka"
+    test_method: "j_pageTurnAnimation"
+    start_time {
+      seconds: 1792859189
+      nanos: 344000000
+    }
+    end_time {
+      seconds: 1792859194
+      nanos: 328000000
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/belajar-tka/belajar-tka/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/logcat-id.nopal.belajartka.QcFlowTest-j_pageTurnAnimation.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/belajar-tka/belajar-tka/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/belajar-tka/belajar-tka/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/belajar-tka/belajar-tka/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "QcFlowTest"
+    test_package: "id.nopal.belajartka"
+    test_method: "n_focusDark"
+    start_time {
+      seconds: 1792859194
+      nanos: 330000000
+    }
+    end_time {
+      seconds: 1792859198
+      nanos: 908000000
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/belajar-tka/belajar-tka/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/logcat-id.nopal.belajartka.QcFlowTest-n_focusDark.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/belajar-tka/belajar-tka/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/belajar-tka/belajar-tka/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/belajar-tka/belajar-tka/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "QcFlowTest"
+    test_package: "id.nopal.belajartka"
+    test_method: "k_latexAndEnglishBook"
+    start_time {
+      seconds: 1792859198
+      nanos: 961000000
+    }
+    end_time {
+      seconds: 1792859207
+      nanos: 268000000
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/belajar-tka/belajar-tka/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/logcat-id.nopal.belajartka.QcFlowTest-k_latexAndEnglishBook.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/belajar-tka/belajar-tka/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/belajar-tka/belajar-tka/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/belajar-tka/belajar-tka/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "QcFlowTest"
+    test_package: "id.nopal.belajartka"
+    test_method: "l_latexQuiz"
+    start_time {
+      seconds: 1792859207
+      nanos: 273000000
+    }
+    end_time {
+      seconds: 1792859213
+      nanos: 336000000
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/belajar-tka/belajar-tka/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/logcat-id.nopal.belajartka.QcFlowTest-l_latexQuiz.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/belajar-tka/belajar-tka/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/belajar-tka/belajar-tka/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/belajar-tka/belajar-tka/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "QcFlowTest"
+    test_package: "id.nopal.belajartka"
+    test_method: "a_readOnTheMap"
+    start_time {
+      seconds: 1792859213
+      nanos: 367000000
+    }
+    end_time {
+      seconds: 1792859226
+      nanos: 3000000
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/belajar-tka/belajar-tka/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/logcat-id.nopal.belajartka.QcFlowTest-a_readOnTheMap.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/belajar-tka/belajar-tka/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/belajar-tka/belajar-tka/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/belajar-tka/belajar-tka/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "QcFlowTest"
+    test_package: "id.nopal.belajartka"
+    test_method: "o_tutiInQuizDark"
+    start_time {
+      seconds: 1792859226
+      nanos: 159000000
+    }
+    end_time {
+      seconds: 1792859238
+      nanos: 975000000
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/belajar-tka/belajar-tka/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/logcat-id.nopal.belajartka.QcFlowTest-o_tutiInQuizDark.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/belajar-tka/belajar-tka/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/belajar-tka/belajar-tka/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/belajar-tka/belajar-tka/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "QcFlowTest"
+    test_package: "id.nopal.belajartka"
+    test_method: "b_lockedNodeShakes"
+    start_time {
+      seconds: 1792859238
+      nanos: 987000000
+    }
+    end_time {
+      seconds: 1792859243
+      nanos: 799000000
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/belajar-tka/belajar-tka/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/logcat-id.nopal.belajartka.QcFlowTest-b_lockedNodeShakes.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/belajar-tka/belajar-tka/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/belajar-tka/belajar-tka/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/belajar-tka/belajar-tka/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "QcFlowTest"
+    test_package: "id.nopal.belajartka"
+    test_method: "h_summaryTyping"
+    start_time {
+      seconds: 1792859243
+      nanos: 831000000
+    }
+    end_time {
+      seconds: 1792859250
+      nanos: 452000000
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/belajar-tka/belajar-tka/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/logcat-id.nopal.belajartka.QcFlowTest-h_summaryTyping.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/belajar-tka/belajar-tka/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/belajar-tka/belajar-tka/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/belajar-tka/belajar-tka/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "QcFlowTest"
+    test_package: "id.nopal.belajartka"
+    test_method: "m_settingsAndDarkMode"
+    start_time {
+      seconds: 1792859250
+      nanos: 481000000
+    }
+    end_time {
+      seconds: 1792859264
+      nanos: 216000000
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/belajar-tka/belajar-tka/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/logcat-id.nopal.belajartka.QcFlowTest-m_settingsAndDarkMode.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/belajar-tka/belajar-tka/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/belajar-tka/belajar-tka/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/belajar-tka/belajar-tka/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/cpuinfo"
+    }
+  }
+}
+output_artifact {
+  label {
+    label: "test-results.log"
+    namespace: "com.google.testing.platform.runtime.android.driver.AndroidInstrumentationDriver"
+  }
+  source_path {
+    path: "/home/runner/work/belajar-tka/belajar-tka/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/testlog/test-results.log"
+  }
+  type: TEST_DATA
+  mime_type: "text/plain"
+}

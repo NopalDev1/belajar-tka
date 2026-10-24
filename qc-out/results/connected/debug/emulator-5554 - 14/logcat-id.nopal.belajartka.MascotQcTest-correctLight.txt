@@ -1,0 +1,575 @@
+10-24 16:23:43.789  6166  6187 I TestRunner: started: correctLight(id.nopal.belajartka.MascotQcTest)
+10-24 16:23:43.818  6166  6187 W FileTestStorage: Output properties is not supported.
+10-24 16:23:43.821  6166  6187 E AndroidXTracer: enableTracing failed. You may need to upgrade your androidx.tracing:tracing version
+10-24 16:23:43.821  6166  6187 E AndroidXTracer: java.lang.NoSuchMethodError: No static method forceEnableAppTracing()V in class Landroidx/tracing/Trace; or its super classes (declaration of 'androidx.tracing.Trace' appears in /data/app/~~87EVUdJ-iGfFP4fZX43Yxw==/id.nopal.belajartka-uCgBIZM7aVS9JFANIJooPg==/base.apk!classes4.dex)
+10-24 16:23:43.821  6166  6187 E AndroidXTracer: 	at androidx.test.platform.tracing.AndroidXTracer.enableTracing(AndroidXTracer.java:57)
+10-24 16:23:43.821  6166  6187 E AndroidXTracer: 	at androidx.test.platform.tracing.Tracing.<init>(Tracing.java:53)
+10-24 16:23:43.821  6166  6187 E AndroidXTracer: 	at androidx.test.platform.tracing.Tracing.<clinit>(Tracing.java:49)
+10-24 16:23:43.821  6166  6187 E AndroidXTracer: 	at androidx.test.espresso.base.BaseLayerModule.providesTracing(BaseLayerModule.java:1)
+10-24 16:23:43.821  6166  6187 E AndroidXTracer: 	at androidx.test.espresso.base.BaseLayerModule_ProvidesTracingFactory.providesTracing(BaseLayerModule_ProvidesTracingFactory.java:1)
+10-24 16:23:43.821  6166  6187 E AndroidXTracer: 	at androidx.test.espresso.base.BaseLayerModule_ProvidesTracingFactory.get(BaseLayerModule_ProvidesTracingFactory.java:1)
+10-24 16:23:43.821  6166  6187 E AndroidXTracer: 	at androidx.test.espresso.base.BaseLayerModule_ProvidesTracingFactory.get(BaseLayerModule_ProvidesTracingFactory.java:2)
+10-24 16:23:43.821  6166  6187 E AndroidXTracer: 	at androidx.test.espresso.core.internal.deps.dagger.internal.DoubleCheck.get(DoubleCheck.java:6)
+10-24 16:23:43.821  6166  6187 E AndroidXTracer: 	at androidx.test.espresso.base.IdlingResourceRegistry_Factory.get(IdlingResourceRegistry_Factory.java:1)
+10-24 16:23:43.821  6166  6187 E AndroidXTracer: 	at androidx.test.espresso.base.IdlingResourceRegistry_Factory.get(IdlingResourceRegistry_Factory.java:2)
+10-24 16:23:43.821  6166  6187 E AndroidXTracer: 	at androidx.test.espresso.core.internal.deps.dagger.internal.DoubleCheck.get(DoubleCheck.java:6)
+10-24 16:23:43.821  6166  6187 E AndroidXTracer: 	at androidx.test.espresso.DaggerBaseLayerComponent$BaseLayerComponentImpl.idlingResourceRegistry(DaggerBaseLayerComponent.java:1)
+10-24 16:23:43.821  6166  6187 E AndroidXTracer: 	at androidx.test.espresso.Espresso.<clinit>(Espresso.java:3)
+10-24 16:23:43.821  6166  6187 E AndroidXTracer: 	at androidx.compose.ui.test.EspressoLink_androidKt.runEspressoOnIdle(EspressoLink.android.kt:92)
+10-24 16:23:43.821  6166  6187 E AndroidXTracer: 	at androidx.compose.ui.test.EspressoLink.runUntilIdle(EspressoLink.android.kt:79)
+10-24 16:23:43.821  6166  6187 E AndroidXTracer: 	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment.runTest(ComposeUiTest.android.kt:326)
+10-24 16:23:43.821  6166  6187 E AndroidXTracer: 	at androidx.compose.ui.test.junit4.AndroidComposeTestRule$apply$1.evaluate(AndroidComposeTestRule.android.kt:271)
+10-24 16:23:43.821  6166  6187 E AndroidXTracer: 	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+10-24 16:23:43.821  6166  6187 E AndroidXTracer: 	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+10-24 16:23:43.821  6166  6187 E AndroidXTracer: 	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+10-24 16:23:43.821  6166  6187 E AndroidXTracer: 	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+10-24 16:23:43.821  6166  6187 E AndroidXTracer: 	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+10-24 16:23:43.821  6166  6187 E AndroidXTracer: 	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+10-24 16:23:43.821  6166  6187 E AndroidXTracer: 	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+10-24 16:23:43.821  6166  6187 E AndroidXTracer: 	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+10-24 16:23:43.821  6166  6187 E AndroidXTracer: 	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+10-24 16:23:43.821  6166  6187 E AndroidXTracer: 	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+10-24 16:23:43.821  6166  6187 E AndroidXTracer: 	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+10-24 16:23:43.821  6166  6187 E AndroidXTracer: 	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+10-24 16:23:43.821  6166  6187 E AndroidXTracer: 	at androidx.test.ext.junit.runners.AndroidJUnit4.run(AndroidJUnit4.java:162)
+10-24 16:23:43.821  6166  6187 E AndroidXTracer: 	at org.junit.runners.Suite.runChild(Suite.java:128)
+10-24 16:23:43.821  6166  6187 E AndroidXTracer: 	at org.junit.runners.Suite.runChild(Suite.java:27)
+10-24 16:23:43.821  6166  6187 E AndroidXTracer: 	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+10-24 16:23:43.821  6166  6187 E AndroidXTracer: 	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+10-24 16:23:43.821  6166  6187 E AndroidXTracer: 	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+10-24 16:23:43.821  6166  6187 E AndroidXTracer: 	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+10-24 16:23:43.821  6166  6187 E AndroidXTracer: 	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+10-24 16:23:43.821  6166  6187 E AndroidXTracer: 	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+10-24 16:23:43.821  6166  6187 E AndroidXTracer: 	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+10-24 16:23:43.821  6166  6187 E AndroidXTracer: 	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+10-24 16:23:43.821  6166  6187 E AndroidXTracer: 	at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
+10-24 16:23:43.821  6166  6187 E AndroidXTracer: 	at androidx.test.internal.runner.TestExecutor.execute(TestExecutor.java:68)
+10-24 16:23:43.821  6166  6187 E AndroidXTracer: 	at androidx.test.internal.runner.TestExecutor.execute(TestExecutor.java:59)
+10-24 16:23:43.821  6166  6187 E AndroidXTracer: 	at androidx.test.runner.AndroidJUnitRunner.onStart(AndroidJUnitRunner.java:463)
+10-24 16:23:43.821  6166  6187 E AndroidXTracer: 	at android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:2402)
+10-24 16:23:43.821  6166  6187 I Tracing : Tracer added: class androidx.test.platform.tracing.AndroidXTracer
+10-24 16:23:43.826  6166  6166 D EventInjectionStrategy: Creating injection strategy with input manager.
+10-24 16:23:43.827  6166  6166 W opal.belajartka: Accessing hidden method Landroid/hardware/input/InputManager;->getInstance()Landroid/hardware/input/InputManager; (unsupported, reflection, allowed)
+10-24 16:23:43.828  6166  6166 W opal.belajartka: Accessing hidden method Landroid/hardware/input/InputManager;->injectInputEvent(Landroid/view/InputEvent;I)Z (unsupported, reflection, allowed)
+10-24 16:23:43.828  6166  6166 W opal.belajartka: Accessing hidden field Landroid/hardware/input/InputManager;->INJECT_INPUT_EVENT_MODE_WAIT_FOR_FINISH:I (unsupported, reflection, allowed)
+10-24 16:23:43.836  6166  6166 W opal.belajartka: Accessing hidden method Landroid/os/MessageQueue;->next()Landroid/os/Message; (unsupported, reflection, allowed)
+10-24 16:23:43.836  6166  6166 W opal.belajartka: Accessing hidden field Landroid/os/MessageQueue;->mMessages:Landroid/os/Message; (unsupported, reflection, allowed)
+10-24 16:23:43.836  6166  6166 W opal.belajartka: Accessing hidden method Landroid/os/Message;->recycleUnchecked()V (unsupported, reflection, allowed)
+10-24 16:23:43.837  6166  6187 D IdlingRegistry: Registering idling resources: [androidx.compose.ui.test.EspressoLink@f4d3d89]
+10-24 16:23:43.854  6166  6187 W Settings: Setting always_finish_activities has moved from android.provider.Settings.System to android.provider.Settings.Global, returning read-only value.
+10-24 16:23:43.877   910   991 D SplashScreenView: Build android.window.SplashScreenView{6c55c0c V.E...... ......ID 0,0-0,0}
+10-24 16:23:43.877   910   991 D SplashScreenView: Icon: view: null drawable: null size: 0
+10-24 16:23:43.877   910   991 D SplashScreenView: Branding: view: android.view.View{15c0955 G.ED..... ......I. 0,0-0,0 #10204ef android:id/splashscreen_branding_view} drawable: null size w: 0 h: 0
+10-24 16:23:43.895   414   414 I BpBinder: onLastStrongRef automatically unlinking death recipients:
+10-24 16:23:43.927  6166  6192 D libEGL  : loaded /vendor/lib64/egl/libEGL_emulation.so
+10-24 16:23:43.929  6166  6192 D libEGL  : loaded /vendor/lib64/egl/libGLESv1_CM_emulation.so
+10-24 16:23:43.930  6166  6192 D libEGL  : loaded /vendor/lib64/egl/libGLESv2_emulation.so
+10-24 16:23:43.937  6166  6166 D LifecycleMonitor: Lifecycle status change: androidx.activity.ComponentActivity@e22709f in: PRE_ON_CREATE
+10-24 16:23:43.937  6166  6166 V ActivityScenario: Activity lifecycle changed event received but ignored because the reported transition was not ON_CREATE while the last known transition was PRE_ON_CREATE
+10-24 16:23:44.004  6166  6166 D LifecycleMonitor: Lifecycle status change: androidx.activity.ComponentActivity@e22709f in: CREATED
+10-24 16:23:44.005  6166  6166 V ActivityScenario: Update currentActivityStage to CREATED, currentActivity=androidx.activity.ComponentActivity@e22709f
+10-24 16:23:44.022  6166  6166 D LifecycleMonitor: Lifecycle status change: androidx.activity.ComponentActivity@e22709f in: STARTED
+10-24 16:23:44.022  6166  6166 V ActivityScenario: Update currentActivityStage to STARTED, currentActivity=androidx.activity.ComponentActivity@e22709f
+10-24 16:23:44.024  6166  6166 D LifecycleMonitor: Lifecycle status change: androidx.activity.ComponentActivity@e22709f in: RESUMED
+10-24 16:23:44.030  6166  6166 V ActivityScenario: Update currentActivityStage to RESUMED, currentActivity=androidx.activity.ComponentActivity@e22709f
+10-24 16:23:44.035  1189  1888 D EGL_emulation: app_time_stats: avg=377.15ms min=12.57ms max=1445.38ms count=4
+10-24 16:23:44.038  6166  6166 D CompatibilityChangeReporter: Compat change id reported: 237531167; UID 10192; state: DISABLED
+10-24 16:23:44.044  6166  6166 W OpenGLRenderer: Unknown dataspace 0
+10-24 16:23:44.104   414   504 W ServiceManagerCppClient: Permission failure: android.permission.ROTATE_SURFACE_FLINGER from uid=10192 pid=0
+10-24 16:23:44.104   414   504 D PermissionCache: checking android.permission.ROTATE_SURFACE_FLINGER for uid=10192 => denied (981 us)
+10-24 16:23:44.104   414   504 W ServiceManagerCppClient: Permission failure: android.permission.INTERNAL_SYSTEM_WINDOW from uid=10192 pid=0
+10-24 16:23:44.104   414   504 D PermissionCache: checking android.permission.INTERNAL_SYSTEM_WINDOW for uid=10192 => denied (760 us)
+10-24 16:23:44.105   414  1269 W ServiceManagerCppClient: Permission failure: android.permission.ROTATE_SURFACE_FLINGER from uid=10192 pid=6166
+10-24 16:23:44.105   414  1269 D PermissionCache: checking android.permission.ROTATE_SURFACE_FLINGER for uid=10192 => denied (1973 us)
+10-24 16:23:44.105   414  1269 W ServiceManagerCppClient: Permission failure: android.permission.ACCESS_SURFACE_FLINGER from uid=10192 pid=6166
+10-24 16:23:44.105   414  1269 D PermissionCache: checking android.permission.ACCESS_SURFACE_FLINGER for uid=10192 => denied (497 us)
+10-24 16:23:44.108   414   504 W ServiceManagerCppClient: Permission failure: android.permission.ACCESS_SURFACE_FLINGER from uid=10192 pid=0
+10-24 16:23:44.108   414   504 D PermissionCache: checking android.permission.ACCESS_SURFACE_FLINGER for uid=10192 => denied (3383 us)
+10-24 16:23:44.168   910  1002 D EGL_emulation: app_time_stats: avg=16651.98ms min=16651.98ms max=16651.98ms count=1
+10-24 16:23:44.188  6166  6190 W OpenGLRenderer: Failed to initialize 101010-2 format, error = EGL_SUCCESS
+10-24 16:23:44.326   157   157 I hwservicemanager: getTransport: Cannot find entry android.hardware.graphics.mapper@4.0::IMapper/default in either framework or device VINTF manifest.
+10-24 16:23:44.326  6166  6190 I Gralloc4: mapper 4.x is not supported
+10-24 16:23:44.614   910  1002 D EGL_emulation: app_time_stats: avg=108877.12ms min=108877.12ms max=108877.12ms count=1
+10-24 16:23:44.841  6166  6166 I Choreographer: Skipped 43 frames!  The application may be doing too much work on its main thread.
+10-24 16:23:44.841   545   996 W ServiceManagerCppClient: Permission failure: android.permission.ROTATE_SURFACE_FLINGER from uid=10192 pid=0
+10-24 16:23:44.841   545   996 D PermissionCache: checking android.permission.ROTATE_SURFACE_FLINGER for uid=10192 => denied (276 us)
+10-24 16:23:44.841   545   996 W ServiceManagerCppClient: Permission failure: android.permission.INTERNAL_SYSTEM_WINDOW from uid=10192 pid=0
+10-24 16:23:44.841   545   996 D PermissionCache: checking android.permission.INTERNAL_SYSTEM_WINDOW for uid=10192 => denied (16 us)
+10-24 16:23:44.841   545   996 W ServiceManagerCppClient: Permission failure: android.permission.ACCESS_SURFACE_FLINGER from uid=10192 pid=0
+10-24 16:23:44.841   545   996 D PermissionCache: checking android.permission.ACCESS_SURFACE_FLINGER for uid=10192 => denied (10 us)
+10-24 16:23:44.852   545   564 W ziparchive: Unable to open '/data/app/~~87EVUdJ-iGfFP4fZX43Yxw==/id.nopal.belajartka-uCgBIZM7aVS9JFANIJooPg==/base.dm': No such file or directory
+10-24 16:23:44.853   545   564 I ActivityTaskManager: Displayed id.nopal.belajartka/androidx.activity.ComponentActivity for user 0: +983ms
+10-24 16:23:44.856  1189  1189 I ActivityThread: Schedule relaunch activity: com.google.android.apps.nexuslauncher.NexusLauncherActivity
+10-24 16:23:44.858  1189  2317 D OneSearchSuggestProvider: Shut down the binder channel
+10-24 16:23:44.858  1189  2317 E io.grpc.internal.z1: *~*~*~ Channel {0} was not shutdown properly!!! ~*~*~*
+10-24 16:23:44.858  1189  2317 E io.grpc.internal.z1:     Make sure to call shutdown()/shutdownNow() and wait until awaitTermination() returns true.
+10-24 16:23:44.858  1189  2317 E io.grpc.internal.z1: java.lang.RuntimeException: ManagedChannel allocation site
+10-24 16:23:44.858  1189  2317 E io.grpc.internal.z1: 	at io.grpc.internal.y1.<init>(Unknown Source:20)
+10-24 16:23:44.858  1189  2317 E io.grpc.internal.z1: 	at io.grpc.internal.z1.<init>(Unknown Source:9)
+10-24 16:23:44.858  1189  2317 E io.grpc.internal.z1: 	at io.grpc.binder.d.a(Unknown Source:211)
+10-24 16:23:44.858  1189  2317 E io.grpc.internal.z1: 	at com.google.android.apps.nexuslauncher.allapps.N0.d(Unknown Source:88)
+10-24 16:23:44.858  1189  2317 E io.grpc.internal.z1: 	at com.google.android.apps.nexuslauncher.allapps.N0.c(Unknown Source:0)
+10-24 16:23:44.858  1189  2317 E io.grpc.internal.z1: 	at com.google.android.apps.nexuslauncher.allapps.A0.run(Unknown Source:22)
+10-24 16:23:44.858  1189  2317 E io.grpc.internal.z1: 	at com.android.launcher3.util.LooperExecutor.execute(Unknown Source:12)
+10-24 16:23:44.858  1189  2317 E io.grpc.internal.z1: 	at com.google.android.apps.nexuslauncher.allapps.y0.apply(Unknown Source:34)
+10-24 16:23:44.858  1189  2317 E io.grpc.internal.z1: 	at java.util.concurrent.CompletableFuture.uniExceptionally(CompletableFuture.java:966)
+10-24 16:23:44.858  1189  2317 E io.grpc.internal.z1: 	at java.util.concurrent.CompletableFuture$UniExceptionally.tryFire(CompletableFuture.java:950)
+10-24 16:23:44.858  1189  2317 E io.grpc.internal.z1: 	at java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:486)
+10-24 16:23:44.858  1189  2317 E io.grpc.internal.z1: 	at java.util.concurrent.CompletableFuture.completeExceptionally(CompletableFuture.java:2138)
+10-24 16:23:44.858  1189  2317 E io.grpc.internal.z1: 	at com.google.android.apps.nexuslauncher.allapps.H0.onResult(Unknown Source:59)
+10-24 16:23:44.858  1189  2317 E io.grpc.internal.z1: 	at android.app.appsearch.SearchSessionUtil$1.lambda$onResult$0(SearchSessionUtil.java:129)
+10-24 16:23:44.858  1189  2317 E io.grpc.internal.z1: 	at android.app.appsearch.SearchSessionUtil$1.$r8$lambda$_nlk9WiPjSfaAsqKYmp0aPvSRC0(SearchSessionUtil.java:1)
+10-24 16:23:44.858  1189  2317 E io.grpc.internal.z1: 	at android.app.appsearch.SearchSessionUtil$1$$ExternalSyntheticLambda0.run(R8$$SyntheticClass:13)
+10-24 16:23:44.858  1189  2317 E io.grpc.internal.z1: 	at android.os.Handler.handleCallback(Handler.java:958)
+10-24 16:23:44.858  1189  2317 E io.grpc.internal.z1: 	at android.os.Handler.dispatchMessage(Handler.java:99)
+10-24 16:23:44.858  1189  2317 E io.grpc.internal.z1: 	at android.os.Looper.loopOnce(Looper.java:205)
+10-24 16:23:44.858  1189  2317 E io.grpc.internal.z1: 	at android.os.Looper.loop(Looper.java:294)
+10-24 16:23:44.858  1189  2317 E io.grpc.internal.z1: 	at android.os.HandlerThread.run(HandlerThread.java:67)
+10-24 16:23:44.858  1189  1222 I IPCThreadState: oneway function results for code 2 on binder at 0x79dc736c7a50 will be dropped but finished with status UNKNOWN_TRANSACTION
+10-24 16:23:44.861  1189  1231 I ImeTracker: com.google.android.apps.nexuslauncher:b6d43503: onRequestHide at ORIGIN_CLIENT_HIDE_SOFT_INPUT reason HIDE_SOFT_INPUT
+10-24 16:23:44.861  1189  1231 I ImeTracker: com.google.android.apps.nexuslauncher:b6d43503: onFailed at PHASE_CLIENT_VIEW_SERVED
+10-24 16:23:44.869  1904  3375 I PBSessionCacheImpl: Deleted sessionId[8375673416051803] from persistence.
+10-24 16:23:44.870   545  2059 I ImeTracker: id.nopal.belajartka:15f67064: onRequestHide at ORIGIN_SERVER_HIDE_INPUT reason HIDE_UNSPECIFIED_WINDOW
+10-24 16:23:44.870   545  2059 I ImeTracker: id.nopal.belajartka:15f67064: onCancelled at PHASE_SERVER_SHOULD_HIDE
+10-24 16:23:44.874  1904  2635 I A       : Using proto config with mendel
+10-24 16:23:44.874  1904  2635 I A       : Using proto config with mendel
+10-24 16:23:44.874  1904  2635 W SearchServiceCore: Abort, client detached.
+10-24 16:23:44.874  1904  2635 W SearchServiceCore: Abort, client detached.
+10-24 16:23:44.874  1904  2635 W SearchServiceCore: Abort, client detached.
+10-24 16:23:44.874  1904  2635 W SearchServiceCore: Abort, client detached.
+10-24 16:23:44.875  1904  2635 W SearchServiceCore: Abort, client detached.
+10-24 16:23:44.875  1904  2635 W SearchServiceCore: Abort, client detached.
+10-24 16:23:44.875  1904  2635 W SearchServiceCore: Abort, client detached.
+10-24 16:23:44.875  6166  6181 I OpenGLRenderer: Davey! duration=778ms; Flags=1, FrameTimelineVsyncId=7706, IntendedVsync=145618893065, Vsync=145618893065, InputEventId=0, HandleInputStart=145633135018, AnimationStart=145633139936, PerformTraversalsStart=145633142529, DrawStart=146060428319, FrameDeadline=145635559731, FrameInterval=145633116000, FrameStartTime=16666666, SyncQueued=146114371463, SyncStart=146119538916, IssueDrawCommandsStart=146121111036, SwapBuffers=146245476330, FrameCompleted=146402788525, DequeueBufferDuration=1843, QueueBufferDuration=174819, GpuCompleted=146402788525, SwapBuffersCompleted=146380148654, DisplayPresentTime=16496969387776, CommandSubmissionCompleted=146245476330,
+10-24 16:23:44.879  1114  1385 D BtGatt.ScanManager: uid 10128 isForeground true scanMode -1
+10-24 16:23:44.879  1114  1385 D BtGatt.ScanManager: uid 10128 isForeground true scanMode -1
+10-24 16:23:44.880  1189  1189 D b/254119092: clearActivity
+10-24 16:23:44.880  1189  1189 D b/254119092: mActivity and mContext agree taskbarIsPresent=false
+10-24 16:23:44.881  1672  1672 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():3227
+10-24 16:23:44.886  1672  1672 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 0, unlocked = true
+10-24 16:23:44.886  1672  1672 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1877 onStartInput(EditorInfo{inputType=0x0(NULL) imeOptions=0x0 privateImeOptions=null actionName=UNSPECIFIED actionLabel=null actionId=0 initialSelStart=-1 initialSelEnd=-1 initialCapsMode=0x0 hintText=null label=null packageName=id.nopal.belajartka fieldId=0 fieldName=null extras=null}, false)
+10-24 16:23:44.886  1672  1672 I GoogleInputMethodService: GoogleInputMethodService.shouldHideHeaderOnInitialState():4008 ShouldHideHeaderOnInitialState = false
+10-24 16:23:44.886  1672  1672 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 2, unlocked = true
+10-24 16:23:44.886  1672  1672 I DeviceModeUtil: DeviceModeUtil.getDeviceMode():122 Get device mode phone by ui mode:1 and smallestScreenWidthDp:411
+10-24 16:23:44.886  1672  1672 I KeyboardModeManager: KeyboardModeManager.setInputView():364 setInputView() : supportsOneHandedMode=true
+10-24 16:23:44.887  1672  1672 I NormalModeController: NormalModeController.getKeyboardBodyViewHolderPaddingBottom():116 currentPrimeKeyboardType:SOFT systemPaddingBottom:-1
+10-24 16:23:44.887  1672  1672 I KeyboardModeManager: KeyboardModeManager.setInputView():356 setInputView() : entry=hwn{languageTag=en-US, variant=qwerty, hasLocalizedResources=true, conditionCacheKey=_device=phone_device_size=default_enable_adaptive_text_editing=true_enable_inline_suggestions_on_client_side=false_enable_large_tablet_batch_1=false_enable_large_tablet_batch_2=false_enable_more_candidates_view_for_multilingual=false_enable_nav_redesign=false_enable_number_row=false_enable_preemptive_decode=true_enable_secondary_symbols=false_expressions=normal_four_or_more_letter_rows=false_keyboard_mode=normal_language=en-US_orientation=portrait_physical_keyboard=qwerty_show_secondary_digits=true_show_suggestions=true_split_with_duplicate_keys=true_variant=qwerty, imeDef.stringId=ime_english_united_states, imeDef.className=com.google.android.apps.inputmethod.libs.latin5.LatinIme, imeDef.languageTag=en-US}
+10-24 16:23:44.887  1114  1385 D BtGatt.ScanManager: uid 10128 isForeground true scanMode -1
+10-24 16:23:44.887  1114  1385 D BtGatt.ScanManager: uid 10128 isForeground true scanMode -1
+10-24 16:23:44.890  5174  5186 I FontLog : Received query Noto Color Emoji Compat, URI content://com.google.android.gms.fonts [CONTEXT service_id=132 ]
+10-24 16:23:44.890  5174  5186 I FontLog : Query [emojicompat-emoji-font] resolved to {Noto Color Emoji Compat, wdth 100.0, wght 400, ital 0.0, bestEffort false} [CONTEXT service_id=132 ]
+10-24 16:23:44.891  5174  5186 I FontLog : Fetch {Noto Color Emoji Compat, wdth 100.0, wght 400, ital 0.0, bestEffort false} end status Status{statusCode=SUCCESS, resolution=null} [CONTEXT service_id=132 ]
+10-24 16:23:44.893  1672  1672 I StyledKeyboardTheme: StyledKeyboardTheme.<init>():87 Pref: [], themeName: [silk:], darkMode: [false], cacheKey: [overlay_builtin_dynamic_color_light_base.binarypb:dynamic-light-fff0f0f3-ff76d1ff-ce191c6173d879ea127e4e40bfd70d3c]
+10-24 16:23:44.893  1672  1672 I DeviceModeUtil: DeviceModeUtil.getDeviceMode():122 Get device mode phone by ui mode:1 and smallestScreenWidthDp:411
+10-24 16:23:44.893  1672  1672 I DeviceModeUtil: DeviceModeUtil.getDeviceMode():122 Get device mode phone by ui mode:1 and smallestScreenWidthDp:411
+10-24 16:23:44.893  1672  1672 I DeviceModeUtil: DeviceModeUtil.getDeviceMode():122 Get device mode phone by ui mode:1 and smallestScreenWidthDp:411
+10-24 16:23:44.894  1189  1189 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=falsecallback=android.view.ViewRootImpl$$ExternalSyntheticLambda17@976c860
+10-24 16:23:44.894  1672  1672 I DeviceModeUtil: DeviceModeUtil.getDeviceMode():122 Get device mode phone by ui mode:1 and smallestScreenWidthDp:411
+10-24 16:23:44.894  1672  1672 I DeviceModeUtil: DeviceModeUtil.getDeviceMode():122 Get device mode phone by ui mode:1 and smallestScreenWidthDp:411
+10-24 16:23:44.894  1189  1189 W WindowOnBackDispatcher: OnBackInvokedCallback is not enabled for the application.
+10-24 16:23:44.894  1189  1189 W WindowOnBackDispatcher: Set 'android:enableOnBackInvokedCallback="true"' in the application manifest.
+10-24 16:23:44.898  5174  5981 I FontLog : Pulling font file for id = 1, cache size = 1 [CONTEXT service_id=132 ]
+10-24 16:23:44.898  1672  1672 I GoogleInputMethodService: GoogleInputMethodService.initializeKeyboardTheme():1343 Apply keyboard theme: theme_border_bottom4dp_stylesheet_noshadow_gsans_pillkey_silkpopup_refinedkp_materiallight_phone_400_overlay_builtin_dynamic_color_light_base.binarypb:dynamic-light-fff0f0f3-ff76d1ff-ce191c6173d879ea127e4e40bfd70d3c_port
+10-24 16:23:44.899  1672  1672 I GoogleInputMethodService: GoogleInputMethodService.onCreateInputView():1768 onCreateInputView()
+10-24 16:23:44.902  5174  5981 I FontLog : Pulling font file for id = 1, cache size = 1 [CONTEXT service_id=132 ]
+10-24 16:23:44.930  1672  1672 I DeviceModeUtil: DeviceModeUtil.getDeviceMode():122 Get device mode phone by ui mode:1 and smallestScreenWidthDp:411
+10-24 16:23:44.930  1672  1672 I KeyboardViewUtil: KeyboardViewUtil.getKeyboardHeightRatio():189 systemKeyboardHeightRatio:1.000000; userKeyboardHeightRatio:1.000000.
+10-24 16:23:44.935  1672  1672 I DeviceModeUtil: DeviceModeUtil.getDeviceMode():122 Get device mode phone by ui mode:1 and smallestScreenWidthDp:411
+10-24 16:23:44.939  1672  1672 I KeyboardModeManager: KeyboardModeManager.setInputView():364 setInputView() : supportsOneHandedMode=true
+10-24 16:23:44.939  1672  1672 I AndroidIME: KeyboardViewManager.updateKeyboardBackgroundFrameVisibility():357 Set background frame visibility. old:8, new:8
+10-24 16:23:44.939  1672  1672 I NormalModeController: NormalModeController.getKeyboardBodyViewHolderPaddingBottom():116 currentPrimeKeyboardType:SOFT systemPaddingBottom:-1
+10-24 16:23:44.939  1672  1672 I NormalModeController: NormalModeController.getKeyboardBodyViewHolderPaddingBottom():116 currentPrimeKeyboardType:SOFT systemPaddingBottom:-1
+10-24 16:23:44.942  1189  1231 I AiAiSuggestUi: Connecting to system intelligence module.
+10-24 16:23:44.944  1189  1222 I AiAiSuggestUi: Successfully connected to system intelligence:
+10-24 16:23:44.967  1672  1672 I KeyboardModeManager: KeyboardModeManager.setInputView():356 setInputView() : entry=hwn{languageTag=en-US, variant=qwerty, hasLocalizedResources=true, conditionCacheKey=_device=phone_device_size=default_enable_adaptive_text_editing=true_enable_inline_suggestions_on_client_side=false_enable_large_tablet_batch_1=false_enable_large_tablet_batch_2=false_enable_more_candidates_view_for_multilingual=false_enable_nav_redesign=false_enable_number_row=false_enable_preemptive_decode=true_enable_secondary_symbols=false_expressions=normal_four_or_more_letter_rows=false_keyboard_mode=normal_language=en-US_orientation=portrait_physical_keyboard=qwerty_show_secondary_digits=true_show_suggestions=true_split_with_duplicate_keys=true_variant=qwerty, imeDef.stringId=ime_english_united_states, imeDef.className=com.google.android.apps.inputmethod.libs.latin5.LatinIme, imeDef.languageTag=en-US}
+10-24 16:23:45.001  1189  1189 D AutofillManager: Fill dialog is enabled:false, hints=[password, passwordAuto, creditCardNumber, creditCardSecurityCode, creditCardExpirationDate]
+10-24 16:23:45.003  1189  1189 D DeviceSearchAlg: search timeout = %d200
+10-24 16:23:45.004  1189  1189 W PageIndicator: Total number of pages invalid: 0. Assuming 1 page.
+10-24 16:23:45.010  1189  1189 W BcSmartspaceView: Current card is not present in the Adapter; cannot log.
+10-24 16:23:45.014  1189  1189 I OverviewComponentObserver: updateOverviewTargets: mIsHomeDisabled=false, isDefaultHomeNull=false, mIsDefaultHome=true
+10-24 16:23:45.112  1189  1189 D AutofillManager: view is not autofillable - activity denied for autofill
+10-24 16:23:45.134  1781  1781 I AiAiEcho: SearchContextManagerImpl::setSearchContext resultTypes=[141151] extras=[Bundle[mParcelledData.dataSize=684]] sessionId=[com.google.android.apps.nexuslauncher:19810382-026b-4874-ba49-4a3dc7329b11,0]
+10-24 16:23:45.136  1189  1231 D SearchTargetUtil:  query= size=1
+10-24 16:23:45.136  1189  1231 D SearchTargetUtil: layoutType=icon_row resultType=4096 packageName= extras=Bundle{icon_container_enabled=true,zero_state_all_apps_web_suggest_count=3,rank=1.0,key_ipc_start=146675,hide_subtitle=true,zero_state_qsb_web_suggest_count=10,}ParentID: null targetID: SESSION_INFO:0::zero_state_flags
+10-24 16:23:45.140  1189  1189 I ContentCaptureHelper: Setting logging level to DEBUG
+10-24 16:23:45.140  1189  1189 D ContentCaptureManager: setFlushViewTreeAppearingEventDisabled(): setting to false
+10-24 16:23:45.140  1189  1189 D ContentCaptureManager: updateWindowAttributes(): window flags=-2137980672
+10-24 16:23:45.169  1904  2330 W A       : Batch timed out; batchId=1 taskId=-1000007
+10-24 16:23:45.197  1781  2310 I AiAiStatsd: Successfully logged feature usage for VISUAL_CORTEX.
+10-24 16:23:45.261  1189  1189 D ContentCaptureManager: updateWindowAttributes(): window flags=-2137980672
+10-24 16:23:45.276  1189  1231 I ImeTracker: com.google.android.apps.nexuslauncher:f5e83e3a: onRequestHide at ORIGIN_CLIENT_HIDE_SOFT_INPUT reason HIDE_SOFT_INPUT
+10-24 16:23:45.276  1189  1231 I ImeTracker: com.google.android.apps.nexuslauncher:f5e83e3a: onFailed at PHASE_CLIENT_VIEW_SERVED
+10-24 16:23:45.314  1904  1904 I ImeTracker: com.google.android.googlequicksearchbox:search:3dfa9e06: onRequestHide at ORIGIN_CLIENT_HIDE_SOFT_INPUT reason HIDE_SOFT_INPUT
+10-24 16:23:45.324  1904  1904 I ImeTracker: com.google.android.googlequicksearchbox:search:3dfa9e06: onFailed at PHASE_CLIENT_VIEW_SERVED
+10-24 16:23:45.326  1904  5882 D t       : Starting download: https://www.gstatic.com/federated_assistant/policy_config_federated_hotword-v610555528.binarypb
+10-24 16:23:45.326  1904  5882 V t       : Is http uri, downloading (uri: https://www.gstatic.com/federated_assistant/policy_config_federated_hotword-v610555528.binarypb)
+10-24 16:23:45.353  1904  5882 E MDD     : DownloadProgressMonitor: Can't find file group for uri: android://com.google.android.googlequicksearchbox/files/datadownload/shared/public/datadownloadfile_1792858923022
+10-24 16:23:45.354  1904  2328 I A       : NGA Sync: MDD Task: MDD.CHARGING.PERIODIC.TASK done.
+10-24 16:23:45.354  1904  2328 I A       : NGA Sync: isNgaSyncEnabled: false; enableFileGroupPopulator: false; requiresMddAssets: false
+10-24 16:23:45.355  1904  2288 I A       : Refresh account policy.
+10-24 16:23:45.358  1189  1231 I ImeTracker: com.google.android.apps.nexuslauncher:cfaaa9ae: onRequestHide at ORIGIN_CLIENT_HIDE_SOFT_INPUT reason HIDE_SOFT_INPUT
+10-24 16:23:45.358  1189  1231 I ImeTracker: com.google.android.apps.nexuslauncher:cfaaa9ae: onFailed at PHASE_CLIENT_VIEW_SERVED
+10-24 16:23:45.365  1189  1189 W BcSmartspaceCard: No title view to update
+10-24 16:23:45.365  1189  1189 I BcSmartspaceCard: setFormattedContentDescription: text=null, iconDescription=null, contentDescription=null
+10-24 16:23:45.365  1904  1904 I ImeTracker: com.google.android.googlequicksearchbox:search:47aa5124: onRequestHide at ORIGIN_CLIENT_HIDE_SOFT_INPUT reason HIDE_SOFT_INPUT
+10-24 16:23:45.365  1904  1904 I ImeTracker: com.google.android.googlequicksearchbox:search:47aa5124: onFailed at PHASE_CLIENT_VIEW_SERVED
+10-24 16:23:45.395  1904  1904 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=falsecallback=android.view.ViewRootImpl$$ExternalSyntheticLambda17@a943990
+10-24 16:23:45.396  1904  5877 D t       : Starting download: https://www.gstatic.com/assistant/appintegration/models/1/662c5aa4617258c027708e2bb9323ead.binarypb
+10-24 16:23:45.396  1904  5877 V t       : Is http uri, downloading (uri: https://www.gstatic.com/assistant/appintegration/models/1/662c5aa4617258c027708e2bb9323ead.binarypb)
+10-24 16:23:45.400   545  2259 W InputManager-JNI: Input channel object 'e330f71 com.google.android.apps.nexuslauncher/com.google.android.apps.nexuslauncher.NexusLauncherActivity (client)' was disposed without first being removed with the input manager!
+10-24 16:23:45.412  1904  5877 E MDD     : DownloadProgressMonitor: Can't find file group for uri: android://com.google.android.googlequicksearchbox/files/datadownload/shared/public/datadownloadfile_1792858923020
+10-24 16:23:45.421  1189  1189 D TISBindHelper: TIS service connected
+10-24 16:23:45.421  1189  1189 D b/254119092: Set mActivity=com.google.android.apps.nexuslauncher.NexusLauncherActivity@a97c5c9
+10-24 16:23:45.421  1189  1189 D b/254119092: mActivity and mContext agree taskbarIsPresent=false
+10-24 16:23:45.429  1904  1904 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=falsecallback=android.view.ViewRootImpl$$ExternalSyntheticLambda17@aaeeaed
+10-24 16:23:45.432   545  2059 W InputManager-JNI: Input channel object 'b306e73 com.google.android.googlequicksearchbox/android.app.ContextImpl (client)' was disposed without first being removed with the input manager!
+10-24 16:23:45.440  1904  5886 D t       : Starting download: https://www.gstatic.com/assistant/appintegration/models/1/05a8f7c516a3ad6c26cc4161a3dd6ac6.binarypb
+10-24 16:23:45.440  1904  5886 V t       : Is http uri, downloading (uri: https://www.gstatic.com/assistant/appintegration/models/1/05a8f7c516a3ad6c26cc4161a3dd6ac6.binarypb)
+10-24 16:23:45.455  1904  5911 D t       : Starting download: https://dl.google.com/assistant/nga/1/4bce3720332aff95260f75ee29bbe97bd379e868.mddz
+10-24 16:23:45.455  1904  5911 V t       : Is http uri, downloading (uri: https://dl.google.com/assistant/nga/1/4bce3720332aff95260f75ee29bbe97bd379e868.mddz)
+10-24 16:23:45.461   910   982 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=falsecallback=android.view.ViewRootImpl$$ExternalSyntheticLambda17@2722cf8
+10-24 16:23:45.467   545   898 W InputManager-JNI: Input channel object 'fa9adca Splash Screen id.nopal.belajartka (client)' was disposed without first being removed with the input manager!
+10-24 16:23:45.469  1904  5886 E MDD     : DownloadProgressMonitor: Can't find file group for uri: android://com.google.android.googlequicksearchbox/files/datadownload/shared/public/datadownloadfile_1792858923021
+10-24 16:23:45.477  1904  2635 W SearchServiceCore: Abort, client detached.
+10-24 16:23:45.477  1904  2635 W SearchServiceCore: Abort, client detached.
+10-24 16:23:45.477  1189  1206 I s.nexuslauncher: Background young concurrent copying GC freed 62901(2311KB) AllocSpace objects, 16(1304KB) LOS objects, 27% free, 9853KB/13MB, paused 6.262ms,12us total 93.639ms
+10-24 16:23:45.530  1904  5882 D t       : Starting download: https://dl.google.com/assistant/nga/1/17d453d07f334b7d810f8e6e05dbd6001dc45eea.mddz
+10-24 16:23:45.530  1904  5882 V t       : Is http uri, downloading (uri: https://dl.google.com/assistant/nga/1/17d453d07f334b7d810f8e6e05dbd6001dc45eea.mddz)
+10-24 16:23:45.597  1672  1684 I putmethod.latin: Background young concurrent copying GC freed 221802(8690KB) AllocSpace objects, 10(520KB) LOS objects, 36% free, 13MB/20MB, paused 54us,25us total 159.247ms
+10-24 16:23:45.598  1672  1686 W SP      : File ref is being finalized but wasn't closed, file: main_en_us_2022101700_1[6]
+10-24 16:23:45.599  1672  1686 W SP      : File ref is being finalized but wasn't closed, file: main_en_840_2022102600_1[2]
+10-24 16:23:45.616  6166  6166 I Choreographer: Skipped 42 frames!  The application may be doing too much work on its main thread.
+10-24 16:23:45.639  1904  5911 E MDD     : DownloadProgressMonitor: Can't find file group for uri: android://com.google.android.googlequicksearchbox/files/datadownload/shared/public/datadownloadfile_1792858923023_1d48ae4b292cd15bc945ae5ddedb9565d268f7e2
+10-24 16:23:45.707   910  1002 D EGL_emulation: app_time_stats: avg=79.89ms min=6.37ms max=325.40ms count=11
+10-24 16:23:45.768  1904  2534 E SingleDataFileGroupPop: Failed to add file group
+10-24 16:23:45.768  1904  2534 E PhFileGroupPop: Failed to add file group
+10-24 16:23:45.768  1904  2534 E PhFileGroupPop: Failed to add file group
+10-24 16:23:45.768  1904  2534 E PhFileGroupPop: Failed to add file group
+10-24 16:23:45.769  1904  2534 E PhFileGroupPop: Failed to add file group
+10-24 16:23:45.769  1904  2534 E PhFileGroupPop: Failed to add file group
+10-24 16:23:45.769  1904  2534 E d       : RuntimeException while executing runnable cb{com.google.apps.tiktok.tracing.ej@ea11b73} with executor MoreExecutors.directExecutor()
+10-24 16:23:45.769  1904  2534 E d       : java.lang.NullPointerException: Attempt to read from field 'java.lang.String com.google.android.libraries.mdi.download.ae.b' on a null object reference in method 'void com.google.android.libraries.mdi.download.h.bq.gH(java.lang.Object)'
+10-24 16:23:45.769  1904  2534 E d       : 	at com.google.android.libraries.mdi.download.h.bq.gH(PG:2)
+10-24 16:23:45.769  1904  2534 E d       : 	at com.google.apps.tiktok.tracing.ej.gH(PG:2)
+10-24 16:23:45.769  1904  2534 E d       : 	at com.google.common.util.concurrent.cb.run(PG:7)
+10-24 16:23:45.769  1904  2534 E d       : 	at com.google.common.util.concurrent.bf.execute(PG:1)
+10-24 16:23:45.769  1904  2534 E d       : 	at com.google.common.util.concurrent.d.i(PG:1)
+10-24 16:23:45.769  1904  2534 E d       : 	at com.google.common.util.concurrent.d.iq(PG:5)
+10-24 16:23:45.769  1904  2534 E d       : 	at com.google.common.util.concurrent.ci.t(PG:1)
+10-24 16:23:45.769  1904  2534 E d       : 	at com.google.android.libraries.mdi.download.h.bu.b(PG:26)
+10-24 16:23:45.769  1904  2534 E d       : 	at com.google.android.libraries.mdi.download.gs.p(PG:3)
+10-24 16:23:45.769  1904  2534 E d       : 	at com.google.android.libraries.mdi.download.gf.apply(Unknown Source:4)
+10-24 16:23:45.769  1904  2534 E d       : 	at com.google.apps.tiktok.tracing.eo.apply(PG:2)
+10-24 16:23:45.769  1904  2534 E d       : 	at com.google.common.util.concurrent.h.e(PG:2)
+10-24 16:23:45.769  1904  2534 E d       : 	at com.google.common.util.concurrent.j.run(PG:9)
+10-24 16:23:45.769  1904  2534 E d       : 	at com.google.common.util.concurrent.do.run(PG:4)
+10-24 16:23:45.769  1904  2534 E d       : 	at com.google.android.libraries.i.ae.run(PG:1)
+10-24 16:23:45.769  1904  2534 E d       : 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+10-24 16:23:45.769  1904  2534 E d       : 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)
+10-24 16:23:45.769  1904  2534 E d       : 	at com.google.android.libraries.i.i.run(PG:2)
+10-24 16:23:45.769  1904  2534 E d       : 	at com.google.android.libraries.i.p.run(PG:4)
+10-24 16:23:45.769  1904  2534 E d       : 	at java.lang.Thread.run(Thread.java:1012)
+10-24 16:23:45.769  1904  2534 E PhFileGroupPop: Failed to add file group
+10-24 16:23:45.769  1904  2534 E PhFileGroupPop: Failed to add file group
+10-24 16:23:45.769  1904  2534 E PhFileGroupPop: Failed to add file group
+10-24 16:23:45.770  1904  2534 I A       : Download file group for language pack: en-US
+10-24 16:23:45.770  1904  2534 W A       : Locale en-US is not compatible, please check manifest exists
+10-24 16:23:45.770  1904  2534 I A       : Using proto config with mendel
+10-24 16:23:45.770  1904  2534 I A       : Using proto config with mendel
+10-24 16:23:45.774  1904  5897 I A       : Starting new batch; batchId=2 corpus=1014
+10-24 16:23:45.775  1904  2534 I A       : Using proto config with mendel
+10-24 16:23:45.775  1904  2534 I A       : Merging legacy hotword config map with new proto.
+10-24 16:23:45.775  1904  2534 I A       : Adding from config to map. Locale: cmn-Hant-TW modelPrefix: x_google Location:4e7cae00daee30ec565c34e3aa67a51f isSpeakerIdSupported: true
+10-24 16:23:45.775  1904  2534 I A       : Adding from config to map. Locale: id-ID modelPrefix: x_google Location:cfffcc1a4c1c084c003c8eb27f73d770 isSpeakerIdSupported: true
+10-24 16:23:45.775  1904  2534 I A       : Adding from config to map. Locale: ko-KR modelPrefix: x_google Location:0b132163a2eb2c1194b202067475724b isSpeakerIdSupported: true
+10-24 16:23:45.775  1904  2534 I A       : Skipping. Expected model: 2 Found: 1
+10-24 16:23:45.775  1904  2534 I A       : Adding from config to map. Locale: zh-TW modelPrefix: x_google Location:4e7cae00daee30ec565c34e3aa67a51f isSpeakerIdSupported: true
+10-24 16:23:45.775  1904  2534 I HotwordModelPopulator: #updateHotwordFileGroup group name: hotword_model_en-US_okhey, raw locale: en-US, locale: en-US
+10-24 16:23:45.775  1904  2534 I A       : Using proto config with mendel
+10-24 16:23:45.776  1904  2534 I A       : Using proto config with mendel
+10-24 16:23:45.776  1904  2534 I A       : Merging legacy hotword config map with new proto.
+10-24 16:23:45.776  1904  2534 I A       : Adding from config to map. Locale: cmn-Hant-TW modelPrefix: x_google Location:4e7cae00daee30ec565c34e3aa67a51f isSpeakerIdSupported: true
+10-24 16:23:45.776  1904  2534 I A       : Adding from config to map. Locale: id-ID modelPrefix: x_google Location:cfffcc1a4c1c084c003c8eb27f73d770 isSpeakerIdSupported: true
+10-24 16:23:45.776  1904  2534 I A       : Adding from config to map. Locale: ko-KR modelPrefix: x_google Location:0b132163a2eb2c1194b202067475724b isSpeakerIdSupported: true
+10-24 16:23:45.776  1904  2534 I A       : Skipping. Expected model: 2 Found: 1
+10-24 16:23:45.776  1904  2534 I A       : Adding from config to map. Locale: zh-TW modelPrefix: x_google Location:4e7cae00daee30ec565c34e3aa67a51f isSpeakerIdSupported: true
+10-24 16:23:45.776  1904  2534 I HotwordModelPopulator: #updateHotwordFileGroup group name: hotword_model_en-US_okhey, raw locale: en-US, locale: en-US
+10-24 16:23:45.778  1904  5886 I A       : Joining existing batch; batchId=2 corpus=1004
+10-24 16:23:45.778  1904  5877 I A       : Joining existing batch; batchId=2 corpus=1008
+10-24 16:23:45.790  1904  5916 I A       : Joining existing batch; batchId=2 corpus=1015
+10-24 16:23:45.790  1904  2534 I A       : Using proto config with mendel
+10-24 16:23:45.790  1904  2534 I A       : Merging legacy hotword config map with new proto.
+10-24 16:23:45.790  1904  2534 I A       : Adding from config to map. Locale: cmn-Hant-TW modelPrefix: x_google Location:4e7cae00daee30ec565c34e3aa67a51f isSpeakerIdSupported: true
+10-24 16:23:45.790  1904  2534 I A       : Adding from config to map. Locale: id-ID modelPrefix: x_google Location:cfffcc1a4c1c084c003c8eb27f73d770 isSpeakerIdSupported: true
+10-24 16:23:45.790  1904  2534 I A       : Adding from config to map. Locale: ko-KR modelPrefix: x_google Location:0b132163a2eb2c1194b202067475724b isSpeakerIdSupported: true
+10-24 16:23:45.790  1904  2534 I A       : Skipping. Expected model: 2 Found: 1
+10-24 16:23:45.790  1904  2534 I A       : Adding from config to map. Locale: zh-TW modelPrefix: x_google Location:4e7cae00daee30ec565c34e3aa67a51f isSpeakerIdSupported: true
+10-24 16:23:45.790  1904  2534 I HotwordModelPopulator: #updateHotwordFileGroup group name: hotword_model_en-US_okhey, raw locale: en-US, locale: en-US
+10-24 16:23:45.793  1904  2534 D PhFileGroupPop: Added file groups assistant_appintegration_appactions_config
+10-24 16:23:45.811  1904  2534 D PhFileGroupPop: Added file groups fedass_policy_config_group
+10-24 16:23:45.853  1904  2534 D PhFileGroupPop: Added file groups tapas_cortex
+10-24 16:23:45.878  1904  2292 I MicroModelsUtil: #getHotwordModelFromMobstore [mobstoreUri: android://com.google.android.googlequicksearchbox/files/datadownload/shared/public/datadownloadfile_1792858923019]
+10-24 16:23:45.879  1904  2292 I HotwordModelPopulator: Updated file group for locale 'hotword_model_en-US_okhey' from location: https://www.gstatic.com/android-search/hotword/x_google/975058821313279e27b2c3f04de0beef/hotword.data. Download already finished.
+10-24 16:23:45.879  1904  2292 I MicroModelsUtil: #getHotwordModelFromMobstore [mobstoreUri: android://com.google.android.googlequicksearchbox/files/datadownload/shared/public/datadownloadfile_1792858923019]
+10-24 16:23:45.881  1904  2291 I MicroModelsUtil: #getHotwordModelFromMobstore [mobstoreUri: android://com.google.android.googlequicksearchbox/files/datadownload/shared/public/datadownloadfile_1792858923019]
+10-24 16:23:45.882  1904  2291 I HotwordModelPopulator: Updated file group for locale 'hotword_model_en-US_okhey' from location: https://www.gstatic.com/android-search/hotword/x_google/975058821313279e27b2c3f04de0beef/hotword.data. Download already finished.
+10-24 16:23:45.882  1904  5882 E MDD     : DownloadProgressMonitor: Can't find file group for uri: android://com.google.android.googlequicksearchbox/files/datadownload/shared/public/datadownloadfile_1792858923024_a64a3f98d26fa7e7180cd6d29bf44fced216fc32
+10-24 16:23:45.883  1904  2292 I HotwordModelPopulator: Updated file group for locale 'hotword_model_en-US_okhey' from location: https://www.gstatic.com/android-search/hotword/x_google/975058821313279e27b2c3f04de0beef/hotword.data. Download already finished.
+10-24 16:23:45.893  1904  5916 D t       : Starting download: https://dl.google.com/assistant/nga/1/c11ffd9ddd4f0c6433a5cb07a437812b735fa547.mddz
+10-24 16:23:45.893  1904  5916 V t       : Is http uri, downloading (uri: https://dl.google.com/assistant/nga/1/c11ffd9ddd4f0c6433a5cb07a437812b735fa547.mddz)
+10-24 16:23:45.910  1904  5882 D t       : Starting download: https://dl.google.com/assistant/nga/1/1658155c551c182a9c9cbdff0bc6cd4293920bc3.mddz
+10-24 16:23:45.910  1904  5882 V t       : Is http uri, downloading (uri: https://dl.google.com/assistant/nga/1/1658155c551c182a9c9cbdff0bc6cd4293920bc3.mddz)
+10-24 16:23:46.068  1904  5916 E MDD     : DownloadProgressMonitor: Can't find file group for uri: android://com.google.android.googlequicksearchbox/files/datadownload/shared/public/datadownloadfile_1792858923025_5e9da2701f510020f2592c1e5b468922569445d7
+10-24 16:23:46.106  1904  5882 E MDD     : DownloadProgressMonitor: Can't find file group for uri: android://com.google.android.googlequicksearchbox/files/datadownload/shared/public/datadownloadfile_1792858923026_b56351a773b9354cf1ebcacf86f309b6489173ac
+10-24 16:23:46.399  1904  2534 E SingleDataFileGroupPop: Failed to add file group
+10-24 16:23:46.400  1904  2534 E PhFileGroupPop: Failed to add file group
+10-24 16:23:46.400  1904  2534 E PhFileGroupPop: Failed to add file group
+10-24 16:23:46.400  1904  2534 E PhFileGroupPop: Failed to add file group
+10-24 16:23:46.400  1904  2534 E PhFileGroupPop: Failed to add file group
+10-24 16:23:46.400  1904  2534 E PhFileGroupPop: Failed to add file group
+10-24 16:23:46.401  1904  2534 E d       : RuntimeException while executing runnable cb{com.google.apps.tiktok.tracing.ej@f3155cb} with executor MoreExecutors.directExecutor()
+10-24 16:23:46.401  1904  2534 E d       : java.lang.NullPointerException: Attempt to read from field 'java.lang.String com.google.android.libraries.mdi.download.ae.b' on a null object reference in method 'void com.google.android.libraries.mdi.download.h.bq.gH(java.lang.Object)'
+10-24 16:23:46.401  1904  2534 E d       : 	at com.google.android.libraries.mdi.download.h.bq.gH(PG:2)
+10-24 16:23:46.401  1904  2534 E d       : 	at com.google.apps.tiktok.tracing.ej.gH(PG:2)
+10-24 16:23:46.401  1904  2534 E d       : 	at com.google.common.util.concurrent.cb.run(PG:7)
+10-24 16:23:46.401  1904  2534 E d       : 	at com.google.common.util.concurrent.bf.execute(PG:1)
+10-24 16:23:46.401  1904  2534 E d       : 	at com.google.common.util.concurrent.d.i(PG:1)
+10-24 16:23:46.401  1904  2534 E d       : 	at com.google.common.util.concurrent.d.iq(PG:5)
+10-24 16:23:46.401  1904  2534 E d       : 	at com.google.common.util.concurrent.ci.t(PG:1)
+10-24 16:23:46.401  1904  2534 E d       : 	at com.google.android.libraries.mdi.download.h.bu.b(PG:26)
+10-24 16:23:46.401  1904  2534 E d       : 	at com.google.android.libraries.mdi.download.gs.p(PG:3)
+10-24 16:23:46.401  1904  2534 E d       : 	at com.google.android.libraries.mdi.download.gf.apply(Unknown Source:4)
+10-24 16:23:46.401  1904  2534 E d       : 	at com.google.apps.tiktok.tracing.eo.apply(PG:2)
+10-24 16:23:46.401  1904  2534 E d       : 	at com.google.common.util.concurrent.h.e(PG:2)
+10-24 16:23:46.401  1904  2534 E d       : 	at com.google.common.util.concurrent.j.run(PG:9)
+10-24 16:23:46.401  1904  2534 E d       : 	at com.google.common.util.concurrent.do.run(PG:4)
+10-24 16:23:46.401  1904  2534 E d       : 	at com.google.android.libraries.i.ae.run(PG:1)
+10-24 16:23:46.401  1904  2534 E d       : 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+10-24 16:23:46.401  1904  2534 E d       : 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)
+10-24 16:23:46.401  1904  2534 E d       : 	at com.google.android.libraries.i.i.run(PG:2)
+10-24 16:23:46.401  1904  2534 E d       : 	at com.google.android.libraries.i.p.run(PG:4)
+10-24 16:23:46.401  1904  2534 E d       : 	at java.lang.Thread.run(Thread.java:1012)
+10-24 16:23:46.401  1904  2534 E PhFileGroupPop: Failed to add file group
+10-24 16:23:46.401  1904  2534 E PhFileGroupPop: Failed to add file group
+10-24 16:23:46.401  1904  2534 E PhFileGroupPop: Failed to add file group
+10-24 16:23:46.404  1904  2534 I A       : Download file group for language pack: en-US
+10-24 16:23:46.404  1904  2534 W A       : Locale en-US is not compatible, please check manifest exists
+10-24 16:23:46.404  1904  2534 I A       : Using proto config with mendel
+10-24 16:23:46.404  1904  2534 I A       : Using proto config with mendel
+10-24 16:23:46.404  1904  2534 I A       : Using proto config with mendel
+10-24 16:23:46.404  1904  2534 I A       : Merging legacy hotword config map with new proto.
+10-24 16:23:46.404  1904  2534 I A       : Adding from config to map. Locale: cmn-Hant-TW modelPrefix: x_google Location:4e7cae00daee30ec565c34e3aa67a51f isSpeakerIdSupported: true
+10-24 16:23:46.404  1904  2534 I A       : Adding from config to map. Locale: id-ID modelPrefix: x_google Location:cfffcc1a4c1c084c003c8eb27f73d770 isSpeakerIdSupported: true
+10-24 16:23:46.404  1904  2534 I A       : Adding from config to map. Locale: ko-KR modelPrefix: x_google Location:0b132163a2eb2c1194b202067475724b isSpeakerIdSupported: true
+10-24 16:23:46.404  1904  2534 I A       : Skipping. Expected model: 2 Found: 1
+10-24 16:23:46.404  1904  2534 I A       : Adding from config to map. Locale: zh-TW modelPrefix: x_google Location:4e7cae00daee30ec565c34e3aa67a51f isSpeakerIdSupported: true
+10-24 16:23:46.405  1904  2534 I HotwordModelPopulator: #updateHotwordFileGroup group name: hotword_model_en-US_okhey, raw locale: en-US, locale: en-US
+10-24 16:23:46.405  1904  2534 I A       : Using proto config with mendel
+10-24 16:23:46.405  1904  2534 I A       : Using proto config with mendel
+10-24 16:23:46.405  1904  2534 I A       : Merging legacy hotword config map with new proto.
+10-24 16:23:46.405  1904  2534 I A       : Adding from config to map. Locale: cmn-Hant-TW modelPrefix: x_google Location:4e7cae00daee30ec565c34e3aa67a51f isSpeakerIdSupported: true
+10-24 16:23:46.405  1904  2534 I A       : Adding from config to map. Locale: id-ID modelPrefix: x_google Location:cfffcc1a4c1c084c003c8eb27f73d770 isSpeakerIdSupported: true
+10-24 16:23:46.405  1904  2534 I A       : Adding from config to map. Locale: ko-KR modelPrefix: x_google Location:0b132163a2eb2c1194b202067475724b isSpeakerIdSupported: true
+10-24 16:23:46.405  1904  2534 I A       : Skipping. Expected model: 2 Found: 1
+10-24 16:23:46.405  1904  2534 I A       : Adding from config to map. Locale: zh-TW modelPrefix: x_google Location:4e7cae00daee30ec565c34e3aa67a51f isSpeakerIdSupported: true
+10-24 16:23:46.408  1904  2534 I HotwordModelPopulator: #updateHotwordFileGroup group name: hotword_model_en-US_okhey, raw locale: en-US, locale: en-US
+10-24 16:23:46.408  1904  5911 I A       : Joining existing batch; batchId=2 corpus=1014
+10-24 16:23:46.408  1904  5877 I A       : Joining existing batch; batchId=2 corpus=1015
+10-24 16:23:46.408  1904  5882 I A       : Joining existing batch; batchId=2 corpus=1008
+10-24 16:23:46.408  1904  2534 I A       : Using proto config with mendel
+10-24 16:23:46.408  1904  2534 I A       : Merging legacy hotword config map with new proto.
+10-24 16:23:46.409  1904  2534 I A       : Adding from config to map. Locale: cmn-Hant-TW modelPrefix: x_google Location:4e7cae00daee30ec565c34e3aa67a51f isSpeakerIdSupported: true
+10-24 16:23:46.409  1904  2534 I A       : Adding from config to map. Locale: id-ID modelPrefix: x_google Location:cfffcc1a4c1c084c003c8eb27f73d770 isSpeakerIdSupported: true
+10-24 16:23:46.409  1904  2534 I A       : Adding from config to map. Locale: ko-KR modelPrefix: x_google Location:0b132163a2eb2c1194b202067475724b isSpeakerIdSupported: true
+10-24 16:23:46.409  1904  2534 I A       : Skipping. Expected model: 2 Found: 1
+10-24 16:23:46.409  1904  2534 I A       : Adding from config to map. Locale: zh-TW modelPrefix: x_google Location:4e7cae00daee30ec565c34e3aa67a51f isSpeakerIdSupported: true
+10-24 16:23:46.409  1904  2534 I HotwordModelPopulator: #updateHotwordFileGroup group name: hotword_model_en-US_okhey, raw locale: en-US, locale: en-US
+10-24 16:23:46.409  1904  2534 D PhFileGroupPop: Added file groups assistant_appintegration_appactions_config
+10-24 16:23:46.409  1904  2534 D PhFileGroupPop: Added file groups fedass_policy_config_group
+10-24 16:23:46.410  1904  2534 D PhFileGroupPop: Added file groups tapas_cortex
+10-24 16:23:46.412  1904  5916 I A       : Joining existing batch; batchId=2 corpus=1004
+10-24 16:23:46.415  1904  2288 I MicroModelsUtil: #getHotwordModelFromMobstore [mobstoreUri: android://com.google.android.googlequicksearchbox/files/datadownload/shared/public/datadownloadfile_1792858923019]
+10-24 16:23:46.415  1904  2289 I MicroModelsUtil: #getHotwordModelFromMobstore [mobstoreUri: android://com.google.android.googlequicksearchbox/files/datadownload/shared/public/datadownloadfile_1792858923019]
+10-24 16:23:46.416  1904  2289 I HotwordModelPopulator: Updated file group for locale 'hotword_model_en-US_okhey' from location: https://www.gstatic.com/android-search/hotword/x_google/975058821313279e27b2c3f04de0beef/hotword.data. Download already finished.
+10-24 16:23:46.416  1904  2289 I MicroModelsUtil: #getHotwordModelFromMobstore [mobstoreUri: android://com.google.android.googlequicksearchbox/files/datadownload/shared/public/datadownloadfile_1792858923019]
+10-24 16:23:46.416  1904  2289 I HotwordModelPopulator: Updated file group for locale 'hotword_model_en-US_okhey' from location: https://www.gstatic.com/android-search/hotword/x_google/975058821313279e27b2c3f04de0beef/hotword.data. Download already finished.
+10-24 16:23:46.420  1904  2288 I HotwordModelPopulator: Updated file group for locale 'hotword_model_en-US_okhey' from location: https://www.gstatic.com/android-search/hotword/x_google/975058821313279e27b2c3f04de0beef/hotword.data. Download already finished.
+10-24 16:23:46.670   910   910 D StatusBarIconController: ignoring old pipeline callbacks, because the new mobile icons are enabled
+10-24 16:23:46.792  1904  2534 I A       : Scheduled one-off task for batch; batchId=2 taskId=-1000009 corpora=[1004,1008,1014,1015]
+10-24 16:23:46.795  1904  2534 I A       : Pending callbacks: 1
+10-24 16:23:46.850  6166  6181 I OpenGLRenderer: Davey! duration=1849ms; Flags=0, FrameTimelineVsyncId=8104, IntendedVsync=146452226365, Vsync=147152226337, InputEventId=0, HandleInputStart=147157573118, AnimationStart=147157576313, PerformTraversalsStart=147196666130, DrawStart=147228282273, FrameDeadline=146468893031, FrameInterval=147157186465, FrameStartTime=16666666, SyncQueued=147248795181, SyncStart=147249917074, IssueDrawCommandsStart=147249951635, SwapBuffers=148255965150, FrameCompleted=148302367770, DequeueBufferDuration=2794, QueueBufferDuration=170603, GpuCompleted=148302367770, SwapBuffersCompleted=148295976584, DisplayPresentTime=20401094660746, CommandSubmissionCompleted=148255965150,
+10-24 16:23:47.136  1777  2213 W MediaProvider: isAppCloneUserPair for user 0: false
+10-24 16:23:47.136  1777  2213 W MediaProvider: isAppCloneUserPair for user 0: false
+10-24 16:23:47.136  1777  2213 W MediaProvider: isAppCloneUserPair for user 0: false
+10-24 16:23:47.156  5174  5944 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService started execution. cause:9 exec_start_elapsed_seconds: 148 [CONTEXT service_id=218 ]
+10-24 16:23:47.159  5174  5964 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService finished executing. cause:9 result: 1 elapsed_millis: 7 uptime_millis: 7 exec_start_elapsed_seconds: 148 [CONTEXT service_id=218 ]
+10-24 16:23:47.229  1777  2213 W MediaProvider: isAppCloneUserPair for user 0: false
+10-24 16:23:47.264  5174  5873 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService started execution. cause:9 exec_start_elapsed_seconds: 148 [CONTEXT service_id=218 ]
+10-24 16:23:47.265  5174  5873 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService finished executing. cause:9 result: 1 elapsed_millis: 6 uptime_millis: 6 exec_start_elapsed_seconds: 148 [CONTEXT service_id=218 ]
+10-24 16:23:47.495  1777  2213 W MediaProvider: isAppCloneUserPair for user 0: false
+10-24 16:23:47.510  5174  6209 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService started execution. cause:9 exec_start_elapsed_seconds: 149 [CONTEXT service_id=218 ]
+10-24 16:23:47.512  5174  5944 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService finished executing. cause:9 result: 1 elapsed_millis: 6 uptime_millis: 6 exec_start_elapsed_seconds: 149 [CONTEXT service_id=218 ]
+10-24 16:23:47.587  1777  2213 W MediaProvider: isAppCloneUserPair for user 0: false
+10-24 16:23:47.619  5174  6209 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService started execution. cause:9 exec_start_elapsed_seconds: 149 [CONTEXT service_id=218 ]
+10-24 16:23:47.621  5174  5964 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService finished executing. cause:9 result: 1 elapsed_millis: 5 uptime_millis: 5 exec_start_elapsed_seconds: 149 [CONTEXT service_id=218 ]
+10-24 16:23:47.700  1777  2213 W MediaProvider: isAppCloneUserPair for user 0: false
+10-24 16:23:47.737  5174  5873 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService started execution. cause:9 exec_start_elapsed_seconds: 149 [CONTEXT service_id=218 ]
+10-24 16:23:47.740  5174  5964 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService finished executing. cause:9 result: 1 elapsed_millis: 7 uptime_millis: 7 exec_start_elapsed_seconds: 149 [CONTEXT service_id=218 ]
+10-24 16:23:47.768  6166  6190 D EGL_emulation: app_time_stats: avg=223.42ms min=15.85ms max=1915.82ms count=13
+10-24 16:23:47.843  1777  2212 W MediaProvider: isAppCloneUserPair for user 0: false
+10-24 16:23:47.871  5174  6209 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService started execution. cause:9 exec_start_elapsed_seconds: 149 [CONTEXT service_id=218 ]
+10-24 16:23:47.877  5174  6209 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService finished executing. cause:9 result: 1 elapsed_millis: 10 uptime_millis: 10 exec_start_elapsed_seconds: 149 [CONTEXT service_id=218 ]
+10-24 16:23:47.944  1777  2213 W MediaProvider: isAppCloneUserPair for user 0: false
+10-24 16:23:47.965   357   357 I netd    : setProcSysNet(4, 2, wlan0, retrans_time_ms, 750) <0.06ms>
+10-24 16:23:47.965   357   357 I netd    : setProcSysNet(4, 2, wlan0, ucast_solicit, 10) <0.01ms>
+10-24 16:23:47.965   357   357 I netd    : setProcSysNet(6, 2, wlan0, retrans_time_ms, 750) <0.02ms>
+10-24 16:23:47.965   357   357 I netd    : setProcSysNet(6, 2, wlan0, ucast_solicit, 10) <0.01ms>
+10-24 16:23:47.982  5174  5964 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService started execution. cause:9 exec_start_elapsed_seconds: 149 [CONTEXT service_id=218 ]
+10-24 16:23:47.983  5174  5873 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService finished executing. cause:9 result: 1 elapsed_millis: 6 uptime_millis: 6 exec_start_elapsed_seconds: 149 [CONTEXT service_id=218 ]
+10-24 16:23:48.056  1777  2501 W MediaProvider: isAppCloneUserPair for user 0: false
+10-24 16:23:48.081  5174  5964 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService started execution. cause:9 exec_start_elapsed_seconds: 149 [CONTEXT service_id=218 ]
+10-24 16:23:48.083  5174  6209 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService finished executing. cause:9 result: 1 elapsed_millis: 7 uptime_millis: 7 exec_start_elapsed_seconds: 149 [CONTEXT service_id=218 ]
+10-24 16:23:48.164  1777  2212 W MediaProvider: isAppCloneUserPair for user 0: false
+10-24 16:23:48.179  5174  5964 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService started execution. cause:9 exec_start_elapsed_seconds: 149 [CONTEXT service_id=218 ]
+10-24 16:23:48.181  5174  5873 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService finished executing. cause:9 result: 1 elapsed_millis: 5 uptime_millis: 5 exec_start_elapsed_seconds: 149 [CONTEXT service_id=218 ]
+10-24 16:23:48.262  1777  2213 W MediaProvider: isAppCloneUserPair for user 0: false
+10-24 16:23:48.283  5174  6209 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService started execution. cause:9 exec_start_elapsed_seconds: 149 [CONTEXT service_id=218 ]
+10-24 16:23:48.286  5174  5964 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService finished executing. cause:9 result: 1 elapsed_millis: 7 uptime_millis: 7 exec_start_elapsed_seconds: 149 [CONTEXT service_id=218 ]
+10-24 16:23:48.363  1777  2501 W MediaProvider: isAppCloneUserPair for user 0: false
+10-24 16:23:48.387  5174  6209 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService started execution. cause:9 exec_start_elapsed_seconds: 149 [CONTEXT service_id=218 ]
+10-24 16:23:48.388  5174  6209 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService finished executing. cause:9 result: 1 elapsed_millis: 7 uptime_millis: 7 exec_start_elapsed_seconds: 149 [CONTEXT service_id=218 ]
+10-24 16:23:48.463  1777  2212 W MediaProvider: isAppCloneUserPair for user 0: false
+10-24 16:23:48.488  5174  5964 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService started execution. cause:9 exec_start_elapsed_seconds: 150 [CONTEXT service_id=218 ]
+10-24 16:23:48.490  5174  5873 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService finished executing. cause:9 result: 1 elapsed_millis: 7 uptime_millis: 7 exec_start_elapsed_seconds: 150 [CONTEXT service_id=218 ]
+10-24 16:23:48.555  1777  2213 W MediaProvider: isAppCloneUserPair for user 0: false
+10-24 16:23:48.593  5174  5964 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService started execution. cause:9 exec_start_elapsed_seconds: 150 [CONTEXT service_id=218 ]
+10-24 16:23:48.594  5174  5964 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService finished executing. cause:9 result: 1 elapsed_millis: 13 uptime_millis: 13 exec_start_elapsed_seconds: 150 [CONTEXT service_id=218 ]
+10-24 16:23:48.665  1777  2501 W MediaProvider: isAppCloneUserPair for user 0: false
+10-24 16:23:48.683  5174  5873 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService started execution. cause:9 exec_start_elapsed_seconds: 150 [CONTEXT service_id=218 ]
+10-24 16:23:48.685  5174  5944 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService finished executing. cause:9 result: 1 elapsed_millis: 6 uptime_millis: 6 exec_start_elapsed_seconds: 150 [CONTEXT service_id=218 ]
+10-24 16:23:48.762  1777  2212 W MediaProvider: isAppCloneUserPair for user 0: false
+10-24 16:23:48.789  5174  5944 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService started execution. cause:9 exec_start_elapsed_seconds: 150 [CONTEXT service_id=218 ]
+10-24 16:23:48.792  5174  5944 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService finished executing. cause:9 result: 1 elapsed_millis: 5 uptime_millis: 5 exec_start_elapsed_seconds: 150 [CONTEXT service_id=218 ]
+10-24 16:23:48.803  6166  6190 D EGL_emulation: app_time_stats: avg=51.33ms min=17.54ms max=84.90ms count=20
+10-24 16:23:48.859  1777  2501 W MediaProvider: isAppCloneUserPair for user 0: false
+10-24 16:23:48.882  6166  6210 D ProfileInstaller: Installing profile for id.nopal.belajartka
+10-24 16:23:48.890  5174  6209 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService started execution. cause:9 exec_start_elapsed_seconds: 150 [CONTEXT service_id=218 ]
+10-24 16:23:48.893  5174  5873 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService finished executing. cause:9 result: 1 elapsed_millis: 7 uptime_millis: 7 exec_start_elapsed_seconds: 150 [CONTEXT service_id=218 ]
+10-24 16:23:48.970  1777  2212 W MediaProvider: isAppCloneUserPair for user 0: false
+10-24 16:23:48.990  5174  5944 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService started execution. cause:9 exec_start_elapsed_seconds: 150 [CONTEXT service_id=218 ]
+10-24 16:23:48.993  5174  6209 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService finished executing. cause:9 result: 1 elapsed_millis: 6 uptime_millis: 6 exec_start_elapsed_seconds: 150 [CONTEXT service_id=218 ]
+10-24 16:23:49.066  1777  2213 W MediaProvider: isAppCloneUserPair for user 0: false
+10-24 16:23:49.098  5174  5944 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService started execution. cause:9 exec_start_elapsed_seconds: 150 [CONTEXT service_id=218 ]
+10-24 16:23:49.100  5174  5964 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService finished executing. cause:9 result: 1 elapsed_millis: 6 uptime_millis: 6 exec_start_elapsed_seconds: 150 [CONTEXT service_id=218 ]
+10-24 16:23:49.170  1777  2501 W MediaProvider: isAppCloneUserPair for user 0: false
+10-24 16:23:49.216  5174  5944 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService started execution. cause:9 exec_start_elapsed_seconds: 150 [CONTEXT service_id=218 ]
+10-24 16:23:49.220  5174  5873 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService finished executing. cause:9 result: 1 elapsed_millis: 19 uptime_millis: 19 exec_start_elapsed_seconds: 150 [CONTEXT service_id=218 ]
+10-24 16:23:49.280  1777  2501 W MediaProvider: isAppCloneUserPair for user 0: false
+10-24 16:23:49.307  5174  5964 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService started execution. cause:9 exec_start_elapsed_seconds: 150 [CONTEXT service_id=218 ]
+10-24 16:23:49.309  5174  6209 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService finished executing. cause:9 result: 1 elapsed_millis: 5 uptime_millis: 5 exec_start_elapsed_seconds: 150 [CONTEXT service_id=218 ]
+10-24 16:23:49.378  1777  2501 W MediaProvider: isAppCloneUserPair for user 0: false
+10-24 16:23:49.406  5174  5964 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService started execution. cause:9 exec_start_elapsed_seconds: 150 [CONTEXT service_id=218 ]
+10-24 16:23:49.407  5174  5873 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService finished executing. cause:9 result: 1 elapsed_millis: 6 uptime_millis: 6 exec_start_elapsed_seconds: 150 [CONTEXT service_id=218 ]
+10-24 16:23:49.469  1777  2501 W MediaProvider: isAppCloneUserPair for user 0: false
+10-24 16:23:49.499  5174  6209 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService started execution. cause:9 exec_start_elapsed_seconds: 151 [CONTEXT service_id=218 ]
+10-24 16:23:49.501  5174  5944 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService finished executing. cause:9 result: 1 elapsed_millis: 6 uptime_millis: 6 exec_start_elapsed_seconds: 151 [CONTEXT service_id=218 ]
+10-24 16:23:49.589  1777  2501 W MediaProvider: isAppCloneUserPair for user 0: false
+10-24 16:23:49.606  5174  6209 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService started execution. cause:9 exec_start_elapsed_seconds: 151 [CONTEXT service_id=218 ]
+10-24 16:23:49.608  5174  5964 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService finished executing. cause:9 result: 1 elapsed_millis: 7 uptime_millis: 7 exec_start_elapsed_seconds: 151 [CONTEXT service_id=218 ]
+10-24 16:23:49.669  1777  2501 W MediaProvider: isAppCloneUserPair for user 0: false
+10-24 16:23:49.691  5174  5964 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService started execution. cause:9 exec_start_elapsed_seconds: 151 [CONTEXT service_id=218 ]
+10-24 16:23:49.695  5174  5873 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService finished executing. cause:9 result: 1 elapsed_millis: 10 uptime_millis: 10 exec_start_elapsed_seconds: 151 [CONTEXT service_id=218 ]
+10-24 16:23:49.753  1777  2501 W MediaProvider: isAppCloneUserPair for user 0: false
+10-24 16:23:49.782  5174  6209 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService started execution. cause:9 exec_start_elapsed_seconds: 151 [CONTEXT service_id=218 ]
+10-24 16:23:49.785  5174  5873 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService finished executing. cause:9 result: 1 elapsed_millis: 10 uptime_millis: 10 exec_start_elapsed_seconds: 151 [CONTEXT service_id=218 ]
+10-24 16:23:49.799  6166  6166 D LifecycleMonitor: Lifecycle status change: androidx.activity.ComponentActivity@e22709f in: PAUSED
+10-24 16:23:49.800  6166  6166 V ActivityScenario: Update currentActivityStage to PAUSED, currentActivity=androidx.activity.ComponentActivity@e22709f
+10-24 16:23:49.800   910   991 D SplashScreenView: Build android.window.SplashScreenView{2d9c104 V.E...... ......ID 0,0-0,0}
+10-24 16:23:49.800   910   991 D SplashScreenView: Icon: view: null drawable: null size: 0
+10-24 16:23:49.800   910   991 D SplashScreenView: Branding: view: android.view.View{c9e96ed G.ED..... ......I. 0,0-0,0 #10204ef android:id/splashscreen_branding_view} drawable: null size w: 0 h: 0
+10-24 16:23:49.813   358   358 D Zygote  : Forked child process 6211
+10-24 16:23:49.830   414   414 I BpBinder: onLastStrongRef automatically unlinking death recipients:
+10-24 16:23:49.843  6211  6211 I belajartka.test: Late-enabling -Xcheck:jni
+10-24 16:23:49.858  6211  6211 I belajartka.test: Using CollectorTypeCC GC.
+10-24 16:23:49.858  6211  6211 W belajartka.test: Unexpected CPU variant for x86: x86_64.
+10-24 16:23:49.858  6211  6211 W belajartka.test: Known variants: atom, sandybridge, silvermont, goldmont, goldmont-plus, tremont, kabylake, default
+10-24 16:23:49.896   435   450 I adbd    : jdwp connection from 6211
+10-24 16:23:49.935  6211  6211 D CompatibilityChangeReporter: Compat change id reported: 171979766; UID 10193; state: ENABLED
+10-24 16:23:49.935  6211  6211 D CompatibilityChangeReporter: Compat change id reported: 242716250; UID 10193; state: ENABLED
+10-24 16:23:49.946   390   390 I android.hardware.power-service.example: Power isModeSupported: 6
+10-24 16:23:49.962  6211  6211 D ApplicationLoaders: Returning zygote-cached class loader: /system/framework/android.test.base.jar
+10-24 16:23:49.965  6211  6211 D nativeloader: Configuring clns-6 for other apk /system/framework/android.test.mock.jar. target_sdk_version=34, uses_libraries=ALL, library_path=/data/app/~~xxIF6MtoBEvPCCWfBONXpA==/id.nopal.belajartka.test-W3waqtaYHIETwV0y_fRuTA==/lib/x86_64, permitted_path=/data:/mnt/expand:/data/user/0/id.nopal.belajartka.test
+10-24 16:23:49.965  6211  6211 D ApplicationLoaders: Returning zygote-cached class loader: /system/framework/android.test.base.jar
+10-24 16:23:49.966  6211  6211 D nativeloader: Configuring clns-7 for other apk /system/framework/android.test.runner.jar. target_sdk_version=34, uses_libraries=ALL, library_path=/data/app/~~xxIF6MtoBEvPCCWfBONXpA==/id.nopal.belajartka.test-W3waqtaYHIETwV0y_fRuTA==/lib/x86_64, permitted_path=/data:/mnt/expand:/data/user/0/id.nopal.belajartka.test
+10-24 16:23:49.966  6211  6211 W ziparchive: Unable to open '/data/app/~~xxIF6MtoBEvPCCWfBONXpA==/id.nopal.belajartka.test-W3waqtaYHIETwV0y_fRuTA==/base.dm': No such file or directory
+10-24 16:23:49.966  6211  6211 W ziparchive: Unable to open '/data/app/~~xxIF6MtoBEvPCCWfBONXpA==/id.nopal.belajartka.test-W3waqtaYHIETwV0y_fRuTA==/base.dm': No such file or directory
+10-24 16:23:49.984  6211  6211 D nativeloader: Configuring clns-8 for other apk /data/app/~~xxIF6MtoBEvPCCWfBONXpA==/id.nopal.belajartka.test-W3waqtaYHIETwV0y_fRuTA==/base.apk. target_sdk_version=34, uses_libraries=, library_path=/data/app/~~xxIF6MtoBEvPCCWfBONXpA==/id.nopal.belajartka.test-W3waqtaYHIETwV0y_fRuTA==/lib/x86_64, permitted_path=/data:/mnt/expand:/data/user/0/id.nopal.belajartka.test
+10-24 16:23:49.999  6211  6211 V GraphicsEnvironment: Currently set values for:
+10-24 16:23:49.999  6211  6211 V GraphicsEnvironment:   angle_gl_driver_selection_pkgs=[]
+10-24 16:23:49.999  6211  6211 V GraphicsEnvironment:   angle_gl_driver_selection_values=[]
+10-24 16:23:49.999  6211  6211 V GraphicsEnvironment: ANGLE GameManagerService for id.nopal.belajartka.test: false
+10-24 16:23:50.000  6211  6211 V GraphicsEnvironment: id.nopal.belajartka.test is not listed in per-application setting
+10-24 16:23:50.000  6211  6211 V GraphicsEnvironment: Neither updatable production driver nor prerelease driver is supported.
+10-24 16:23:50.012  6211  6232 D libEGL  : loaded /vendor/lib64/egl/libEGL_emulation.so
+10-24 16:23:50.013  6211  6232 D libEGL  : loaded /vendor/lib64/egl/libGLESv1_CM_emulation.so
+10-24 16:23:50.018  6211  6232 D libEGL  : loaded /vendor/lib64/egl/libGLESv2_emulation.so
+10-24 16:23:50.064  6211  6211 D CompatibilityChangeReporter: Compat change id reported: 237531167; UID 10193; state: DISABLED
+10-24 16:23:50.065  6211  6211 W OpenGLRenderer: Unknown dataspace 0
+10-24 16:23:50.066  1114  1385 D BtGatt.ScanManager: uid 10128 isForeground true scanMode -1
+10-24 16:23:50.067  1114  1385 D BtGatt.ScanManager: uid 10128 isForeground true scanMode -1
+10-24 16:23:50.103   414   437 W ServiceManagerCppClient: Permission failure: android.permission.ROTATE_SURFACE_FLINGER from uid=10193 pid=6211
+10-24 16:23:50.103   414   437 D PermissionCache: checking android.permission.ROTATE_SURFACE_FLINGER for uid=10193 => denied (2743 us)
+10-24 16:23:50.103   414  1269 W ServiceManagerCppClient: Permission failure: android.permission.ROTATE_SURFACE_FLINGER from uid=10193 pid=0
+10-24 16:23:50.103   414  1269 D PermissionCache: checking android.permission.ROTATE_SURFACE_FLINGER for uid=10193 => denied (380 us)
+10-24 16:23:50.104   414   437 W ServiceManagerCppClient: Permission failure: android.permission.INTERNAL_SYSTEM_WINDOW from uid=10193 pid=6211
+10-24 16:23:50.104   414   437 D PermissionCache: checking android.permission.INTERNAL_SYSTEM_WINDOW for uid=10193 => denied (329 us)
+10-24 16:23:50.104   414  1269 W ServiceManagerCppClient: Permission failure: android.permission.INTERNAL_SYSTEM_WINDOW from uid=10193 pid=0
+10-24 16:23:50.104   414  1269 D PermissionCache: checking android.permission.INTERNAL_SYSTEM_WINDOW for uid=10193 => denied (810 us)
+10-24 16:23:50.104   414   437 W ServiceManagerCppClient: Permission failure: android.permission.ACCESS_SURFACE_FLINGER from uid=10193 pid=6211
+10-24 16:23:50.107   414   437 D PermissionCache: checking android.permission.ACCESS_SURFACE_FLINGER for uid=10193 => denied (3672 us)
+10-24 16:23:50.110   414  1269 W ServiceManagerCppClient: Permission failure: android.permission.ACCESS_SURFACE_FLINGER from uid=10193 pid=0
+10-24 16:23:50.110   414  1269 D PermissionCache: checking android.permission.ACCESS_SURFACE_FLINGER for uid=10193 => denied (5459 us)
+10-24 16:23:50.121  6211  6230 W OpenGLRenderer: Failed to initialize 101010-2 format, error = EGL_SUCCESS
+10-24 16:23:50.141   157   157 I hwservicemanager: getTransport: Cannot find entry android.hardware.graphics.mapper@4.0::IMapper/default in either framework or device VINTF manifest.
+10-24 16:23:50.141  6211  6230 I Gralloc4: mapper 4.x is not supported
+10-24 16:23:50.355   545  1529 W ServiceManagerCppClient: Permission failure: android.permission.ROTATE_SURFACE_FLINGER from uid=10193 pid=0
+10-24 16:23:50.357   545  1529 D PermissionCache: checking android.permission.ROTATE_SURFACE_FLINGER for uid=10193 => denied (1811 us)
+10-24 16:23:50.357   545  1529 W ServiceManagerCppClient: Permission failure: android.permission.INTERNAL_SYSTEM_WINDOW from uid=10193 pid=0
+10-24 16:23:50.357   545  1529 D PermissionCache: checking android.permission.INTERNAL_SYSTEM_WINDOW for uid=10193 => denied (124 us)
+10-24 16:23:50.357   545  1529 W ServiceManagerCppClient: Permission failure: android.permission.ACCESS_SURFACE_FLINGER from uid=10193 pid=0
+10-24 16:23:50.357   545  1529 D PermissionCache: checking android.permission.ACCESS_SURFACE_FLINGER for uid=10193 => denied (103 us)
+10-24 16:23:50.372   545   564 W ziparchive: Unable to open '/data/app/~~xxIF6MtoBEvPCCWfBONXpA==/id.nopal.belajartka.test-W3waqtaYHIETwV0y_fRuTA==/base.dm': No such file or directory
+10-24 16:23:50.373   545   564 I ActivityTaskManager: Displayed id.nopal.belajartka.test/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity for user 0: +585ms
+10-24 16:23:50.415  1114  1385 D BtGatt.ScanManager: uid 10128 isForeground true scanMode -1
+10-24 16:23:50.415  1114  1385 D BtGatt.ScanManager: uid 10128 isForeground true scanMode -1
+10-24 16:23:50.471   545  1815 W AppSearchIcing: icing-search-engine.cc:283: Error: 5, Message: Document (com.google.android.googlequicksearchbox$OneSearchZeroStateGoogleSuggestions/default, zp) not found.
+10-24 16:23:50.472  1189  2317 D OneSearchSuggestProvider: Created the binder channel successfully for end point service =com.google.android.apps.search.googleapp.search.suggest.plugins.onesearch.server.OneSearchSuggestService , mChannel=z1{delegate=s1{logId=13, target=directaddress:///AndroidComponentAddress%5BIntent%20%7B%20act=grpc.io.action.BIND%20cmp=com.google.android.googlequicksearchbox/com.google.android.apps.search.googleapp.search.suggest.plugins.onesearch.server.OneSearchSuggestService%20%7D%5D}} , mOneSearchConnection=X1.T@c9b64e4
+10-24 16:23:50.656  1781  2169 I AiAiEcho: Predicting[0]:
+10-24 16:23:50.656  1781  2169 I AiAiEcho: EchoTargets:
+10-24 16:23:50.656  1781  2169 I AiAiEcho: Filtered by AiAi flag check:
+10-24 16:23:50.656  1781  2169 I AiAiEcho: Ranked targets strategy: SORT, count: 0, ranking metadata:
+10-24 16:23:50.657  1781  2169 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface home with targets# 0 (types=[])
+10-24 16:23:50.801  1904  1904 I A       : Constructor was called
+10-24 16:23:50.805  1904  1904 I A       : No savedInstanceState.
+10-24 16:23:50.805  1904  1904 I A       : makeRequest: subscribing to new source
+10-24 16:23:50.811  1904  1904 I A       : OnCreate Was Called
+10-24 16:23:50.811  1904  1904 I A       : getMinusOnePromotion
+10-24 16:23:50.900   910   982 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=falsecallback=android.view.ViewRootImpl$$ExternalSyntheticLambda17@856740f
+10-24 16:23:50.904   545  1529 W InputManager-JNI: Input channel object '87490b7 Splash Screen id.nopal.belajartka.test (client)' was disposed without first being removed with the input manager!
+10-24 16:23:50.936  6166  6166 D LifecycleMonitor: Lifecycle status change: androidx.activity.ComponentActivity@e22709f in: STOPPED
+10-24 16:23:50.937  6166  6166 V ActivityScenario: Update currentActivityStage to STOPPED, currentActivity=androidx.activity.ComponentActivity@e22709f
+10-24 16:23:50.940  1904  2330 I A       : #enqueuePeriodicJob: running = false
+10-24 16:23:50.941  1904  2330 I A       : #scheduledRefresh: enable_prod_refresh is true but we have no valid refresh schedule
+10-24 16:23:50.975  1904  1904 I A       : onApplyWindowInsets: systemWindowInsets=Insets{left=0, top=128, right=0, bottom=63}
+10-24 16:23:50.975  1904  1904 I A       : onApplyWindowInsets: Adjusting for display cutouts. Safe insets: left=0, top=128, right=0, bottom=0
+10-24 16:23:50.975  1904  1904 I A       : onApplyWindowInsets: systemWindowInsets=Insets{left=0, top=128, right=0, bottom=63}
+10-24 16:23:51.004   910  1002 D EGL_emulation: app_time_stats: avg=1363.23ms min=16.41ms max=6393.79ms count=5
+10-24 16:23:51.005  1904  2328 I A       : loading data on surface MinusOne.
+10-24 16:23:51.024  6166  6166 D LifecycleMonitor: Lifecycle status change: androidx.activity.ComponentActivity@e22709f in: DESTROYED
+10-24 16:23:51.025  6166  6166 V ActivityScenario: Update currentActivityStage to DESTROYED, currentActivity=null
+10-24 16:23:51.030  6166  6166 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=falsecallback=android.view.ViewRootImpl$$ExternalSyntheticLambda17@30f6d50
+10-24 16:23:51.068   545  1529 W InputManager-JNI: Input channel object 'db59721 id.nopal.belajartka/androidx.activity.ComponentActivity (client)' was disposed without first being removed with the input manager!
+10-24 16:23:51.136  6166  6187 D IdlingRegistry: Unregistering idling resources: [androidx.compose.ui.test.EspressoLink@f4d3d89]
+10-24 16:23:51.143   545  1529 I ImeTracker: com.google.android.apps.nexuslauncher:631974bf: onRequestHide at ORIGIN_SERVER_HIDE_INPUT reason HIDE_UNSPECIFIED_WINDOW
+10-24 16:23:51.143   545  1529 I ImeTracker: com.google.android.apps.nexuslauncher:631974bf: onCancelled at PHASE_SERVER_SHOULD_HIDE
+10-24 16:23:51.155  6166  6187 I TestRunner: finished: correctLight(id.nopal.belajartka.MascotQcTest)

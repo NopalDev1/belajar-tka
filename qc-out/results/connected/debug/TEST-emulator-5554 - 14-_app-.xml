@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<testsuite name="id.nopal.belajartka.MascotQcTest" tests="25" failures="0" errors="0" skipped="0" time="254.803" timestamp="2026-10-24T16:27:58" hostname="localhost">
+  <properties>
+    <property name="device" value="emulator-5554 - 14" />
+    <property name="flavor" value="" />
+    <property name="project" value=":app" />
+  </properties>
+  <testcase name="correctLight" classname="id.nopal.belajartka.MascotQcTest" time="7.36" />
+  <testcase name="wrongDark" classname="id.nopal.belajartka.MascotQcTest" time="6.942" />
+  <testcase name="tapReactions" classname="id.nopal.belajartka.MascotQcTest" time="10.499" />
+  <testcase name="idleDark" classname="id.nopal.belajartka.MascotQcTest" time="7.402" />
+  <testcase name="wrongLight" classname="id.nopal.belajartka.MascotQcTest" time="5.257" />
+  <testcase name="doneDark" classname="id.nopal.belajartka.MascotQcTest" time="7.359" />
+  <testcase name="correctDark" classname="id.nopal.belajartka.MascotQcTest" time="6.17" />
+  <testcase name="doneLight" classname="id.nopal.belajartka.MascotQcTest" time="5.248" />
+  <testcase name="idleCycle" classname="id.nopal.belajartka.MascotQcTest" time="13.082" />
+  <testcase name="idleLight" classname="id.nopal.belajartka.MascotQcTest" time="5.834" />
+  <testcase name="e_libraryAndBook" classname="id.nopal.belajartka.QcFlowTest" time="13.039" />
+  <testcase name="c_chapterQuizFromMap" classname="id.nopal.belajartka.QcFlowTest" time="17.394" />
+  <testcase name="d_complexQuestionsWithFigures" classname="id.nopal.belajartka.QcFlowTest" time="31.519" />
+  <testcase name="p_launcherIcon" classname="id.nopal.belajartka.QcFlowTest" time="13.661" />
+  <testcase name="f_progressScreen" classname="id.nopal.belajartka.QcFlowTest" time="5.942" />
+  <testcase name="g_sessionFlow" classname="id.nopal.belajartka.QcFlowTest" time="8.181" />
+  <testcase name="j_pageTurnAnimation" classname="id.nopal.belajartka.QcFlowTest" time="4.984" />
+  <testcase name="n_focusDark" classname="id.nopal.belajartka.QcFlowTest" time="4.563" />
+  <testcase name="k_latexAndEnglishBook" classname="id.nopal.belajartka.QcFlowTest" time="8.316" />
+  <testcase name="l_latexQuiz" classname="id.nopal.belajartka.QcFlowTest" time="6.061" />
+  <testcase name="a_readOnTheMap" classname="id.nopal.belajartka.QcFlowTest" time="12.638" />
+  <testcase name="o_tutiInQuizDark" classname="id.nopal.belajartka.QcFlowTest" time="12.836" />
+  <testcase name="b_lockedNodeShakes" classname="id.nopal.belajartka.QcFlowTest" time="4.794" />
+  <testcase name="h_summaryTyping" classname="id.nopal.belajartka.QcFlowTest" time="6.619" />
+  <testcase name="m_settingsAndDarkMode" classname="id.nopal.belajartka.QcFlowTest" time="13.736" />
+</testsuite>

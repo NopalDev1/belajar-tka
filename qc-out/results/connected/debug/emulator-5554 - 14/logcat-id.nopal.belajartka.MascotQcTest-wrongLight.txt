@@ -1,0 +1,150 @@
+10-24 16:24:16.207  6166  6187 I TestRunner: started: wrongLight(id.nopal.belajartka.MascotQcTest)
+10-24 16:24:16.214  6166  6187 D IdlingRegistry: Registering idling resources: [androidx.compose.ui.test.EspressoLink@e0c4fc3]
+10-24 16:24:16.221  1189  1212 I OpenGLRenderer: Davey! duration=706ms; Flags=0, FrameTimelineVsyncId=16158, IntendedVsync=176718891821, Vsync=177235558467, InputEventId=0, HandleInputStart=177250957917, AnimationStart=177250958107, PerformTraversalsStart=177251522634, DrawStart=177251561732, FrameDeadline=177618891785, FrameInterval=177250828605, FrameStartTime=16666666, SyncQueued=177251642001, SyncStart=177538296210, IssueDrawCommandsStart=177538507914, SwapBuffers=177601450290, FrameCompleted=177711586072, DequeueBufferDuration=91334501, QueueBufferDuration=168860, GpuCompleted=177698936897, SwapBuffersCompleted=177711586072, DisplayPresentTime=0, CommandSubmissionCompleted=177601450290,
+10-24 16:24:16.225  6166  6187 W Settings: Setting always_finish_activities has moved from android.provider.Settings.System to android.provider.Settings.Global, returning read-only value.
+10-24 16:24:16.247  1189  1888 D EGL_emulation: app_time_stats: avg=220.25ms min=76.70ms max=551.09ms count=5
+10-24 16:24:16.251   910   991 D SplashScreenView: Build android.window.SplashScreenView{330216d V.E...... ......ID 0,0-0,0}
+10-24 16:24:16.251   910   991 D SplashScreenView: Icon: view: null drawable: null size: 0
+10-24 16:24:16.251   910   991 D SplashScreenView: Branding: view: android.view.View{cfba1a2 G.ED..... ......I. 0,0-0,0 #10204ef android:id/splashscreen_branding_view} drawable: null size w: 0 h: 0
+10-24 16:24:16.356   414   414 I BpBinder: onLastStrongRef automatically unlinking death recipients:
+10-24 16:24:16.424  6166  6166 D LifecycleMonitor: Lifecycle status change: androidx.activity.ComponentActivity@4d59917 in: PRE_ON_CREATE
+10-24 16:24:16.424  6166  6166 V ActivityScenario: Activity lifecycle changed event received but ignored because the reported transition was not ON_CREATE while the last known transition was PRE_ON_CREATE
+10-24 16:24:16.459  6166  6166 D LifecycleMonitor: Lifecycle status change: androidx.activity.ComponentActivity@4d59917 in: CREATED
+10-24 16:24:16.459  6166  6166 V ActivityScenario: Update currentActivityStage to CREATED, currentActivity=androidx.activity.ComponentActivity@4d59917
+10-24 16:24:16.462  6166  6166 D LifecycleMonitor: Lifecycle status change: androidx.activity.ComponentActivity@4d59917 in: STARTED
+10-24 16:24:16.463  6166  6166 V ActivityScenario: Update currentActivityStage to STARTED, currentActivity=androidx.activity.ComponentActivity@4d59917
+10-24 16:24:16.464  6166  6166 D LifecycleMonitor: Lifecycle status change: androidx.activity.ComponentActivity@4d59917 in: RESUMED
+10-24 16:24:16.464  6166  6166 V ActivityScenario: Update currentActivityStage to RESUMED, currentActivity=androidx.activity.ComponentActivity@4d59917
+10-24 16:24:16.617  3025  3025 I DialerStatusSmsFetcher: com.android.voicemail.impl.sms.StatusSmsFetcher.onReceive:106 Request SMS successfully sent [CONTEXT enable_persistent_logger=true ]
+10-24 16:24:16.680   910  1002 D EGL_emulation: app_time_stats: avg=320.42ms min=8.24ms max=5051.90ms count=17
+10-24 16:24:16.686   910  1002 D EGL_emulation: app_time_stats: avg=273.02ms min=23.07ms max=915.75ms count=5
+10-24 16:24:16.723   545   564 W ziparchive: Unable to open '/data/app/~~87EVUdJ-iGfFP4fZX43Yxw==/id.nopal.belajartka-uCgBIZM7aVS9JFANIJooPg==/base.dm': No such file or directory
+10-24 16:24:16.728   545   564 I ActivityTaskManager: Displayed id.nopal.belajartka/androidx.activity.ComponentActivity for user 0: +491ms
+10-24 16:24:16.775  1114  1385 D BtGatt.ScanManager: uid 10128 isForeground true scanMode -1
+10-24 16:24:16.775  1114  1385 D BtGatt.ScanManager: uid 10128 isForeground true scanMode -1
+10-24 16:24:16.807   545  2460 I ImeTracker: id.nopal.belajartka:5092fc4e: onRequestHide at ORIGIN_SERVER_HIDE_INPUT reason HIDE_UNSPECIFIED_WINDOW
+10-24 16:24:16.807   545  2460 I ImeTracker: id.nopal.belajartka:5092fc4e: onCancelled at PHASE_SERVER_SHOULD_HIDE
+10-24 16:24:16.808  1672  1672 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():3227
+10-24 16:24:16.812  1672  1672 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 0, unlocked = true
+10-24 16:24:16.812  1672  1672 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1877 onStartInput(EditorInfo{inputType=0x0(NULL) imeOptions=0x0 privateImeOptions=null actionName=UNSPECIFIED actionLabel=null actionId=0 initialSelStart=-1 initialSelEnd=-1 initialCapsMode=0x0 hintText=null label=null packageName=id.nopal.belajartka fieldId=0 fieldName=null extras=null}, false)
+10-24 16:24:16.812  1672  1672 I GoogleInputMethodService: GoogleInputMethodService.shouldHideHeaderOnInitialState():4008 ShouldHideHeaderOnInitialState = false
+10-24 16:24:16.820  1672  1672 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 2, unlocked = true
+10-24 16:24:16.839  6166  6166 D AutofillManager: Fill dialog is enabled:false, hints=[password, passwordAuto, creditCardNumber, creditCardSecurityCode, creditCardExpirationDate]
+10-24 16:24:16.863  1189  1231 I ImeTracker: com.google.android.apps.nexuslauncher:b609f0f: onRequestHide at ORIGIN_CLIENT_HIDE_SOFT_INPUT reason HIDE_SOFT_INPUT
+10-24 16:24:16.864   545   561 I ImeTracker: com.google.android.apps.nexuslauncher:b609f0f: onCancelled at PHASE_SERVER_CLIENT_FOCUSED
+10-24 16:24:16.866  1189  2317 D OneSearchSuggestProvider: Shut down the binder channel
+10-24 16:24:16.871  1189  3248 I IPCThreadState: oneway function results for code 2 on binder at 0x79dc736c6310 will be dropped but finished with status UNKNOWN_TRANSACTION
+10-24 16:24:16.878  1904  3401 I PBSessionCacheImpl: Deleted sessionId[8375673416052089] from persistence.
+10-24 16:24:16.889  1904  2635 W SearchServiceCore: Abort, client detached.
+10-24 16:24:16.991   910   910 D StatusBarIconController: ignoring old pipeline callbacks, because the new mobile icons are enabled
+10-24 16:24:17.168  5248  6324 I GmscoreIpa: Starting mediastore instant index [CONTEXT service_id=255 ]
+10-24 16:24:17.177   910   982 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=falsecallback=android.view.ViewRootImpl$$ExternalSyntheticLambda17@405611c
+10-24 16:24:17.178   545  2458 W InputManager-JNI: Input channel object '37ac5d1 Splash Screen id.nopal.belajartka (client)' was disposed without first being removed with the input manager!
+10-24 16:24:17.362  1777  2213 W MediaProvider: isAppCloneUserPair for user 0: false
+10-24 16:24:17.468  5174  5964 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService started execution. cause:9 exec_start_elapsed_seconds: 178 [CONTEXT service_id=218 ]
+10-24 16:24:17.474  5174  6209 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService finished executing. cause:9 result: 1 elapsed_millis: 34 uptime_millis: 34 exec_start_elapsed_seconds: 178 [CONTEXT service_id=218 ]
+10-24 16:24:17.547  1777  2213 W MediaProvider: isAppCloneUserPair for user 0: false
+10-24 16:24:17.632  5174  5964 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService started execution. cause:9 exec_start_elapsed_seconds: 179 [CONTEXT service_id=218 ]
+10-24 16:24:17.643  5174  5964 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService finished executing. cause:9 result: 1 elapsed_millis: 18 uptime_millis: 18 exec_start_elapsed_seconds: 179 [CONTEXT service_id=218 ]
+10-24 16:24:17.701   910  1002 D EGL_emulation: app_time_stats: avg=51.47ms min=1.22ms max=217.69ms count=15
+10-24 16:24:17.770  1777  2213 W MediaProvider: isAppCloneUserPair for user 0: false
+10-24 16:24:17.908  5174  6209 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService started execution. cause:9 exec_start_elapsed_seconds: 179 [CONTEXT service_id=218 ]
+10-24 16:24:17.948  1777  2212 W MediaProvider: isAppCloneUserPair for user 0: false
+10-24 16:24:17.970  5174  6209 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService finished executing. cause:9 result: 1 elapsed_millis: 95 uptime_millis: 95 exec_start_elapsed_seconds: 179 [CONTEXT service_id=218 ]
+10-24 16:24:18.118  1777  2212 W MediaProvider: isAppCloneUserPair for user 0: false
+10-24 16:24:18.208  5174  5964 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService started execution. cause:9 exec_start_elapsed_seconds: 179 [CONTEXT service_id=218 ]
+10-24 16:24:18.212  6166  6190 D EGL_emulation: app_time_stats: avg=118.35ms min=20.64ms max=481.02ms count=13
+10-24 16:24:18.213  5174  6308 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService finished executing. cause:9 result: 1 elapsed_millis: 21 uptime_millis: 21 exec_start_elapsed_seconds: 179 [CONTEXT service_id=218 ]
+10-24 16:24:18.300  1777  2213 W MediaProvider: isAppCloneUserPair for user 0: false
+10-24 16:24:18.390  5174  6209 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService started execution. cause:9 exec_start_elapsed_seconds: 179 [CONTEXT service_id=218 ]
+10-24 16:24:18.407  5174  5964 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService finished executing. cause:9 result: 1 elapsed_millis: 39 uptime_millis: 39 exec_start_elapsed_seconds: 179 [CONTEXT service_id=218 ]
+10-24 16:24:18.521  1777  2501 W MediaProvider: isAppCloneUserPair for user 0: false
+10-24 16:24:18.611  5174  6209 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService started execution. cause:9 exec_start_elapsed_seconds: 180 [CONTEXT service_id=218 ]
+10-24 16:24:18.615  5174  6209 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService finished executing. cause:9 result: 1 elapsed_millis: 32 uptime_millis: 32 exec_start_elapsed_seconds: 180 [CONTEXT service_id=218 ]
+10-24 16:24:18.721   910  1002 D EGL_emulation: app_time_stats: avg=29.62ms min=6.71ms max=51.04ms count=29
+10-24 16:24:18.804  1777  2213 W MediaProvider: isAppCloneUserPair for user 0: false
+10-24 16:24:18.914  5174  5964 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService started execution. cause:9 exec_start_elapsed_seconds: 180 [CONTEXT service_id=218 ]
+10-24 16:24:18.924  5174  6209 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService finished executing. cause:9 result: 1 elapsed_millis: 29 uptime_millis: 29 exec_start_elapsed_seconds: 180 [CONTEXT service_id=218 ]
+10-24 16:24:18.973  1777  2212 W MediaProvider: isAppCloneUserPair for user 0: false
+10-24 16:24:19.014  5174  5964 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService started execution. cause:9 exec_start_elapsed_seconds: 180 [CONTEXT service_id=218 ]
+10-24 16:24:19.018  5174  5873 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService finished executing. cause:9 result: 1 elapsed_millis: 13 uptime_millis: 13 exec_start_elapsed_seconds: 180 [CONTEXT service_id=218 ]
+10-24 16:24:19.085  1777  2213 W MediaProvider: isAppCloneUserPair for user 0: false
+10-24 16:24:19.116  5174  6209 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService started execution. cause:9 exec_start_elapsed_seconds: 180 [CONTEXT service_id=218 ]
+10-24 16:24:19.120  5174  6308 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService finished executing. cause:9 result: 1 elapsed_millis: 11 uptime_millis: 11 exec_start_elapsed_seconds: 180 [CONTEXT service_id=218 ]
+10-24 16:24:19.178  1777  2212 W MediaProvider: isAppCloneUserPair for user 0: false
+10-24 16:24:19.202  5174  5873 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService started execution. cause:9 exec_start_elapsed_seconds: 180 [CONTEXT service_id=218 ]
+10-24 16:24:19.206  5174  5964 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService finished executing. cause:9 result: 1 elapsed_millis: 11 uptime_millis: 11 exec_start_elapsed_seconds: 180 [CONTEXT service_id=218 ]
+10-24 16:24:19.225  6166  6190 D EGL_emulation: app_time_stats: avg=80.63ms min=25.16ms max=193.92ms count=12
+10-24 16:24:19.285  1777  2213 W MediaProvider: isAppCloneUserPair for user 0: false
+10-24 16:24:19.312  5174  5873 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService started execution. cause:9 exec_start_elapsed_seconds: 180 [CONTEXT service_id=218 ]
+10-24 16:24:19.313  5174  6308 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService finished executing. cause:9 result: 1 elapsed_millis: 6 uptime_millis: 6 exec_start_elapsed_seconds: 180 [CONTEXT service_id=218 ]
+10-24 16:24:19.386  1777  2501 W MediaProvider: isAppCloneUserPair for user 0: false
+10-24 16:24:19.405  5174  5964 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService started execution. cause:9 exec_start_elapsed_seconds: 180 [CONTEXT service_id=218 ]
+10-24 16:24:19.406  5174  6209 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService finished executing. cause:9 result: 1 elapsed_millis: 5 uptime_millis: 5 exec_start_elapsed_seconds: 180 [CONTEXT service_id=218 ]
+10-24 16:24:19.475  1777  2212 W MediaProvider: isAppCloneUserPair for user 0: false
+10-24 16:24:19.502  5174  5964 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService started execution. cause:9 exec_start_elapsed_seconds: 181 [CONTEXT service_id=218 ]
+10-24 16:24:19.504  5174  6209 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService finished executing. cause:9 result: 1 elapsed_millis: 6 uptime_millis: 6 exec_start_elapsed_seconds: 181 [CONTEXT service_id=218 ]
+10-24 16:24:19.599  1777  2212 W MediaProvider: isAppCloneUserPair for user 0: false
+10-24 16:24:19.613  5174  6308 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService started execution. cause:9 exec_start_elapsed_seconds: 181 [CONTEXT service_id=218 ]
+10-24 16:24:19.615  5174  5964 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService finished executing. cause:9 result: 1 elapsed_millis: 6 uptime_millis: 6 exec_start_elapsed_seconds: 181 [CONTEXT service_id=218 ]
+10-24 16:24:19.689  1777  2212 W MediaProvider: isAppCloneUserPair for user 0: false
+10-24 16:24:19.714  5174  6209 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService started execution. cause:9 exec_start_elapsed_seconds: 181 [CONTEXT service_id=218 ]
+10-24 16:24:19.716  5174  5964 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService finished executing. cause:9 result: 1 elapsed_millis: 6 uptime_millis: 6 exec_start_elapsed_seconds: 181 [CONTEXT service_id=218 ]
+10-24 16:24:19.794  1777  2212 W MediaProvider: isAppCloneUserPair for user 0: false
+10-24 16:24:19.813  5174  5873 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService started execution. cause:9 exec_start_elapsed_seconds: 181 [CONTEXT service_id=218 ]
+10-24 16:24:19.815  5174  6209 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService finished executing. cause:9 result: 1 elapsed_millis: 7 uptime_millis: 7 exec_start_elapsed_seconds: 181 [CONTEXT service_id=218 ]
+10-24 16:24:19.890  1777  2213 W MediaProvider: isAppCloneUserPair for user 0: false
+10-24 16:24:19.911  5174  5873 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService started execution. cause:9 exec_start_elapsed_seconds: 181 [CONTEXT service_id=218 ]
+10-24 16:24:19.913  5174  5964 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService finished executing. cause:9 result: 1 elapsed_millis: 7 uptime_millis: 7 exec_start_elapsed_seconds: 181 [CONTEXT service_id=218 ]
+10-24 16:24:19.993  1777  2213 W MediaProvider: isAppCloneUserPair for user 0: false
+10-24 16:24:20.014  5174  5873 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService started execution. cause:9 exec_start_elapsed_seconds: 181 [CONTEXT service_id=218 ]
+10-24 16:24:20.017  5174  5873 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService finished executing. cause:9 result: 1 elapsed_millis: 7 uptime_millis: 7 exec_start_elapsed_seconds: 181 [CONTEXT service_id=218 ]
+10-24 16:24:20.091  1777  2212 W MediaProvider: isAppCloneUserPair for user 0: false
+10-24 16:24:20.115  5174  6308 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService started execution. cause:9 exec_start_elapsed_seconds: 181 [CONTEXT service_id=218 ]
+10-24 16:24:20.117  5174  5964 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService finished executing. cause:9 result: 1 elapsed_millis: 6 uptime_millis: 6 exec_start_elapsed_seconds: 181 [CONTEXT service_id=218 ]
+10-24 16:24:20.196  1777  2501 W MediaProvider: isAppCloneUserPair for user 0: false
+10-24 16:24:20.217  5174  6308 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService started execution. cause:9 exec_start_elapsed_seconds: 181 [CONTEXT service_id=218 ]
+10-24 16:24:20.219  5174  5873 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService finished executing. cause:9 result: 1 elapsed_millis: 6 uptime_millis: 6 exec_start_elapsed_seconds: 181 [CONTEXT service_id=218 ]
+10-24 16:24:20.237  6166  6190 D EGL_emulation: app_time_stats: avg=49.97ms min=20.53ms max=78.19ms count=20
+10-24 16:24:20.290  1777  2212 W MediaProvider: isAppCloneUserPair for user 0: false
+10-24 16:24:20.316  5174  6308 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService started execution. cause:9 exec_start_elapsed_seconds: 181 [CONTEXT service_id=218 ]
+10-24 16:24:20.319  5174  5964 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService finished executing. cause:9 result: 1 elapsed_millis: 6 uptime_millis: 6 exec_start_elapsed_seconds: 181 [CONTEXT service_id=218 ]
+10-24 16:24:20.394  1777  2212 W MediaProvider: isAppCloneUserPair for user 0: false
+10-24 16:24:20.413  5174  6308 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService started execution. cause:9 exec_start_elapsed_seconds: 181 [CONTEXT service_id=218 ]
+10-24 16:24:20.415  5174  6308 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService finished executing. cause:9 result: 1 elapsed_millis: 5 uptime_millis: 5 exec_start_elapsed_seconds: 181 [CONTEXT service_id=218 ]
+10-24 16:24:20.477  1777  2501 W MediaProvider: isAppCloneUserPair for user 0: false
+10-24 16:24:20.507  5174  6209 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService started execution. cause:9 exec_start_elapsed_seconds: 182 [CONTEXT service_id=218 ]
+10-24 16:24:20.508  5174  5964 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService finished executing. cause:9 result: 1 elapsed_millis: 7 uptime_millis: 7 exec_start_elapsed_seconds: 182 [CONTEXT service_id=218 ]
+10-24 16:24:20.571  1777  2213 W MediaProvider: isAppCloneUserPair for user 0: false
+10-24 16:24:20.603  5174  6209 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService started execution. cause:9 exec_start_elapsed_seconds: 182 [CONTEXT service_id=218 ]
+10-24 16:24:20.605   910   991 D SplashScreenView: Build android.window.SplashScreenView{50bce49 V.E...... ......ID 0,0-0,0}
+10-24 16:24:20.605   910   991 D SplashScreenView: Icon: view: null drawable: null size: 0
+10-24 16:24:20.605   910   991 D SplashScreenView: Branding: view: android.view.View{457434e G.ED..... ......I. 0,0-0,0 #10204ef android:id/splashscreen_branding_view} drawable: null size w: 0 h: 0
+10-24 16:24:20.608  5174  6308 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService finished executing. cause:9 result: 1 elapsed_millis: 10 uptime_millis: 10 exec_start_elapsed_seconds: 182 [CONTEXT service_id=218 ]
+10-24 16:24:20.610  6166  6166 D LifecycleMonitor: Lifecycle status change: androidx.activity.ComponentActivity@4d59917 in: PAUSED
+10-24 16:24:20.610  6166  6166 V ActivityScenario: Update currentActivityStage to PAUSED, currentActivity=androidx.activity.ComponentActivity@4d59917
+10-24 16:24:20.630   414   414 I BpBinder: onLastStrongRef automatically unlinking death recipients:
+10-24 16:24:20.722  6211  6230 W OpenGLRenderer: Failed to initialize 101010-2 format, error = EGL_SUCCESS
+10-24 16:24:20.895   545   564 W ziparchive: Unable to open '/data/app/~~xxIF6MtoBEvPCCWfBONXpA==/id.nopal.belajartka.test-W3waqtaYHIETwV0y_fRuTA==/base.dm': No such file or directory
+10-24 16:24:20.908   545   564 I ActivityTaskManager: Displayed id.nopal.belajartka.test/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity for user 0: +294ms
+10-24 16:24:20.946   545  1815 W AppSearchIcing: icing-search-engine.cc:283: Error: 5, Message: Document (com.google.android.googlequicksearchbox$OneSearchZeroStateGoogleSuggestions/default, zp) not found.
+10-24 16:24:20.949  1189  2317 D OneSearchSuggestProvider: Created the binder channel successfully for end point service =com.google.android.apps.search.googleapp.search.suggest.plugins.onesearch.server.OneSearchSuggestService , mChannel=z1{delegate=s1{logId=29, target=directaddress:///AndroidComponentAddress%5BIntent%20%7B%20act=grpc.io.action.BIND%20cmp=com.google.android.googlequicksearchbox/com.google.android.apps.search.googleapp.search.suggest.plugins.onesearch.server.OneSearchSuggestService%20%7D%5D}} , mOneSearchConnection=X1.T@e0b95a6
+10-24 16:24:20.982  1781  2169 I AiAiEcho: Predicting[0]:
+10-24 16:24:20.982  1781  2169 I AiAiEcho: EchoTargets:
+10-24 16:24:20.982  1781  2169 I AiAiEcho: Filtered by AiAi flag check:
+10-24 16:24:20.982  1781  2169 I AiAiEcho: Ranked targets strategy: SORT, count: 0, ranking metadata:
+10-24 16:24:20.988  1781  2169 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface home with targets# 0 (types=[])
+10-24 16:24:21.145  1904  2635 I A       : Using proto config with mendel
+10-24 16:24:21.153  1904  2635 W A       : Queue length for executor EventBus is now 11. Perhaps some tasks are too long, or the pool is too small.
+10-24 16:24:21.163  1904  2635 I A       : Using proto config with mendel
+10-24 16:24:21.304  6166  6166 D LifecycleMonitor: Lifecycle status change: androidx.activity.ComponentActivity@4d59917 in: STOPPED
+10-24 16:24:21.304  6166  6166 V ActivityScenario: Update currentActivityStage to STOPPED, currentActivity=androidx.activity.ComponentActivity@4d59917
+10-24 16:24:21.328   910  1002 D EGL_emulation: app_time_stats: avg=1539.02ms min=100.13ms max=4190.39ms count=3
+10-24 16:24:21.389   910   982 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=falsecallback=android.view.ViewRootImpl$$ExternalSyntheticLambda17@b3a0605
+10-24 16:24:21.412  6166  6166 D LifecycleMonitor: Lifecycle status change: androidx.activity.ComponentActivity@4d59917 in: DESTROYED
+10-24 16:24:21.413  6166  6166 V ActivityScenario: Update currentActivityStage to DESTROYED, currentActivity=null
+10-24 16:24:21.415  6166  6166 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=falsecallback=android.view.ViewRootImpl$$ExternalSyntheticLambda17@6e03821
+10-24 16:24:21.474   545  1529 W InputManager-JNI: Input channel object '475403c id.nopal.belajartka/androidx.activity.ComponentActivity (client)' was disposed without first being removed with the input manager!
+10-24 16:24:21.479   545  2056 W InputManager-JNI: Input channel object '1331574 Splash Screen id.nopal.belajartka.test (client)' was disposed without first being removed with the input manager!
+10-24 16:24:21.495  6166  6187 D IdlingRegistry: Unregistering idling resources: [androidx.compose.ui.test.EspressoLink@e0c4fc3]
+10-24 16:24:21.495  6166  6187 I TestRunner: finished: wrongLight(id.nopal.belajartka.MascotQcTest)
