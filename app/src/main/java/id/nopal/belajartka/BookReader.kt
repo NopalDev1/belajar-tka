@@ -83,7 +83,8 @@ private val PaperEdge get() = C.paperEdge
 private val Ink get() = C.paperInk
 private val InkSoft get() = C.paperInkSoft
 
-private val bodyStyle = TextStyle(fontFamily = FontFamily.Serif, fontSize = 17.sp, lineHeight = 28.sp, color = Ink, textAlign = TextAlign.Justify)
+// A getter, so the ink follows the theme instead of freezing at first use.
+private val bodyStyle get() = TextStyle(fontFamily = FontFamily.Serif, fontSize = 17.sp, lineHeight = 28.sp, color = Ink, textAlign = TextAlign.Justify)
 
 /** What a single page of the book shows. */
 private sealed interface BookPage {
