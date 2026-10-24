@@ -20,6 +20,7 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.IntrinsicSize
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.navigationBarsPadding
 import androidx.compose.foundation.layout.padding
@@ -302,7 +303,16 @@ private fun BodyPage(step: Step, section: Int, chapter: Int) {
     val color = step.subject.color
     SubHeading(step, section, chapter)
     sec.explain.forEachIndexed { i, para ->
-        MathText(para, bodyStyle, decorate = { piece, first -> emphasize(piece, color, dropCap = i == 0 && first) })
+        if (para.startsWith(GLOSS)) {
+            // Indonesian gloss under an English paragraph (B. Inggris book).
+            Row(Modifier.fillMaxWidth().height(IntrinsicSize.Min).testTag("gloss")) {
+                Box(Modifier.width(2.dp).fillMaxHeight().background(color))
+                Text(emphasize(para.removePrefix(GLOSS), color), style = bodyStyle.copy(fontStyle = FontStyle.Italic,
+                    fontSize = 15.sp, lineHeight = 22.sp, color = InkSoft), modifier = Modifier.padding(start = 10.dp))
+            }
+        } else {
+            MathText(para, bodyStyle, decorate = { piece, first -> emphasize(piece, color, dropCap = i == 0 && first) })
+        }
         Spacer(Modifier.height(12.dp))
     }
     if (sec.formulas.isNotEmpty()) {

@@ -17,8 +17,8 @@ object LessonsExtra {
         "mat3" -> listOf(diagramData) + base.take(1) + listOf(dataKelompok, penyebaran) + base.drop(1) + listOf(peluangMajemuk)
         "bin1" -> base + listOf(kerangkaTeks, teksJamak, keakuratan, kataSerapan)
         "bin2" -> base + listOf(puisi, drama, prediksiNilai, kalimatTandaBaca)
-        "big1" -> base + listOf(referenceWords, purposeAudience)
-        "big2" -> base + listOf(factOpinion, sequenceSummary, comparingTexts)
+        "big1" -> LessonsBig.big1
+        "big2" -> LessonsBig.big2
         "fis1" -> base + listOf(gerakVertikal)
         "fis4" -> base.take(2) + listOf(persamaanGelombang, tarafIntensitas) + base.drop(2) + listOf(interferensi, alatOptik)
         "fis5" -> base.take(1) + listOf(pemuaian) + base.drop(1) + listOf(kinetikGas)
@@ -850,109 +850,6 @@ object LessonsExtra {
         points = listOf(
             "Anak kalimat di depan → pakai koma.",
             "Namun = pertentangan; oleh karena itu = sebab-akibat.",
-        ),
-    )
-
-    // ============================== B. INGGRIS ==============================
-
-    private val referenceWords = Section(
-        title = "Reference words & main idea",
-        explain = listOf(
-            "Reference words are pronouns that point to a noun mentioned earlier, such as it, they, he, she, this, these, and those. To answer \"The word 'it' refers to…\", read the sentence BEFORE the pronoun and find the noun that matches in number (singular or plural) and makes sense.",
-            "Kunci menjawab soal reference: ganti pronoun dengan pilihan jawaban, lalu baca ulang kalimatnya. Pilihan yang membuat kalimat tetap masuk akal adalah jawabannya.",
-            "The main idea of a paragraph is usually in the topic sentence, often the first sentence. The main idea of the whole text combines the topic sentences of each paragraph. Supporting details give examples, reasons, or numbers.",
-        ),
-        examples = listOf(
-            ex("\"My cat, Milo, has soft orange fur and big green eyes. He is very playful and likes to chase small balls around the house.\" The word 'He' refers to…",
-                "'He' is singular and male.",
-                "The noun before it is 'my cat, Milo'.",
-                "Check: 'Milo is very playful' makes sense.",
-                answer = "Milo (the cat)"),
-        ),
-        pitfalls = listOf("Picking the nearest noun even when it does not match in number or meaning."),
-        points = listOf(
-            "Pronoun refers to an earlier noun; check singular/plural.",
-            "Main idea = topic sentence.",
-        ),
-    )
-
-    private val purposeAudience = Section(
-        title = "Purpose, target reader & moral value",
-        explain = listOf(
-            "Kisi-kisi TKA asks you to infer the purpose of the text, the target reader, and the moral message. Purpose follows text type: descriptive → to describe a particular person, place, or thing; recount → to retell past events; narrative → to entertain and give a lesson; procedure → to tell how to do something; analytical exposition → to persuade readers that something is the case.",
-            "Target reader is inferred from the content and language. A text with simple steps for using a school library is for students; a notice about vaccination schedules for babies is for parents.",
-            "Moral value appears mainly in narratives (fables, legends). Look at what happens to the characters because of their actions: good actions are rewarded, bad actions are punished.",
-        ),
-        examples = listOf(
-            ex("In a fable, a proud hare laughs at a slow tortoise, takes a nap during the race, and loses. What is the moral value?",
-                "The hare's action: being arrogant and careless.",
-                "The result: he loses to the slow but steady tortoise.",
-                answer = "Don't be arrogant; slow and steady wins the race"),
-        ),
-        pitfalls = listOf("Confusing recount (real past experience) with narrative (story with conflict to entertain)."),
-        points = listOf(
-            "Purpose follows text type.",
-            "Moral value comes from the consequence of actions.",
-        ),
-    )
-
-    private val factOpinion = Section(
-        title = "Fact vs opinion, reality vs fantasy",
-        explain = listOf(
-            "A fact can be checked and proven true, for example \"Coral reefs cover less than one percent of the ocean floor.\" An opinion shows someone's feeling, belief, or judgment, so people can disagree with it.",
-            "Opinion signal words: I think, I believe, in my opinion, should, must, best, worst, beautiful, important. Facts often contain numbers, dates, or results of research.",
-            "Reality vs fantasy: in narratives, events that cannot happen in real life (talking animals, magic) are fantasy. Events that can happen in real life are reality.",
-        ),
-        examples = listOf(
-            ex("\"Students should be allowed to bring phones to school.\" Is this a fact or an opinion?",
-                "The word 'should' shows the writer's judgment.",
-                "Other people may disagree.",
-                answer = "Opinion"),
-        ),
-        pitfalls = listOf("Treating a sentence with a number as a fact even when it contains a judgment word."),
-        points = listOf(
-            "Fact = can be proven; opinion = judgment.",
-            "Signal words: should, best, I think.",
-        ),
-    )
-
-    private val sequenceSummary = Section(
-        title = "Sequence, summary & predicting outcomes",
-        explain = listOf(
-            "Sequence questions ask about the order of events. Look for time signals: first, then, next, after that, finally, in the afternoon, last Sunday. In recount and narrative texts, events are usually told in time order.",
-            "A good summary contains only the main points of the whole text, without small details or examples, and uses different words (paraphrase).",
-            "Predicting the outcome means choosing what most likely happens next based on the characters and events so far. The right answer must be supported by clues in the text.",
-        ),
-        examples = listOf(
-            ex("\"Last Sunday, my family and I went to Parangtritis Beach. We left home at 6 a.m. and arrived at 8 a.m. We swam, built sandcastles, and ate grilled fish for lunch. In the afternoon, we went home tired but happy.\" What did they do right after arriving?",
-                "Order: left at 6 → arrived at 8 → swam, built sandcastles → lunch → went home.",
-                "Right after arriving they swam and built sandcastles.",
-                answer = "They swam and built sandcastles"),
-        ),
-        pitfalls = listOf("Choosing a summary that includes only one detail of the text."),
-        points = listOf(
-            "Time signals show sequence.",
-            "Summary = main points only.",
-        ),
-    )
-
-    private val comparingTexts = Section(
-        title = "Cause–effect, comparison & synthesizing",
-        explain = listOf(
-            "Cause–effect signals: because, because of, due to, since (cause); so, therefore, as a result, consequently (effect). Ask: what happened first and made the other happen?",
-            "Comparison signals: similarly, likewise, both (similarity); whereas, while, unlike, on the other hand (difference).",
-            "Synthesizing means combining information from different parts of the text, or from two texts, to reach a new conclusion. Kisi-kisi TKA also asks you to classify people, things, or events into categories and to judge whether the information is sufficient.",
-        ),
-        examples = listOf(
-            ex("\"Rising sea temperatures cause corals to lose the algae that feed them. Without the algae, corals turn white and may die.\" What is the effect of rising sea temperatures?",
-                "Cause: rising sea temperatures.",
-                "Direct effect: corals lose their algae; further effect: they turn white and may die.",
-                answer = "Corals lose their algae, turn white (bleaching), and may die"),
-        ),
-        pitfalls = listOf("Reversing cause and effect."),
-        points = listOf(
-            "Because/due to = cause; so/therefore = effect.",
-            "Whereas/unlike = difference.",
         ),
     )
 

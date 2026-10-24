@@ -761,9 +761,12 @@ object Content {
         ),
     )
 
-    val steps: List<Step> = rawSteps.map { s ->
+    /** The daily plan with full textbook sections, before it is cut into chapters. */
+    val planSteps: List<Step> = rawSteps.map { s ->
         s.copy(sections = LessonsExtra.arrange(s.id, Lessons.byStep[s.id] ?: s.sections))
-    }.let { base -> insertPractice(base) }
+    }
+
+    val steps: List<Step> = planSteps.flatMap { Chapters.split(it) }.let { base -> insertPractice(base) }
 
     /** Every stop on the map in order: each sub-chapter, then the chapter quiz. */
     val nodes: List<PathNode> = steps.flatMap { s ->
@@ -804,7 +807,12 @@ object Content {
                 pack("kbig3", 9, "Min, 1 Nov", Subject.BIG, "Paket B. Inggris 3", kg[2]),
             ),
         )
-        return base.flatMap { listOf(it) + (after[it.id] ?: emptyList()) }
+        // Packs go after the last chapter cut from a plan step: "mat3b" belongs to "mat3".
+        val group = { id: String -> Regex("^[a-z]+\\d+").find(id)?.value ?: id }
+        return base.flatMapIndexed { i, s ->
+            val last = base.getOrNull(i + 1)?.let { group(it.id) != group(s.id) } ?: true
+            listOf(s) + if (last) after[group(s.id)].orEmpty() else emptyList()
+        }
     }
 
     val questionCount: Int get() = steps.sumOf { it.questions.size }

@@ -346,74 +346,6 @@ object Lessons {
             ),
         ),
 
-        // ======================= B. INGGRIS: DESCRIPTIVE, RECOUNT, NARRATIVE =======================
-        "big1" to listOf(
-            Section(
-                title = "Descriptive text",
-                explain = listOf(
-                    "Descriptive text menggambarkan SATU orang, hewan, benda, atau tempat TERTENTU secara rinci, misalnya \"my cat Milo\" atau \"Borobudur Temple\".",
-                    "Strukturnya: Identification (memperkenalkan apa yang dideskripsikan) lalu Description (ciri fisik, sifat, kebiasaan). Teks ini memakai simple present tense (is, has, likes) karena menggambarkan keadaan yang berlaku sekarang.",
-                    "Soal yang sering muncul: main idea (apa yang dideskripsikan), detail (warna, ukuran, kebiasaan), dan reference (kata ganti he/she/it merujuk ke siapa).",
-                ),
-                examples = listOf(
-                    ex("\"My cat, Milo, has soft orange fur and big green eyes. He is very playful...\" Kata \"He\" merujuk ke?",
-                        "\"He\" adalah kata ganti tunggal untuk makhluk jantan.",
-                        "Kata benda tunggal sebelumnya: Milo.",
-                        "Uji: \"Milo is very playful\" masuk akal.",
-                        answer = "Milo"),
-                ),
-                points = listOf("Descriptive: menggambarkan satu objek tertentu, present tense.", "Struktur: identification → description."),
-            ),
-            Section(
-                title = "Recount text",
-                explain = listOf(
-                    "Recount text menceritakan kembali PENGALAMAN atau peristiwa yang sudah terjadi, misalnya liburan atau kunjungan. Tujuannya to retell past events.",
-                    "Strukturnya: Orientation (siapa, kapan, di mana), Events (urutan kejadian), Reorientation (penutup, sering berisi perasaan). Ciri bahasanya: simple past tense (went, swam, ate) dan kata penanda waktu (last Sunday, then, after that, in the afternoon).",
-                    "Bedanya dengan narrative: recount TIDAK punya konflik yang harus diselesaikan.",
-                ),
-                examples = listOf(
-                    ex("\"We left home at 6 a.m. and arrived at 8 a.m.\" When did they arrive?",
-                        "Kata kunci soal: arrive.",
-                        "Cari kata arrived di teks: \"arrived at 8 a.m.\"",
-                        "6 a.m. adalah waktu berangkat (left), itu jebakan.",
-                        answer = "At 8 a.m."),
-                ),
-                points = listOf("Recount: pengalaman masa lalu, past tense, tanpa konflik.", "Struktur: orientation → events → reorientation."),
-            ),
-            Section(
-                title = "Narrative text",
-                explain = listOf(
-                    "Narrative text adalah cerita (legenda, dongeng, fabel, cerita pendek) yang bertujuan menghibur. Ciri utamanya ada KONFLIK atau masalah.",
-                    "Strukturnya: Orientation (pengenalan tokoh dan latar), Complication (masalah muncul dan memuncak), Resolution (masalah selesai), kadang ditutup Coda (pesan moral).",
-                    "Soal favorit: moral value (pesan), konflik utama, dan sifat tokoh. Pesan moral dicari dari AKIBAT perbuatan tokoh: yang berbuat buruk dihukum, yang berbuat baik dihargai.",
-                ),
-                examples = listOf(
-                    ex("Malin Kundang menolak mengakui ibunya karena malu, lalu dikutuk menjadi batu. Apa moral value-nya?",
-                        "Perbuatan Malin: durhaka pada ibu.",
-                        "Akibatnya: dikutuk menjadi batu.",
-                        "Jadi pesannya kebalikan dari perbuatan buruk itu.",
-                        answer = "Respect and love your parents."),
-                ),
-                points = listOf("Narrative: cerita dengan konflik, tujuannya menghibur.", "Struktur: orientation → complication → resolution."),
-            ),
-            Section(
-                title = "Strategi membaca & vocabulary in context",
-                explain = listOf(
-                    "Baca PERTANYAAN dulu, baru teksnya. Dengan begitu kamu tahu informasi apa yang dicari dan tidak membuang waktu.",
-                    "Untuk main idea, baca kalimat pertama dan terakhir tiap paragraf. Untuk detail, ambil kata kunci dari soal lalu scanning. Jawaban detail biasanya berupa PARAFRASE: kata berbeda, maknanya sama.",
-                    "Untuk vocabulary in context, jangan langsung pakai arti kamus. Lihat kalimat di sekitarnya dan kata sambungnya. \"In contrast\" atau \"however\" berarti kata itu BERLAWANAN dengan sesuatu sebelumnya.",
-                ),
-                examples = listOf(
-                    ex("\"The old library was cramped and dark. In contrast, the new one is spacious and bright.\" Spacious paling dekat artinya dengan?",
-                        "\"In contrast\" → lawan dari kalimat sebelumnya.",
-                        "Sebelumnya: cramped (sempit). Lawannya: luas.",
-                        "Pilihan bermakna luas: roomy.",
-                        answer = "roomy"),
-                ),
-                points = listOf("Baca soal dulu, lalu scanning kata kunci.", "Kata sambung membantu menebak arti kata."),
-            ),
-        ),
-
         // ======================= FISIKA: DINAMIKA =======================
         "fis2" to listOf(
             Section(
@@ -791,55 +723,6 @@ object Lessons {
                 ),
                 pitfalls = listOf("Lupa bahwa (1,6) dan (6,1) adalah dua hasil berbeda."),
                 points = listOf("P(A) = n(A)/n(S).", "Dua dadu: 36 hasil; kartu: 52."),
-            ),
-        ),
-
-        // ======================= B. INGGRIS: PROCEDURE & EXPOSITION =======================
-        "big2" to listOf(
-            Section(
-                title = "Procedure text",
-                explain = listOf(
-                    "Procedure text menjelaskan CARA membuat atau melakukan sesuatu: resep, cara memakai alat, cara menanam.",
-                    "Strukturnya: Goal (tujuan, misalnya \"How to make instant noodles\"), Materials (bahan dan alat), Steps (langkah-langkah). Ciri bahasanya: kalimat perintah (Boil, Add, Stir) dan kata urutan (First, Then, Next, After that, Finally).",
-                    "Soal favorit: tujuan teks (to explain how to make/do something), urutan langkah, dan bahan yang dibutuhkan.",
-                ),
-                examples = listOf(
-                    ex("\"First, boil some water. Then, add the noodles... Finally, add the seasoning.\" Tujuan teks?",
-                        "Ada kalimat perintah dan kata urutan First, Then, Finally.",
-                        "Itu ciri procedure text.",
-                        answer = "To explain how to cook noodles"),
-                ),
-                points = listOf("Procedure: cara melakukan sesuatu.", "Goal → materials → steps; kalimat perintah."),
-            ),
-            Section(
-                title = "Analytical exposition",
-                explain = listOf(
-                    "Analytical exposition berisi PENDAPAT penulis yang didukung argumen, dengan tujuan MEMBUJUK pembaca agar setuju (to persuade).",
-                    "Strukturnya: Thesis (pendapat penulis, biasanya di paragraf pertama dengan kata should/must/important), Arguments (alasan-alasan, ditandai First, Second, Moreover), Reiteration (penegasan ulang pendapat di akhir, ditandai Therefore, In conclusion).",
-                    "Soal favorit: tujuan penulis, pendapat penulis, dan fungsi paragraf terakhir (reiteration).",
-                ),
-                examples = listOf(
-                    ex("Teks diawali \"Students should be allowed to bring phones to school\", lalu dua alasan, lalu \"Therefore, schools should allow phones...\". Fungsi kalimat terakhir?",
-                        "Kalimat terakhir mengulang pendapat yang sama dengan kalimat pertama.",
-                        "Diawali Therefore → penegasan ulang.",
-                        answer = "Reiteration"),
-                ),
-                points = listOf("Exposition: membujuk dengan argumen.", "Thesis → arguments → reiteration."),
-            ),
-            Section(
-                title = "Kata sambung & tujuan penulis",
-                explain = listOf(
-                    "Kata sambung menunjukkan hubungan antar gagasan. Contrast (pertentangan): however, but, yet, although, despite, in contrast. Result (akibat): therefore, so, as a result. Addition (tambahan): moreover, furthermore, in addition.",
-                    "Despite dan although sama-sama pertentangan, tetapi despite diikuti kata benda (despite the rain), sedangkan although diikuti kalimat (although it rained).",
-                    "Tujuan penulis bisa ditebak dari jenis teks: iklan dan exposition → persuade; procedure → explain how; recount → retell; narrative → entertain; descriptive → describe.",
-                ),
-                examples = listOf(
-                    ex("\"Despite the heavy rain, the farmers continued harvesting.\" Despite menunjukkan?",
-                        "Hujan deras biasanya menghentikan panen.",
-                        "Petani tetap memanen → berlawanan dengan dugaan.",
-                        answer = "Contrast"),
-                ),
-                points = listOf("However/yet/despite = contrast; therefore/so = result.", "Iklan → persuade."),
             ),
         ),
 
