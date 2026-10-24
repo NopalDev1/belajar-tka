@@ -12,6 +12,8 @@ import androidx.compose.ui.test.performTouchInput
 import androidx.compose.ui.test.swipeLeft
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.platform.app.InstrumentationRegistry
+import androidx.test.uiautomator.By
+import androidx.test.uiautomator.UiDevice
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertTrue
 import org.junit.Before
@@ -36,7 +38,16 @@ class QcFlowTest {
         rule.waitForIdle()
     }
 
+    /** Emulator noise: launcher ANR dialogs and the one-time "App is pinned" tip cover the app. */
+    private fun dismissSystemDialogs() {
+        val device = UiDevice.getInstance(InstrumentationRegistry.getInstrumentation())
+        listOf("Wait", "WAIT", "Got it", "GOT IT").forEach { label ->
+            device.findObject(By.text(label))?.let { runCatching { it.click() } }
+        }
+    }
+
     private fun shot(name: String, settleMs: Long = 600) {
+        dismissSystemDialogs()
         rule.mainClock.advanceTimeBy(settleMs)
         rule.waitForIdle()
         Thread.sleep(250)

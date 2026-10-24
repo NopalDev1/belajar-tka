@@ -234,7 +234,7 @@ private fun Badges(store: Store) {
                                 .border(2.dp, if (got) C.gold else C.line, RoundedCornerShape(50)),
                             contentAlignment = Alignment.Center,
                         ) { Text(if (got) b.emoji else "🔒", fontSize = 24.sp) }
-                        Text(b.title, color = if (got) C.text else C.muted, style = MaterialTheme.typography.labelMedium,
+                        Text(b.title, color = if (got) C.text else C.muted, style = MaterialTheme.typography.labelMedium, fontSize = 11.sp,
                             textAlign = TextAlign.Center, maxLines = 2)
                     }
                 }
