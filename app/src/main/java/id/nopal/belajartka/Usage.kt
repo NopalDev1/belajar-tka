@@ -52,7 +52,7 @@ fun restrictedSettingsBlocked(ctx: Context): Boolean {
     }
     return runCatching {
         val src = ctx.packageManager.getInstallSourceInfo(ctx.packageName).packageSource
-        src == PackageManager.PACKAGE_SOURCE_DOWNLOADED_FILE || src == PackageManager.PACKAGE_SOURCE_LOCAL_FILE
+        src == android.content.pm.PackageInstaller.PACKAGE_SOURCE_DOWNLOADED_FILE || src == android.content.pm.PackageInstaller.PACKAGE_SOURCE_LOCAL_FILE
     }.getOrDefault(true)
 }
 

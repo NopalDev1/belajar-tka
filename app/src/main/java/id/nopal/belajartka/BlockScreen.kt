@@ -52,6 +52,7 @@ fun BlockScreen(store: Store) {
     val ctx = LocalContext.current
     var blockerOn by remember { mutableStateOf(isBlockerEnabled(ctx)) }
     var usageOn by remember { mutableStateOf(hasUsageAccess(ctx)) }
+    var usage by remember { mutableStateOf(emptyMap<String, Int>()) }
     var restricted by remember { mutableStateOf(restrictedSettingsBlocked(ctx)) }
     fun recheck() {
         blockerOn = isBlockerEnabled(ctx)
@@ -59,7 +60,6 @@ fun BlockScreen(store: Store) {
         restricted = restrictedSettingsBlocked(ctx)
         usage = todayUsageMinutes(ctx)
     }
-    var usage by remember { mutableStateOf(emptyMap<String, Int>()) }
     var apps by remember { mutableStateOf<List<AppInfo>?>(null) }
     var query by remember { mutableStateOf("") }
 
