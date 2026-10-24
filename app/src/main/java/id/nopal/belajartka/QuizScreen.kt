@@ -204,6 +204,7 @@ fun QuizScreen(
                 Row(verticalAlignment = Alignment.CenterVertically) {
                     Text(if (ok) "Benar" else "Salah", color = tone, style = MaterialTheme.typography.titleLarge,
                         modifier = Modifier.weight(1f).testTag("verdict"))
+                    Mascot(if (ok) MascotMood.CORRECT else MascotMood.WRONG, size = 52.dp)
                 }
                 MathText("Kunci: ${q.keyText()}", MaterialTheme.typography.titleMedium, color = C.text)
                 MathText(q.explain, MaterialTheme.typography.bodyLarge, color = C.text)
@@ -405,7 +406,8 @@ private fun ResultView(total: Int, correct: Int, bestCombo: Int, color: Color, o
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.spacedBy(16.dp),
     ) {
-        Spacer(Modifier.height(20.dp))
+        Spacer(Modifier.height(8.dp))
+        Mascot(if (total > 0 && correct * 10 >= total * 7) MascotMood.DONE else MascotMood.IDLE, size = 110.dp)
         if (total == 0) {
             Text("Belum ada soal yang salah.", color = C.text, style = MaterialTheme.typography.titleLarge, textAlign = TextAlign.Center)
         } else {

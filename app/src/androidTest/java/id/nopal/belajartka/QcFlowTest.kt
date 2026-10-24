@@ -351,4 +351,32 @@ class QcFlowTest {
         rule.onNodeWithTag("tab_1").performClick()
         shot("59_library_dark", 900)
     }
+
+    @Test fun o_tutiInQuizDark() {
+        rule.runOnUiThread { store.updateThemeMode(2) }
+        val qi = Content.nodes.indexOfFirst { it.isQuiz }
+        unlockUpTo(qi)
+        val step = Content.nodes[qi].step
+        tapNode(qi)
+        rule.onNodeWithTag("start_step").performClick()
+        step.questions.forEachIndexed { i, q ->
+            answer(q, right = i != 0)
+            if (i == 0) shot("60_quiz_wrong_dark", 300)
+            if (i == 1) shot("61_quiz_correct_dark", 250)
+            rule.onNodeWithTag("quiz_next").performClick()
+        }
+        shot("62_result_dark", 1200)
+        assertTrue(displayed("mascot"))
+    }
+
+    @Test fun p_launcherIcon() {
+        val device = UiDevice.getInstance(InstrumentationRegistry.getInstrumentation())
+        device.pressHome()
+        Thread.sleep(1500)
+        shot("63_home_screen", 0)
+        // Open the app drawer, where Tuntas is listed with its icon.
+        device.swipe(device.displayWidth / 2, device.displayHeight * 4 / 5, device.displayWidth / 2, device.displayHeight / 5, 20)
+        Thread.sleep(1500)
+        shot("64_app_drawer", 0)
+    }
 }

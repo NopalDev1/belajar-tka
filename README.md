@@ -24,6 +24,10 @@ Teks buku dan pembahasan memakai ragam buku pelajaran: tanpa emoji, tanpa kalima
 
 Lingkup materi mengikuti kisi-kisi TKA SMA 2026 dari Pusmendik Kemendikdasmen, sebagaimana dikutip CNN Indonesia, Medcom, Kumparan, Bisadanedu, dan Blog ITERA. Daftar lengkapnya ada di tab Progres, bagian Sumber materi.
 
+## Karakter
+
+Tuti si Buku (maskot dan ikon aplikasi) adalah karakter orisinal yang digambar khusus untuk aplikasi ini sebagai vektor (`res/drawable/tuti_*.xml`, `ic_launcher_*.xml`). Tidak dijiplak, tidak memakai gambar stok, dan tidak meniru karakter atau merek mana pun. Gerakannya (napas, kedip, lompat, geleng) dibuat dengan kode di `Mascot.kt`.
+
 ## Build
 
 GitHub Actions (`.github/workflows/android.yml`) menjalankan unit test, membangun APK, merilisnya sebagai `latest`, lalu menjalankan tes UI di emulator dan menyimpan screenshot QC di branch `qc-screenshots`.

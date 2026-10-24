@@ -198,6 +198,7 @@ private fun ContinueCard(store: Store, idx: Int, onStart: () -> Unit) {
                     color = C.muted, style = MaterialTheme.typography.bodyMedium, maxLines = 1,
                 )
             }
+            Mascot(MascotMood.IDLE, size = 64.dp)
         }
         Spacer(Modifier.height(6.dp))
         BouncyButton("Mulai", Modifier.fillMaxWidth().testTag("continue_step"), onClick = onStart)

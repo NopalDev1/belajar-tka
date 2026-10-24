@@ -51,6 +51,8 @@ object C {
     val paperEdge get() = pick(0xFFEDE6D6, 0xFF34302A)
     val paperInk get() = pick(0xFF34302A, 0xFFE9E2D3)
     val paperInkSoft get() = pick(0xFF6F675A, 0xFFB3AA99)
+    /** Sticker rim behind Tuti in dark mode, so the dark outline stays visible. */
+    val mascotRim get() = pick(0x00000000, 0xFF555C70)
 }
 
 @OptIn(ExperimentalTextApi::class)
