@@ -8,16 +8,22 @@ Aplikasi Android untuk persiapan **TKA SMA 2026** (Matematika, B. Indonesia, B. 
 
 ## Fitur
 
-- **Perpustakaan (tab Buku)**: empat buku, yaitu Matematika, B. Indonesia, B. Inggris, dan Fisika. Isinya disusun per bab dan subbab sesuai kisi-kisi resmi. Halamannya bergaya kertas buku dengan efek balik halaman, penjelasan lengkap, kotak rumus, contoh soal yang dibuka langkah demi langkah, "Awas jebakan", dan rangkuman. Ada juga penanda "lanjutkan membaca".
-- **Peta jalur panjang ala Duolingo**: satu titik untuk tiap subbab, lalu latihan di akhir tiap bab, plus paket latihan dari bank soal. Titiknya berikon dan terbuka satu per satu.
-- **Bank soal**: soal dari kisi-kisi dan contoh resmi, latihan TKA B. Inggris, dan Kompeten TKA. Formatnya PG, PG Kompleks (pilih lebih dari satu), dan PG Kompleks Kategori (tabel), lengkap dengan gambar yang bisa diperbesar. Setiap soal ada kunci dan pembahasannya.
-- **Progres interaktif**: level, streak, cincin per mapel, grafik harian, lencana, peti hadiah, dan daftar soal salah.
-- **Sesi Harian**: 5 jam belajar, lalu 1 jam soal, lalu foto atau ketik ringkasan. Selama sesi, aplikasi disematkan dan layar tetap menyala. Ada tombol darurat.
-- **Pemblokir distraksi (Aksesibilitas)**: menutup aplikasi lain saat sesi berjalan. Ada opsi blokir terus dan batas harian.
+- **Perpustakaan (tab Buku)**: empat buku sesuai kisi-kisi resmi. Matematika 12 bab, Fisika 13 bab, B. Indonesia 10 bab, B. Inggris 10 bab. Halaman bergaya kertas dengan efek balik halaman, kotak rumus, contoh soal yang dibuka langkah demi langkah, daftar jebakan, dan rangkuman.
+- **Rumus LaTeX**: rumus Matematika dan Fisika digambar dengan jlatexmath (pecahan, akar, pangkat, integral sigma, dan sebagainya), di buku maupun di soal.
+- **Buku B. Inggris dwibahasa**: isi dalam bahasa Inggris seperti di tes, penjelasan penting diberi terjemahan singkat bahasa Indonesia, istilah ditulis "Indonesia (English)", misalnya "Teks deskriptif (descriptive text)".
+- **Peta jalur**: satu titik untuk tiap subbab, latihan di akhir tiap bab, dan paket latihan dari bank soal. Titik terbuka satu per satu.
+- **Bank soal (512 soal)**: PG, PG Kompleks, dan PG Kompleks Kategori, dengan kunci dan pembahasan singkat. Sumbernya kisi-kisi dan contoh resmi, file latihan yang diunggah, dan soal yang ditulis untuk aplikasi ini dengan acuan contoh soal di detikEdu, CNN Indonesia, Kompas.com, dan Blog ITERA.
+- **Progres**: level, hari berturut-turut, progres per mapel, grafik harian, lencana, dan daftar soal salah.
+- **Sesi Harian**: belajar, latihan soal, lalu foto atau ketik ringkasan. Selama sesi, aplikasi disematkan dan layar tetap menyala.
+- **Pemblokir distraksi (Aksesibilitas)**: menutup aplikasi lain saat sesi berjalan, dengan opsi blokir terus dan batas harian.
+
+## Gaya penulisan
+
+Teks buku dan pembahasan memakai ragam buku pelajaran: tanpa emoji, tanpa kalimat pembuka atau penyemangat, angka dengan satuan, dan tips hanya jika menyebut jebakan yang spesifik. Tampilan memakai warna rata, garis 2 dp, dan sudut 12 dp. Animasi yang tersisa hanya yang memberi informasi: titik terbuka, cincin progres, balik halaman, dan langkah contoh soal. `ContentTest.textHasNoChatbotFiller` memeriksa aturan ini.
 
 ## Sumber materi
 
-Lingkup materi mengikuti kisi-kisi TKA SMA 2026 dari Pusmendik Kemendikdasmen, sebagaimana dikutip CNN Indonesia, Medcom, Kumparan, Bisadanedu, dan Blog ITERA. Daftar lengkapnya ada di tab Progres → Sumber materi.
+Lingkup materi mengikuti kisi-kisi TKA SMA 2026 dari Pusmendik Kemendikdasmen, sebagaimana dikutip CNN Indonesia, Medcom, Kumparan, Bisadanedu, dan Blog ITERA. Daftar lengkapnya ada di tab Progres, bagian Sumber materi.
 
 ## Build
 

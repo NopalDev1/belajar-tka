@@ -69,17 +69,17 @@ fun BlockScreen(store: Store) {
         verticalArrangement = Arrangement.spacedBy(14.dp),
     ) {
         Text("Blokir Distraksi", color = C.text, style = MaterialTheme.typography.headlineLarge)
-        Text("Biar gak ketagihan main HP: pilih aplikasi yang bikin lupa waktu. Saat Sesi Harian berjalan, SEMUA aplikasi lain ditutup otomatis.",
+        Text("Pilih aplikasi yang ditutup otomatis di luar sesi. Saat Sesi Harian berjalan, semua aplikasi lain ditutup.",
             color = C.muted, style = MaterialTheme.typography.bodyLarge)
 
         PermissionCard(
             "Pemblokir (Aksesibilitas)", blockerOn,
-            "Wajib. Buka Setelan → Aksesibilitas → Aplikasi terinstal → \"Jalur TKA: Pemblokir Distraksi\" → Aktifkan.",
+            "Wajib. Buka Setelan, Aksesibilitas, Aplikasi terinstal, \"Jalur TKA: Pemblokir Distraksi\", lalu Aktifkan.",
             "blocker_perm",
         ) { ctx.startActivity(Intent(Settings.ACTION_ACCESSIBILITY_SETTINGS).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)) }
         PermissionCard(
             "Akses penggunaan", usageOn,
-            "Untuk batas harian dan statistik waktu layar. Pilih Jalur TKA → Izinkan.",
+            "Untuk batas harian dan statistik waktu layar. Pilih Jalur TKA, lalu Izinkan.",
             "usage_perm",
         ) { ctx.startActivity(Intent(Settings.ACTION_USAGE_ACCESS_SETTINGS).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)) }
 
@@ -91,7 +91,7 @@ fun BlockScreen(store: Store) {
                 Row(verticalAlignment = Alignment.CenterVertically) {
                     Column(Modifier.weight(1f)) {
                         Text("Blokir terus", color = C.text, style = MaterialTheme.typography.titleMedium)
-                        Text("Aplikasi pilihan selalu ditutup, bahkan di luar sesi. Cocok sampai TKA selesai 5 Nov.", color = C.muted, style = MaterialTheme.typography.bodyMedium)
+                        Text("Aplikasi pilihan selalu ditutup, juga di luar sesi, sampai fitur ini dimatikan.", color = C.muted, style = MaterialTheme.typography.bodyMedium)
                     }
                     Switch(store.alwaysBlock, { store.updateAlwaysBlock(it) }, Modifier.testTag("always_block"),
                         colors = SwitchDefaults.colors(checkedTrackColor = C.bad))
@@ -134,11 +134,11 @@ fun BlockScreen(store: Store) {
             }
         }
 
-        SectionTitle("Tambahan dari HP-mu")
+        SectionTitle("Pengaturan bawaan Android")
         Card(Modifier.fillMaxWidth()) {
             Column(verticalArrangement = Arrangement.spacedBy(6.dp)) {
                 Text("Android punya Kesehatan Digital (Digital Wellbeing):", color = C.text, style = MaterialTheme.typography.titleMedium)
-                Text("• Setelan → Kesehatan Digital → Mode Fokus: pilih aplikasi yang dijeda.", color = C.muted)
+                Text("• Setelan, Kesehatan Digital, Mode Fokus: pilih aplikasi yang dijeda.", color = C.muted)
                 Text("• Timer aplikasi: batasi TikTok/IG per hari.", color = C.muted)
                 Text("• Mode Waktu Tidur: layar abu-abu dan notifikasi senyap mulai 21.00.", color = C.muted)
                 Text("• Matikan notifikasi aplikasi medsos, dan taruh HP di ruangan lain saat tidur.", color = C.muted)
@@ -150,14 +150,12 @@ fun BlockScreen(store: Store) {
 @Composable
 private fun PermissionCard(title: String, on: Boolean, how: String, tag: String, onFix: () -> Unit) {
     Row(
-        Modifier.fillMaxWidth().clip(RoundedCornerShape(20.dp))
+        Modifier.fillMaxWidth().clip(RoundedCornerShape(12.dp))
             .background(if (on) C.good.copy(alpha = 0.12f) else C.gold.copy(alpha = 0.12f))
-            .border(2.dp, if (on) C.good.copy(alpha = 0.5f) else C.gold.copy(alpha = 0.6f), RoundedCornerShape(20.dp))
+            .border(2.dp, if (on) C.good.copy(alpha = 0.5f) else C.gold.copy(alpha = 0.6f), RoundedCornerShape(12.dp))
             .clickable(enabled = !on, onClick = onFix).testTag(tag).padding(16.dp),
         verticalAlignment = Alignment.CenterVertically,
     ) {
-        Text(if (on) "✅" else "⚠️", fontSize = 26.sp)
-        Spacer(Modifier.width(12.dp))
         Column(Modifier.weight(1f)) {
             Text(title + if (on) " aktif" else " belum aktif", color = C.text, style = MaterialTheme.typography.titleMedium)
             if (!on) Text("$how Ketuk di sini.", color = C.muted, style = MaterialTheme.typography.bodyMedium)
@@ -169,7 +167,7 @@ private fun PermissionCard(title: String, on: Boolean, how: String, tag: String,
 private fun ScreenTimeCard(store: Store, usage: Map<String, Int>, usageOn: Boolean) {
     val used = store.blocked.sumOf { usage[it] ?: 0 }
     val limit = store.dailyLimitMin
-    Row(Modifier.fillMaxWidth().clip(RoundedCornerShape(22.dp)).background(C.surface).padding(16.dp), verticalAlignment = Alignment.CenterVertically) {
+    Row(Modifier.fillMaxWidth().clip(RoundedCornerShape(12.dp)).background(C.surface).padding(16.dp), verticalAlignment = Alignment.CenterVertically) {
         val frac = if (limit > 0) used / limit.toFloat() else 0f
         val col = when { limit == 0 -> C.muted; frac >= 1f -> C.bad; frac >= 0.7f -> C.gold; else -> C.good }
         ProgressRing(frac, col, size = 84.dp, stroke = 9.dp) {
@@ -182,12 +180,12 @@ private fun ScreenTimeCard(store: Store, usage: Map<String, Int>, usageOn: Boole
                 when {
                     !usageOn -> "Izinkan Akses penggunaan dulu"
                     limit == 0 -> "$used menit (tanpa batas)"
-                    used >= limit -> "Batas $limit menit habis! Diblokir sampai besok."
+                    used >= limit -> "Batas $limit menit habis. Diblokir sampai besok."
                     else -> "${limit - used} menit tersisa dari $limit"
                 },
                 color = C.text, style = MaterialTheme.typography.titleMedium,
             )
-            Text("🚫 Diblokir ${store.blockedHits()}x hari ini", color = C.bad, style = MaterialTheme.typography.bodyMedium)
+            Text("Diblokir ${store.blockedHits()} kali hari ini", color = C.bad, style = MaterialTheme.typography.bodyMedium)
         }
     }
 }
@@ -196,7 +194,7 @@ private fun ScreenTimeCard(store: Store, usage: Map<String, Int>, usageOn: Boole
 private fun AppRow(app: AppInfo, blocked: Boolean, minutes: Int, onToggle: () -> Unit) {
     val bg by animateColorAsState(if (blocked) C.bad.copy(alpha = 0.12f) else C.surface, label = "app")
     Row(
-        Modifier.fillMaxWidth().clip(RoundedCornerShape(16.dp)).background(bg).clickable(onClick = onToggle).padding(horizontal = 14.dp, vertical = 10.dp),
+        Modifier.fillMaxWidth().clip(RoundedCornerShape(12.dp)).background(bg).clickable(onClick = onToggle).padding(horizontal = 14.dp, vertical = 10.dp),
         verticalAlignment = Alignment.CenterVertically,
     ) {
         Box(Modifier.size(36.dp).clip(CircleShape).background(if (blocked) C.bad else C.surface2), contentAlignment = Alignment.Center) {
