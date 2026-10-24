@@ -164,7 +164,7 @@ private fun MapHeader(store: Store, subject: Subject, onSubject: (Subject) -> Un
                 ) {
                     Box(Modifier.size(8.dp).clip(CircleShape).background(s.color))
                     Spacer(Modifier.width(6.dp))
-                    Text(s.label, color = if (on) Color.White else C.text, style = MaterialTheme.typography.labelLarge)
+                    Text(s.label, color = if (on) C.bg else C.text, style = MaterialTheme.typography.labelLarge)
                 }
             }
         }
@@ -186,15 +186,19 @@ private fun ContinueCard(store: Store, idx: Int, onStart: () -> Unit) {
             .padding(20.dp),
         verticalArrangement = Arrangement.spacedBy(6.dp),
     ) {
-        Text("Lanjutkan · ${chapterLabel(step)}", color = C.muted, style = MaterialTheme.typography.labelMedium)
-        Text(
-            if (node.isQuiz) "Latihan: ${step.title}" else step.sections[node.section].title,
-            color = C.text, style = MaterialTheme.typography.titleLarge, maxLines = 2,
-        )
-        Text(
-            if (node.isQuiz) "${step.questions.size} soal" else step.title,
-            color = C.muted, style = MaterialTheme.typography.bodyMedium, maxLines = 1,
-        )
+        Row(verticalAlignment = Alignment.CenterVertically) {
+            Column(Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(6.dp)) {
+                Text("Lanjutkan · ${chapterLabel(step)}", color = C.muted, style = MaterialTheme.typography.labelMedium)
+                Text(
+                    if (node.isQuiz) "Latihan: ${step.title}" else step.sections[node.section].title,
+                    color = C.text, style = MaterialTheme.typography.titleLarge, maxLines = 2,
+                )
+                Text(
+                    if (node.isQuiz) "${step.questions.size} soal" else step.title,
+                    color = C.muted, style = MaterialTheme.typography.bodyMedium, maxLines = 1,
+                )
+            }
+        }
         Spacer(Modifier.height(6.dp))
         BouncyButton("Mulai", Modifier.fillMaxWidth().testTag("continue_step"), onClick = onStart)
     }
@@ -285,7 +289,7 @@ private fun MapStop(store: Store, idx: Int, isCurrent: Boolean, isSelected: Bool
                 Modifier
                     .clip(RoundedCornerShape(50)).background(C.text)
                     .padding(horizontal = 12.dp, vertical = 4.dp),
-                color = Color.White, fontWeight = FontWeight.Bold, style = MaterialTheme.typography.labelMedium,
+                color = C.bg, fontWeight = FontWeight.Bold, style = MaterialTheme.typography.labelMedium,
             )
             Spacer(Modifier.height(6.dp))
         }

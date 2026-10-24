@@ -35,7 +35,7 @@ class QcFlowTest {
     private val store get() = Store.get(ctx)
 
     @Before fun reset() {
-        rule.runOnUiThread { store.resetAll() }
+        rule.runOnUiThread { store.resetAll(); store.updateThemeMode(1); store.updateReadSize(1) }
         rule.waitForIdle()
     }
 
@@ -312,5 +312,43 @@ class QcFlowTest {
         shot("41_quiz_latex", 900)
         answer(step.questions.first(), right = false)
         shot("42_quiz_feedback", 700)
+    }
+
+    @Test fun m_settingsAndDarkMode() {
+        rule.onNodeWithTag("tab_2").performClick()
+        rule.onNodeWithTag("open_settings").performClick()
+        shot("50_settings_light", 700)
+        rule.onNodeWithTag("set_theme_2").performClick()
+        rule.onNodeWithTag("set_font_2").performClick()
+        shot("51_settings_dark", 700)
+        assertEquals(2, store.themeMode)
+        rule.onNodeWithTag("settings_back").performClick()
+        shot("52_progress_dark", 900)
+        rule.onNodeWithTag("tab_0").performClick()
+        shot("53_map_dark", 1200)
+        tapNode(0)
+        shot("54_popover_dark")
+        rule.onNodeWithTag("start_step").performClick()
+        rule.mainClock.advanceTimeBy(900)
+        turnPage()
+        shot("55_book_dark_large", 900)
+        rule.onNodeWithTag("back").performClick()
+        rule.onNodeWithTag("tab_1").performClick()
+        rule.onNodeWithTag("book_MAT").performClick()
+        val mat = Content.books.getValue(Subject.MAT)
+        val n = mat.indexOfFirst { st -> st.questions.firstOrNull()?.let { MATH in it.text || it.options.any { o -> MATH in o } } == true }
+        rule.onNodeWithTag("chapter_quiz_$n").performScrollTo().performClick()
+        shot("56_quiz_dark", 900)
+        answer(mat[n].questions.first(), right = true)
+        shot("57_quiz_feedback_dark", 700)
+        rule.onNodeWithTag("quiz_next").performClick()
+    }
+
+    @Test fun n_focusDark() {
+        rule.runOnUiThread { store.updateThemeMode(2) }
+        rule.onNodeWithTag("tab_3").performClick()
+        shot("58_focus_dark", 900)
+        rule.onNodeWithTag("tab_1").performClick()
+        shot("59_library_dark", 900)
     }
 }

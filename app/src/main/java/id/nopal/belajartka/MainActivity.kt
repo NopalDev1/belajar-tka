@@ -7,6 +7,8 @@ import androidx.activity.SystemBarStyle
 import androidx.activity.compose.BackHandler
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
+import androidx.compose.foundation.isSystemInDarkTheme
+import androidx.compose.runtime.DisposableEffect
 import androidx.compose.animation.AnimatedContent
 import androidx.compose.animation.core.Spring
 import androidx.compose.animation.core.animateFloatAsState
@@ -71,18 +73,23 @@ sealed interface Route {
     data class Chapter(val index: Int, val section: Int, val back: Route) : Route
     data class Quiz(val index: Int, val back: Route) : Route
     data object Retry : Route
+    data object Settings : Route
 }
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge(
-            statusBarStyle = SystemBarStyle.light(0xFFF6F5F1.toInt(), 0xFFF6F5F1.toInt()),
-            navigationBarStyle = SystemBarStyle.light(android.graphics.Color.WHITE, android.graphics.Color.WHITE),
-        )
+        val store = Store.get(this)
         setContent {
-            JalurTheme {
-                App(Store.get(this))
+            val dark = when (store.themeMode) { 1 -> false; 2 -> true; else -> isSystemInDarkTheme() }
+            DisposableEffect(dark) {
+                val bar = if (dark) SystemBarStyle.dark(0xFF121318.toInt()) else SystemBarStyle.light(0xFFF6F5F1.toInt(), 0xFFF6F5F1.toInt())
+                val nav = if (dark) SystemBarStyle.dark(0xFF1C1E24.toInt()) else SystemBarStyle.light(android.graphics.Color.WHITE, android.graphics.Color.WHITE)
+                enableEdgeToEdge(statusBarStyle = bar, navigationBarStyle = nav)
+                onDispose {}
+            }
+            JalurTheme(dark = dark) {
+                App(store)
             }
         }
     }
@@ -117,6 +124,7 @@ fun App(store: Store) {
                 is Route.Read -> Route.Home(0)
                 is Route.Book -> Route.Home(1)
                 Route.Retry -> Route.Home(2)
+                Route.Settings -> Route.Home(2)
                 is Route.Home -> Route.Home(0)
             },
         )
@@ -147,7 +155,7 @@ fun App(store: Store) {
                                 go(if (n.isQuiz) Route.Quiz(Content.steps.indexOf(n.step), Route.Home(0)) else Route.Read(i))
                             }
                             1 -> LibraryScreen(store, onOpenBook = { go(Route.Book(it)) }, onRead = { i, s -> go(Route.Chapter(i, s, Route.Home(1))) })
-                            2 -> ProgressScreen(store, onRetry = { go(Route.Retry) }, onOpenStep = { i ->
+                            2 -> ProgressScreen(store, onRetry = { go(Route.Retry) }, onSettings = { go(Route.Settings) }, onOpenStep = { i ->
                                 go(if (Content.steps[i].sections.isNotEmpty()) Route.Chapter(i, 0, Route.Home(2)) else Route.Quiz(i, Route.Home(2)))
                             })
                             else -> FocusScreen(store)
@@ -185,6 +193,7 @@ fun App(store: Store) {
                         onContinue = { go(r.back) },
                     )
                 }
+                Route.Settings -> SettingsScreen(store, onBack = { go(Route.Home(2)) })
                 Route.Retry -> {
                     val qs = remember { store.wrong.mapNotNull { Content.allQuestions[it]?.second }.shuffled() }
                     QuizScreen(
@@ -202,7 +211,7 @@ fun App(store: Store) {
 private fun depth(r: Route) = when (r) {
     is Route.Home -> 0
     is Route.Book -> 1
-    is Route.Read, is Route.Chapter, Route.Retry -> 2
+    is Route.Read, is Route.Chapter, Route.Retry, Route.Settings -> 2
     is Route.Quiz -> 3
 }
 

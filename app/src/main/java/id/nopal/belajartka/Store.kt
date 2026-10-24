@@ -40,6 +40,16 @@ class Store private constructor(private val prefs: SharedPreferences) {
     var tick by mutableIntStateOf(0)
         private set
 
+    /** 0 = follow the system, 1 = light, 2 = dark. */
+    var themeMode by mutableIntStateOf(prefs.getInt(K_THEME, 0))
+        private set
+    /** Reading text size in the books: 0 = small, 1 = medium, 2 = large. */
+    var readSize by mutableIntStateOf(prefs.getInt(K_READ_SIZE, 1))
+        private set
+
+    fun updateThemeMode(v: Int) { themeMode = v; prefs.edit().putInt(K_THEME, v).apply() }
+    fun updateReadSize(v: Int) { readSize = v; prefs.edit().putInt(K_READ_SIZE, v).apply() }
+
     fun bestScore(stepId: String) = prefs.getInt("score_$stepId", -1)
 
     fun focusMinutes(date: LocalDate = LocalDate.now()) = prefs.getInt("focus_$date", 0)
@@ -178,7 +188,8 @@ class Store private constructor(private val prefs: SharedPreferences) {
     }
 
     fun resetAll() {
-        prefs.edit().clear().apply()
+        // Settings survive a progress reset.
+        prefs.edit().clear().putInt(K_THEME, themeMode).putInt(K_READ_SIZE, readSize).apply()
         studyMin = 300; practiceMin = 60
         done = emptySet(); read = emptySet(); wrong = emptySet(); xp = 0; streak = 0; badges = emptySet()
         phase = 0; phaseEndAt = 0L; photos = emptyList(); tick++
@@ -224,6 +235,8 @@ class Store private constructor(private val prefs: SharedPreferences) {
         private const val K_PRACTICE_MIN = "practice_min"
         private const val K_PHOTOS = "photos"
         private const val K_BADGES = "badges"
+        private const val K_THEME = "theme_mode"
+        private const val K_READ_SIZE = "read_size"
 
         @Volatile private var instance: Store? = null
         fun get(ctx: Context): Store = instance ?: synchronized(this) {

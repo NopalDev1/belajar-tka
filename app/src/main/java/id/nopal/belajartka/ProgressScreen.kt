@@ -30,6 +30,8 @@ import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.Icon
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.rounded.Settings
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -57,13 +59,17 @@ import java.time.LocalDate
 import java.time.temporal.ChronoUnit
 
 @Composable
-fun ProgressScreen(store: Store, onRetry: () -> Unit, onOpenStep: (Int) -> Unit) {
+fun ProgressScreen(store: Store, onRetry: () -> Unit, onSettings: () -> Unit, onOpenStep: (Int) -> Unit) {
     store.tick // re-read day counters when they change
     Column(
         Modifier.fillMaxSize().verticalScroll(rememberScrollState()).padding(16.dp),
         verticalArrangement = Arrangement.spacedBy(14.dp),
     ) {
-        Text("Progres", color = C.text, style = MaterialTheme.typography.headlineLarge)
+        Row(verticalAlignment = Alignment.CenterVertically) {
+            Text("Progres", color = C.text, style = MaterialTheme.typography.headlineLarge, modifier = Modifier.weight(1f))
+            Icon(Icons.Rounded.Settings, "Pengaturan", tint = C.text,
+                modifier = Modifier.clip(RoundedCornerShape(50)).clickable(onClick = onSettings).testTag("open_settings").padding(8.dp).size(24.dp))
+        }
         OverallCard(store)
         TotalsCard(store)
         SectionTitle("Per mapel · ketuk untuk detail")
@@ -78,7 +84,6 @@ fun ProgressScreen(store: Store, onRetry: () -> Unit, onOpenStep: (Int) -> Unit)
         PhotoStrip(store)
         SectionTitle("Sumber materi")
         Sources()
-        ResetButton(store)
         Spacer(Modifier.height(20.dp))
     }
 }
@@ -305,18 +310,3 @@ private fun Sources() {
     }
 }
 
-@Composable
-private fun ResetButton(store: Store) {
-    var confirm by remember { mutableStateOf(false) }
-    Column(Modifier.fillMaxWidth(), horizontalAlignment = Alignment.CenterHorizontally) {
-        if (!confirm) {
-            Text("Reset progres", color = C.muted, modifier = Modifier.clip(RoundedCornerShape(16.dp)).clickable { confirm = true }.padding(10.dp))
-        } else {
-            Text("Semua progres dan lencana akan dihapus.", color = C.bad)
-            Row(horizontalArrangement = Arrangement.spacedBy(10.dp), modifier = Modifier.padding(top = 8.dp)) {
-                BouncyButton("Batal", Modifier.width(140.dp), secondary = true) { confirm = false }
-                BouncyButton("Reset", Modifier.width(140.dp), color = C.bad) { store.resetAll(); confirm = false }
-            }
-        }
-    }
-}

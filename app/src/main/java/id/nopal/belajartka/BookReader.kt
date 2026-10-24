@@ -1,5 +1,8 @@
 package id.nopal.belajartka
 
+import androidx.compose.ui.unit.Density
+import androidx.compose.runtime.CompositionLocalProvider
+import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.animateColorAsState
 import androidx.compose.animation.core.Spring
@@ -75,10 +78,10 @@ import kotlinx.coroutines.launch
 import kotlin.math.absoluteValue
 
 /** Paper and ink for the book pages. */
-private val Paper = Color(0xFFFFFCF5)
-private val PaperEdge = Color(0xFFEDE6D6)
-private val Ink = Color(0xFF34302A)
-private val InkSoft = Color(0xFF6F675A)
+private val Paper get() = C.paper
+private val PaperEdge get() = C.paperEdge
+private val Ink get() = C.paperInk
+private val InkSoft get() = C.paperInkSoft
 
 private val bodyStyle = TextStyle(fontFamily = FontFamily.Serif, fontSize = 17.sp, lineHeight = 28.sp, color = Ink, textAlign = TextAlign.Justify)
 
@@ -110,8 +113,28 @@ private fun pagesFor(step: Step, sections: List<Int>, withOpener: Boolean): List
  * The reading room: one sub-chapter (from the map) or a whole chapter (from the Buku tab),
  * laid out as book pages you turn sideways.
  */
+/** Font scale applied inside the reader for the "Ukuran huruf bacaan" setting. */
+val READ_SCALES = listOf(0.9f, 1f, 1.15f)
+
 @Composable
 fun BookReader(
+    store: Store,
+    step: Step,
+    startSection: Int,
+    wholeChapter: Boolean,
+    onBack: () -> Unit,
+    onFinished: () -> Unit,
+    onStartQuiz: () -> Unit,
+) {
+    // The reading-size setting scales every text inside the book, formulas included.
+    val d = LocalDensity.current
+    CompositionLocalProvider(LocalDensity provides Density(d.density, d.fontScale * READ_SCALES[store.readSize])) {
+        BookReaderPages(store, step, startSection, wholeChapter, onBack, onFinished, onStartQuiz)
+    }
+}
+
+@Composable
+private fun BookReaderPages(
     store: Store,
     step: Step,
     startSection: Int,
@@ -381,7 +404,7 @@ private fun SummaryPage(step: Step, section: Int, understood: MutableList<String
     val color = step.subject.color
     if (sec.pitfalls.isNotEmpty()) {
         Column(
-            Modifier.fillMaxWidth().clip(RoundedCornerShape(14.dp)).background(Color(0xFFFFF3E0))
+            Modifier.fillMaxWidth().clip(RoundedCornerShape(14.dp)).background(C.warnWash)
                 .border(2.dp, C.pink, RoundedCornerShape(14.dp)).padding(14.dp),
             verticalArrangement = Arrangement.spacedBy(8.dp),
         ) {

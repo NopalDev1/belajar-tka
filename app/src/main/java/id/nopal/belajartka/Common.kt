@@ -112,7 +112,7 @@ fun BouncyButton(
 ) {
     val src = remember { MutableInteractionSource() }
     val pressed by src.collectIsPressedAsState()
-    val base = when { !enabled -> C.surface2; secondary -> Color.White; else -> color }
+    val base = when { !enabled -> C.surface2; secondary -> C.surface; else -> color }
     val face = if (pressed && enabled) darken(base, 0.9f) else base
     val label = when { !enabled -> C.faded; secondary -> C.text; else -> textColor }
     Box(

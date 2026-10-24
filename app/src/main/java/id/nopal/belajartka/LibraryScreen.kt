@@ -123,7 +123,7 @@ private fun BookCover(store: Store, s: Subject, modifier: Modifier, onClick: () 
     val read = readCount(store, s)
     Box(modifier.aspectRatio(0.72f)) {
         // Pages peeking out behind the cover.
-        Box(Modifier.fillMaxSize().padding(start = 8.dp, top = 6.dp).clip(RoundedCornerShape(6.dp, 16.dp, 16.dp, 6.dp)).background(Color(0xFFF1EADB)))
+        Box(Modifier.fillMaxSize().padding(start = 8.dp, top = 6.dp).clip(RoundedCornerShape(6.dp, 16.dp, 16.dp, 6.dp)).background(C.paperEdge))
         Row(
             Modifier.fillMaxSize().padding(end = 6.dp, bottom = 6.dp)
                 .clip(RoundedCornerShape(6.dp, 16.dp, 16.dp, 6.dp))
