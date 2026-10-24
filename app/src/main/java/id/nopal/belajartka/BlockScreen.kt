@@ -52,14 +52,19 @@ fun BlockScreen(store: Store) {
     val ctx = LocalContext.current
     var blockerOn by remember { mutableStateOf(isBlockerEnabled(ctx)) }
     var usageOn by remember { mutableStateOf(hasUsageAccess(ctx)) }
+    var restricted by remember { mutableStateOf(restrictedSettingsBlocked(ctx)) }
+    fun recheck() {
+        blockerOn = isBlockerEnabled(ctx)
+        usageOn = hasUsageAccess(ctx)
+        restricted = restrictedSettingsBlocked(ctx)
+        usage = todayUsageMinutes(ctx)
+    }
     var usage by remember { mutableStateOf(emptyMap<String, Int>()) }
     var apps by remember { mutableStateOf<List<AppInfo>?>(null) }
     var query by remember { mutableStateOf("") }
 
     LifecycleResumeEffect(Unit) {
-        blockerOn = isBlockerEnabled(ctx)
-        usageOn = hasUsageAccess(ctx)
-        usage = todayUsageMinutes(ctx)
+        recheck()
         onPauseOrDispose { }
     }
     LaunchedEffect(Unit) { apps = withContext(Dispatchers.Default) { launchableApps(ctx) } }
@@ -72,6 +77,9 @@ fun BlockScreen(store: Store) {
         Text("Pilih aplikasi yang ditutup otomatis di luar sesi. Saat Sesi Harian berjalan, semua aplikasi lain ditutup.",
             color = C.muted, style = MaterialTheme.typography.bodyLarge)
 
+        if ((!blockerOn || !usageOn) && android.os.Build.VERSION.SDK_INT >= 33) {
+            RestrictedCard(detected = restricted, onOpen = { openAppInfo(ctx) }, onRecheck = { recheck() })
+        }
         PermissionCard(
             "Pemblokir (Aksesibilitas)", blockerOn,
             "Wajib. Buka Setelan, Aksesibilitas, Aplikasi terinstal, \"Jalur TKA: Pemblokir Distraksi\", lalu Aktifkan.",
@@ -143,6 +151,42 @@ fun BlockScreen(store: Store) {
                 Text("• Mode Waktu Tidur: layar abu-abu dan notifikasi senyap mulai 21.00.", color = C.muted)
                 Text("• Matikan notifikasi aplikasi medsos, dan taruh HP di ruangan lain saat tidur.", color = C.muted)
             }
+        }
+    }
+}
+
+/**
+ * Sideloaded APKs on Android 13+ get "Setelan terbatas": the Aksesibilitas and Akses penggunaan
+ * toggles stay grey until the user allows restricted settings in App info.
+ */
+@Composable
+private fun RestrictedCard(detected: Boolean, onOpen: () -> Unit, onRecheck: () -> Unit) {
+    Column(
+        Modifier.fillMaxWidth().clip(RoundedCornerShape(12.dp)).background(C.surface)
+            .border(2.dp, if (detected) C.gold else C.line, RoundedCornerShape(12.dp)).padding(16.dp).testTag("restricted_card"),
+        verticalArrangement = Arrangement.spacedBy(8.dp),
+    ) {
+        Text(if (detected) "Izin masih dibatasi Android (Setelan terbatas)" else "Tombol izin abu-abu?",
+            color = C.text, style = MaterialTheme.typography.titleMedium)
+        Text("Aplikasi yang dipasang dari file APK dibatasi oleh Android 13 ke atas. Tombol Aksesibilitas dan Akses penggunaan " +
+            "tidak bisa dinyalakan dan tertulis \"Dikontrol oleh Setelan Terbatas\". Cara membukanya:",
+            color = C.muted, style = MaterialTheme.typography.bodyMedium)
+        listOf(
+            "Ketuk salah satu kartu izin di bawah sekali, lalu tutup dialog \"Aplikasi tidak diberi akses\". Langkah ini membuat menu di langkah 3 muncul.",
+            "Ketuk Buka Info aplikasi.",
+            "Ketuk titik tiga di kanan atas, pilih \"Izinkan setelan terbatas\", lalu konfirmasi dengan PIN atau sidik jari.",
+            "Kembali ke sini, ketuk Sudah, cek lagi, lalu nyalakan Pemblokir dan Akses penggunaan.",
+        ).forEachIndexed { i, t ->
+            Row {
+                Text("${i + 1}.", color = C.text, fontWeight = FontWeight.Bold, modifier = Modifier.width(22.dp))
+                Text(t, color = C.text, style = MaterialTheme.typography.bodyMedium, modifier = Modifier.weight(1f))
+            }
+        }
+        Text("Di HP Xiaomi, jika titik tiga tidak ada: Setelan, Aplikasi, Kelola aplikasi, Jalur TKA, lalu cari titik tiga atau menu \"Izinkan setelan terbatas\" di halaman itu.",
+            color = C.muted, style = MaterialTheme.typography.bodySmall)
+        Row(horizontalArrangement = Arrangement.spacedBy(10.dp)) {
+            BouncyButton("Buka Info aplikasi", Modifier.weight(1f).testTag("open_app_info"), color = C.gold, onClick = onOpen)
+            BouncyButton("Sudah, cek lagi", Modifier.weight(1f).testTag("recheck_perm"), secondary = true, onClick = onRecheck)
         }
     }
 }
